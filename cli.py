@@ -57,6 +57,7 @@ def setup(
   deb('Logger is logging at debug level.')
   # Configure logging levels for edgecase_client package.
   # By default, without setup, it logs at ERROR level.
+  # Optionally, the package could be configured here to use a different log level, by e.g. passing in 'error' instead of log_level.
   edgecase_client.setup(
     log_level = log_level,
     debug = debug,
