@@ -1,0 +1,169 @@
+<signed_datafeed_article>
+<datafeed_article>
+<datafeed_name>edgecase_datafeed</datafeed_name>
+<datafeed_article_id>216</datafeed_article_id>
+<date>2021-04-12
+<note>This is the date at the time of creation of this datafeed article. A checkpoint article containing a hash of this datafeed article may be created on this date or at a later date.</note>
+</date>
+<previous_checkpoint>
+<datafeed_article_id>215</datafeed_article_id>
+<checkpoint_id>10</checkpoint_id>
+<date>2021-04-10</date>
+<transaction>
+<blockchain_name>bitcoin</blockchain_name>
+<transaction_id>fe062b308ad6254b71ae4af5bbe8ec485105ebb9ae9cf1b905b115f596dd827a</transaction_id>
+<block_height>678607</block_height>
+<source_address>1HtwyqFWNVDoSEVqZwjBRRAV2oEsi8aQXr</source_address>
+<source_address>13MfGs39pR5aEK4iKdoLjVYXKwi6Y3uyPq</source_address>
+<destination_address>1Hdv9WprSk5ugh12TpsLvEt6tfdSmnz1SG</destination_address>
+</transaction>
+</previous_checkpoint>
+<article>
+<title>Discussion:_Crypto_Messaging_Apps</title>
+<author_name>stjohn_piano</author_name>
+<date>2021-04-12</date>
+<signed_by_author>no</signed_by_author>
+<content>
+
+
+<chat>
+<name>StJohn Piano</name>
+<name>John Underwood</name>
+<separator>:</separator>
+<data_lines>
+StJohn Piano: I understand your feelings about Faceborg / Whatsapp, by the way.
+StJohn Piano: I just expect Signal to be absorbed in a year or two anyway, if not by Zuck, then by a similar oligarch.
+StJohn Piano: I read a lot of the Snowden documents, and "how it works" is laid out pretty clearly. <footnote_lines>
+If you make an effort to discern the patterns of processes that produced those pages.
+</footnote_lines>
+John Underwood: Then I'll have to move again
+StJohn Piano: In my preferred future, a messaging app becomes a blockchain/crypto protocol, on which messages are encrypted by default, and relayed by nodes in multiple countries, for an embedded transaction fee.
+StJohn Piano: Otherwise, we stay on the merry-go-around <footnote_lines>
+Every few years, an engineer tries to build a "proper messaging app". It's marketed as secure / private / wonderful (and actually is these things, compared to the alternatives). A large mass of users flees to it on the basis of these promises, but isn't willing to actually <italic>pay anything</italic>. The engineer, being a political idiot, thinks that people should just have secure / private / wonderful messaging for free, and doesn't charge them! Then he begins to run out of money to pay the increasing server & development costs. Then, bit by bit, he trades away the security & privacy & wonderfulness to a series of investors, who have certain non-negotiable requirements in exchange for their (printed) money, and eventually the app grows into exactly the same thing that it originally tried to replace - a government-controlled (or at least strongly government-influenced) spy agency.
+
+Note: Some messaging-app engineers are more politically astute. They understand perfectly that this is the available route, and proceed capably along it, jettisoning the "privacy" marketing without much regret after it is no longer needed. It was a necessary rocket booster, nothing more.
+
+Now, however, cryptocurrency has changed the game. The board is a bit bigger, and some new strategies are emerging.
+</footnote_lines>
+John Underwood: Okay. So here's what I don't get. Blockchain relies on massive infrastructure. That will also just get assimilated
+StJohn Piano: sure, massive.
+StJohn Piano: but crucially, financially decentralised (to some degree)
+StJohn Piano: the key phrase is "to some degree"
+StJohn Piano: this prevents the standard centralisation + sell it to an obedient oligarch
+John Underwood: I don't see the limiting function that stops that happening eventually
+John Underwood: Just not worth the investment right now
+StJohn Piano: the fact that the payments are embedded in the transaction itself.
+StJohn Piano: means that payment processing tends to distribute itself across multiple jurisdictions.
+StJohn Piano: that's the chokepoint.
+John Underwood: Right. But for my <latin-1>L-</latin-1> to be worth anything the government has to still be running. For my BTC to be worth anything the servers have to still be running
+StJohn Piano: Sure.
+StJohn Piano: I'm not referring to BTC in this discussion, btw.
+John Underwood: And the power and locations for those servers are macro elements
+John Underwood: Whatever currency you like
+StJohn Piano: sure
+John Underwood: It's completely reliant on a functioning supply chain of huge complexity
+John Underwood: From dead dinosaurs, to refinement, to silicon, to cooling, to copper...
+StJohn Piano: I'm saying that the game theory makes it very hard to have a single centralised chokepoint.
+StJohn Piano: "It's completely reliant on a functioning supply chain of huge complexity" - yes, but everything is. if you delete that, we go straight to mad max.
+StJohn Piano: then it doesn't matter about BTC vs fiat.
+John Underwood: "yes, but everything is. if you delete that, we go straight to mad max." - I disagree
+StJohn Piano: ah?
+John Underwood: History shows us the spectrum between that and "mad max"
+StJohn Piano: well, we go straight to pre-industrial civ.
+StJohn Piano: fair enough.
+StJohn Piano: point is, if the argument against a crypto protocol is "it relies on the internet".... the same argument applies to the current centralised approaches.
+John Underwood: In some ways I prefer conceptual complexity to infrastructure complexity.
+
+It's very "Ted Talk" to look at crypto as 'simpler' than fiat. Sure it requires less philosophical gymnastics (maybe), but it ultimately still relies on those power structures
+StJohn Piano: "In some ways I prefer conceptual complexity to infrastructure complexity." - this leads directly to Zuck having all your data.
+StJohn Piano: the infrastructure complexity is the price for some degree of freedom.
+StJohn Piano: I don't look at crypto as simpler.
+John Underwood: I don't see that
+StJohn Piano: really?
+John Underwood: The more complex the infrastructure the closer to 'absolute' you need the authority to be that runs and maintains it
+StJohn Piano: ah...
+John Underwood: You can actually have paved roads between city states
+StJohn Piano: sure
+John Underwood: But internet infrastructure? Data highways?
+John Underwood: No chance
+John Underwood: It's way too complicated for different power centres to collaborate on
+John Underwood: So power centralises
+StJohn Piano: I'm not arguing that.
+StJohn Piano: I'm saying it can be a bit less centralised than "Silicon Valley polices all your speech".
+StJohn Piano: via crypto stuff that plays off various states against each other.
+StJohn Piano: I guess the underlying thing is that I'm not actually a libertarian.
+StJohn Piano: I just dislike Soviet Union superstates, such as $currentDay America
+John Underwood: Well I'm not a libertarian either. But I see value in weening myself off the convenience of allowing a handful of companies to manage my digital experience.
+John Underwood: If I distribute my data I don't actually make myself less "censorable" - I'm sure there are ways around that. But look at the massive flight of people away from Whatsapp. Group action does have an effect and the only vote I have is my feet
+John Underwood: I'm actually optimistic about these companies breaking up in the future
+StJohn Piano: I understand your argument, and mildly agree with it....
+StJohn Piano: I'm not sure that you see mine, exactly...
+John Underwood: Well, let me have a stab
+StJohn Piano: sure
+John Underwood: You're arguing that proper crypto encryption of communication and monetary transactions limits the control and influence of global powers (state or corporate)
+StJohn Piano: yes
+StJohn Piano: via the game-theoretic constraints that crypto protocols can apply to external states (geographic or corporate) that are in competition with each other.
+John Underwood: That does make sense to me
+StJohn Piano: Aha. Tricky to phrase the argument correctly, I admit it's a bit abstract.
+John Underwood: However, I'm pointing out that the complexity of the underlying infrastructure creates new reliances on centralised power structures
+StJohn Piano: I agree.
+StJohn Piano: There will be still be major centralised powers, I think, in this variant of the future.
+John Underwood: I think my point about Whatsapp is only that there is value in taking a convenience hit in order to decrease reliance on a handful of corporates <italic>before</italic> this paradigm shift takes place. I think you agree
+StJohn Piano: I do, yes.
+John Underwood: ok
+John Underwood: "There will be still be major centralised powers, I think, in this variant of the future." - But the specifics of their granular level of control is limited by the crypto element
+John Underwood: (?)
+StJohn Piano: bingo
+John Underwood: Sort of how right now the sheer scale limits the interference of any corporation into my life personally
+StJohn Piano: ha
+John Underwood: Even if they influence my life at a macro level
+StJohn Piano: until and unless the Eye of Sauron picks you out randomly for 20 mins' hate.
+John Underwood: Right
+StJohn Piano: Hm, I think this discussion was rather good, and informative for hypothetical future readers. Much better than the stuff I normally see on teh intertubes. Would like to publish it on edgecase. Would you prefer to be anon?
+John Underwood: Have to think about that... wouldn't want to end up on 20 minutes of hate somehow...
+StJohn Piano: don't blame you at all for staying anon
+StJohn Piano: I am aware that I take a certain risk by publishing under my own name.
+John Underwood: Yeah, I'm happy to have my name on it. There's nothing here that's more contentious than anything I usually say
+StJohn Piano: Haha
+StJohn Piano: Cool. I'll put up a draft first, and let you have a read-through - once I finally publish it becomes immutable (via crypto timestamping) but you can change your mind before that point.
+StJohn Piano: I'll clean up / edit the text a bit as well.
+</data_lines>
+</chat>
+
+
+
+
+Note: This discussion took place on 2021-02-02, prior to the 2021-04-06 announcement of Signal's integration with a cryptocurrency <link>
+<type>hyperlink</type>
+<reference>http://www.wired.com/story/signal-mobilecoin-payments-messaging-cryptocurrency</reference>
+<text>[link]</text>
+</link>. Whether or not the integration works, or works eventually, or fails and a future messaging app succeeds instead, this marks a significant shift away from the trajectory of previous messaging apps.
+
+
+
+
+
+
+
+
+
+
+</content>
+</article>
+</datafeed_article>
+<datafeed_signature>
+iQIcBAABCgAGBQJgdDH0AAoJECL1OzZgiBhwylwP/1Yl7mabEN/uHUCEqgE/G3pv
+9MmpqGiFrgXTx11QQv3qANIZYK28h9L/x1c0NwyXCA/kQEDMCb7B8PgSwrB2Wc7k
+aRPgI8C0h6mnxURgZ6feUxPE55WS6YtPqsU/Zf4B7g13SKmduMLAXlJz6/R7lMRK
+SHVXwZe/QNd5q3wcJKR7E3TwS3ACvJKURhMriRUuIO/LsOCkcH6WK3ju9e7IsLqc
+876VX6EgXYFDacKMj/7ncUKH2Wu8usXHideawwcf/WGmuV7m169tT2/FNnAcM+ch
+6f072XtRN5p8OkXoHsfRC0xDN6fFSGo/toqfSg/T2eFOXxaNwUA9IJAWXf6a6BT1
+TVT0SL0vEq8f4HsOlbA+JO0RF3hdMPQ0mMz7wF6M2EFgGJSjjaICKfK+AVup3xRb
+RaussJ3PmmQgjec+Y+iDQi3N5oVtxk7s0/YSuaE+NjxKllcisN4ED4V1GzwvDiA8
+LFxTqiixh7zLBXyqRtYA6ZoP2ES18OFqfmR6n7ZHM0liGMR0qPPtbZVFvXpvTxfS
+jU+p+g6KhkEXiqs1nRtcxQXnyzYEIxUljtMOZ962uLVzKrg+UwKFHi74oz48cSv1
+gYKohlcDmncK+wdMsuvuiQzH1oQqizxEdntV2F1r7+3JIJzzmu16/Vc37qyhsMTL
+xTqKk07XrqiYT+a93Xeq
+=cCle
+</datafeed_signature>
+</signed_datafeed_article>
