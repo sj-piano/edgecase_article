@@ -7,6 +7,7 @@ import logging
 # Relative imports
 from .. import util
 from . import datajack
+from . import stateless_gpg
 
 
 
@@ -40,6 +41,12 @@ def setup(
   deb('Logger is logging at debug level.')
   # Configure modules further down in this package.
   datajack.setup(
+    log_level = log_level,
+    debug = debug,
+    log_timestamp = log_timestamp,
+    log_filepath = log_filepath,
+  )
+  stateless_gpg.setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
