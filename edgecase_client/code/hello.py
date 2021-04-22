@@ -43,9 +43,9 @@ def setup(
 
 
 def hello():
-  print('hello world')
   log('Log statement at INFO level')
   deb('Log statement at DEBUG level')
+  print('hello world')
 
 
 
