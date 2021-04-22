@@ -19,6 +19,14 @@ import edgecase_client
 
 
 
+# Shortcuts
+datajack = edgecase_client.submodules.datajack
+stateless_gpg = edgecase_client.submodules.stateless_gpg
+gpg = stateless_gpg.gpg
+
+
+
+
 # Notes:
 # - Using keyword function arguments, each of which is on its own line,
 # makes Python code easier to maintain. Arguments can be changed and
@@ -73,7 +81,7 @@ def main():
   # Note: We use camelCase for option names because it's faster to type.
 
   parser = argparse.ArgumentParser(
-    description='Command-Line Interface (CLI) for using the datajack package.'
+    description='Command-Line Interface (CLI) for using the edgecase_client package.'
   )
 
   parser.add_argument(
@@ -126,7 +134,7 @@ def main():
   )
 
   # Run top-level function (i.e. the appropriate task).
-  tasks = 'hello hello2 hello3 hello4'.split()
+  tasks = 'hello hello2 hello3 hello4 hello5'.split()
   if a.task not in tasks:
     print("Unrecognised task: {}".format(a.task))
     stop()
@@ -139,9 +147,9 @@ def hello(a):
   # Confirm:
   # - that we can run a simple task.
   # - that this tool has working logging.
-  print('hello world')
   log('Log statement at INFO level')
   deb('Log statement at DEBUG level')
+  print('hello world')
 
 
 
@@ -165,9 +173,30 @@ def hello3(a):
 
 def hello4(a):
   # Confirm:
-  # - that a submodule can be accessed.
-  e = edgecase_client.submodules.datajack.Element()
-  print(e.hello())
+  # - that the datajack submodule can be accessed.
+  e = datajack.Element()
+  value = e.hello()
+  print(value)
+
+
+
+
+def hello5(a):
+  # Confirm:
+  # - that we can use the stateless_gpg submodule
+  data = "hello world\n"
+  log("data = " + data.strip())
+  data_dir = 'edgecase_client/submodules/stateless_gpg/stateless_gpg/data'
+  private_key_file = data_dir + '/test_key_1_private_key.txt'
+  private_key = open(private_key_file).read()
+  signature = gpg.make_signature(private_key, data)
+  public_key_file = data_dir + '/test_key_1_public_key.txt'
+  public_key = open(public_key_file).read()
+  result = gpg.verify_signature(public_key, data, signature)
+  log("result = " + str(result))
+  if not result:
+    raise Exception("Failed to create and verify signature")
+  print("Signature created and verified.")
 
 
 
