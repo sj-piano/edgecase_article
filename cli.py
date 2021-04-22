@@ -126,7 +126,7 @@ def main():
   )
 
   # Run top-level function (i.e. the appropriate task).
-  tasks = 'hello hello2 hello3'.split()
+  tasks = 'hello hello2 hello3 hello4'.split()
   if a.task not in tasks:
     print("Unrecognised task: {}".format(a.task))
     stop()
@@ -159,6 +159,15 @@ def hello3(a):
   # Confirm:
   # - that we can run a simple package task that loads a resource file.
   edgecase_client.code.hello.hello_resource()
+
+
+
+
+def hello4(a):
+  # Confirm:
+  # - that a submodule can be accessed.
+  e = edgecase_client.submodules.datajack.Element()
+  print(e.hello())
 
 
 
