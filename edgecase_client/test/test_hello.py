@@ -49,7 +49,7 @@ def setup_module(pytestconfig):
 
 
 def test_hello():
-  x = 'hello'
+  x = code.hello.hello()
   print(x)
   assert x == 'hello'
 

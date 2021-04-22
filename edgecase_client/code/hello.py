@@ -46,6 +46,7 @@ def hello():
   log('Log statement at INFO level')
   deb('Log statement at DEBUG level')
   print('hello world')
+  return 'hello world'
 
 
 
