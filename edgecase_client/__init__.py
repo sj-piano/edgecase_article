@@ -7,11 +7,12 @@ import logging
 # Relative imports
 from . import code
 from . import util
+from . import submodules
 
 
 
 
-# Set up logger for this module. By default, it logs at ERROR level.
+# Set up logger for this module. By default, it produces no output.
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
 logger.setLevel(logging.ERROR)
@@ -40,6 +41,12 @@ def setup(
   deb('Logger is logging at debug level.')
   # Configure modules further down in this package.
   code.setup(
+    log_level = log_level,
+    debug = debug,
+    log_timestamp = log_timestamp,
+    log_filepath = log_filepath,
+  )
+  submodules.setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
