@@ -53,7 +53,7 @@ def setup_module(pytestconfig):
 def test_hello():
   x = code.hello.hello()
   print(x)
-  assert x == 'hello'
+  assert x == 'hello world'
 
 
 def test_hello_data():
