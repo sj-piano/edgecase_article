@@ -8,6 +8,7 @@ import pkgutil
 # Relative imports
 from .. import code
 from .. import util
+from .. import submodules
 
 
 
@@ -20,6 +21,7 @@ def setup_module(pytestconfig):
   if log_level is not None:
     log_level = log_level.lower()
     code.setup(log_level = log_level)
+    submodules.setup(log_level = log_level)
 
 
 
