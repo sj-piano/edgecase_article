@@ -1,3 +1,6 @@
 [submodule "edgecase_client/submodules/datajack"]
 	path = edgecase_client/submodules/datajack
 	url = https://github.com/sj-piano/datajack
+[submodule "edgecase_client/submodules/stateless_gpg"]
+	path = edgecase_client/submodules/stateless_gpg
+	url = git@github.com:sj-piano/stateless_gpg.git
