@@ -9,6 +9,7 @@ import pkgutil
 # Relative imports
 from .. import util
 from .. import submodules
+from . import Article
 
 
 
@@ -57,9 +58,13 @@ def setup(
 def verify(
     article_path = None,
     article_type = None,
+    verify_file_name = None,
+    verify_signature = None,
   ):
   v.string(article_path)
   v.string(article_type)
+  v.boolean(verify_file_name)
+  v.boolean(verify_signature)
   article_types = ("article signed_article checkpoint_article" + \
     " datafeed_article signed_datafeed_article"
   ).split()
@@ -77,6 +82,7 @@ def verify(
       msg = "Element name {} not in list of recognised article_types".format(repr(e.name))
       msg += "\n{}".format(article_types)
       raise ValueError(msg)
+    article_type = e.name
   elif e.name != article_type:
       msg = "Expected article_type {}, found element with name {}.".format(
         repr(article_type), repr(e.name),
@@ -85,14 +91,11 @@ def verify(
   msg = "Element name: {}.".format(e.name)
   log(msg)
   # Use the element name to select an article class.
-
-
-
-
-
-
-
-
-
-
-
+  if article_type == 'article':
+    article = Article.Article.from_element(element=e)
+    article.set_file_path(article_path)
+    if verify_file_name:
+      article.validate_file_name()
+  else:
+    msg = "No class available for article_type {}".format(repr(article_type))
+    raise ValueError(msg)
