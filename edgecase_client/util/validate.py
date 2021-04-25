@@ -108,21 +108,22 @@ def validate_signed_by_author(s):
 def validate_date(d):
   # Example: 2017-06-28
   if len(d) != 10:
-    msg = 'Date [{}] must be exactly 10 characters.'.format(d)
+    msg = 'Date ({}) must be exactly 10 characters.'.format(repr(d))
     raise ValueError(msg)
   for i in [4,7]:
     if d[i] != '-':
-      msg = 'Char {i} [{c}] in date [{d}] must be "-".'.format(i=i, c=d[i], d=d)
+      msg = "Char {i} [{c}] in date {d} must be '-'.".format(i=i, c=d[i], d=repr(d))
       raise ValueError(msg)
   d2 = d[:4] + d[5:7] + d[8:]
   if not d2.isdigit():
-    msg = 'Date [{}] (with hyphens removed) must contain only digits.'.format(d)
+    msg = 'Date ({}), with hyphens removed, must contain only digits.'.format(repr(d))
     raise ValueError(msg)
 
 
 
 
 def validate_author_name(n):
+  # Example: stjohn_piano
   permitted = string.ascii_lowercase + '_'
   for c in n:
     if c not in permitted:
@@ -147,7 +148,7 @@ def validate_uri_title(u):
 
 def validate_title(t, article_type):
   if article_type == 'checkpoint_article':
-    # Example: "checkpoint_0"
+    # Example: checkpoint_0
     if t[:10] != 'checkpoint':
       raise ValueError
     if t[10] != '_':
@@ -167,7 +168,6 @@ def validate_title(t, article_type):
 
 
 
-
 def validate_article_type(article_type, name=None, location=None, kind='article_type'):
   article_types = ("article signed_article checkpoint_article" + \
     " datafeed_article signed_datafeed_article"
@@ -175,6 +175,7 @@ def validate_article_type(article_type, name=None, location=None, kind='article_
   if article_type not in article_types:
     msg = "Unrecognised article_type: {}".format(article_type)
     raise ValueError(msg)
+
 
 
 
