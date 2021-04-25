@@ -65,7 +65,7 @@ def validate_article_file_name(
     date = None,
     author_name = None,
     uri_title = None,
-  ):
+    ):
   # Example:
   # 2019-04-14_stjohn_piano_a_simple_api__json_input_output.txt
   validate_date(date)
@@ -110,7 +110,7 @@ def validate_date(d):
   if len(d) != 10:
     msg = 'Date ({}) must be exactly 10 characters.'.format(repr(d))
     raise ValueError(msg)
-  for i in [4,7]:
+  for i in [4, 7]:
     if d[i] != '-':
       msg = "Char {i} [{c}] in date {d} must be '-'.".format(i=i, c=d[i], d=repr(d))
       raise ValueError(msg)
@@ -169,9 +169,10 @@ def validate_title(t, article_type):
 
 
 def validate_article_type(article_type, name=None, location=None, kind='article_type'):
-  article_types = ("article signed_article checkpoint_article" + \
-    " datafeed_article signed_datafeed_article"
-  ).split()
+  article_types = """
+article signed_article checkpoint_article
+datafeed_article signed_datafeed_article
+""".split()
   if article_type not in article_types:
     msg = "Unrecognised article_type: {}".format(article_type)
     raise ValueError(msg)
