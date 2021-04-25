@@ -103,6 +103,18 @@ def main():
   )
 
   parser.add_argument(
+    '-c', '--verifyFileName',
+    action='store_true',
+    help="Checks that the article's filename is in the proper format.",
+  )
+
+  parser.add_argument(
+    '-e', '--verifySignature',
+    action='store_true',
+    help="Checks that the article's signature(s) are valid.",
+  )
+
+  parser.add_argument(
     '-l', '--logLevel', type=str,
     choices=['debug', 'info', 'warning', 'error'],
     help="Choose logging level (default: '%(default)s').",
@@ -216,11 +228,11 @@ def hello5(a):
 
 
 def verify(a):
-  article_type = a.articleType
-  article_path = a.articlePath
   edgecase_client.code.verify.verify(
-    article_path = article_path,
-    article_type = article_type,
+    article_path = a.articlePath,
+    article_type = a.articleType,
+    verify_file_name = a.verifyFileName,
+    verify_signature = a.verifySignature,
   )
 
 
