@@ -62,17 +62,37 @@ def validate_datafeed_article_file_name(file_name):
 
 def validate_article_file_name(
     file_name = None,
-    #article_date = None,
-    #article_author_name = None,
-    #article_title = None,
+    date = None,
+    author_name = None,
+    uri_title = None,
   ):
   # Example:
   # 2019-04-14_stjohn_piano_a_simple_api__json_input_output.txt
+  validate_date(date)
+  validate_author_name(author_name)
+  validate_uri_title(uri_title)
   file_name, ext = os.path.splitext(file_name)
   if ext != '.txt':
     raise ValueError
-  date = file_name[:10]
-  validate_date(date)
+  d = file_name[:10]
+  validate_date(d)
+  if d != date:
+    msg = "Date in filename ({}) differs from date in article ({}).".format(d, date)
+    raise ValueError(msg)
+  if file_name[10] != '_':
+    raise ValueError
+  n = len(author_name)
+  an = file_name[11:11+n]
+  if an != author_name:
+    raise ValueError
+  i = 11+n
+  if file_name[i] != '_':
+    msg = 'Char between author_name and uri_title (index {i}, in this case) must be an underscore. Instead, it is {c}.'.format(i=i, c=file_name[i])
+    raise ValueError(msg)
+  remaining = file_name[i+1:]
+  if uri_title != remaining:
+    msg = "Remaining portion of file_name ({r}) is not the same as the uri_title ({u})".format(r=remaining, u=uri_title)
+    raise ValueError(msg)
 
 
 
@@ -112,6 +132,19 @@ def validate_author_name(n):
 
 
 
+def validate_uri_title(u):
+  # Examples:
+  # stalky__co__by_rudyard_kipling_in_ambush
+  # recipe_for_installing_kafka_2_5_0_as_a_systemd_service_on_ubuntu_16_04
+  permitted = string.ascii_lowercase + '_'
+  for c in u:
+    if c not in permitted:
+      msg = 'Character [{}] not permitted in uri_title.'.format(repr(c))
+      raise ValueError(msg)
+
+
+
+
 def validate_title(t, article_type):
   if article_type == 'checkpoint_article':
     # Example: "checkpoint_0"
@@ -131,6 +164,17 @@ def validate_title(t, article_type):
         msg = 'Character [{}] not permitted in article title.'.format(repr(c))
         raise ValueError(msg)
 
+
+
+
+
+def validate_article_type(article_type, name=None, location=None, kind='article_type'):
+  article_types = ("article signed_article checkpoint_article" + \
+    " datafeed_article signed_datafeed_article"
+  ).split()
+  if article_type not in article_types:
+    msg = "Unrecognised article_type: {}".format(article_type)
+    raise ValueError(msg)
 
 
 
