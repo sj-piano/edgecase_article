@@ -1,4 +1,6 @@
 # Imports
+import os
+import string as string_module  # We have a function in here called 'string'.
 import re
 
 
@@ -6,6 +8,8 @@ import re
 
 # Notes:
 # - We treat this module as foundational. It shouldn't import anything other than standard library modules.
+# - Functions at the bottom are the most basic.
+# -- Functions further up may use functions below them.
 
 
 
@@ -42,14 +46,100 @@ def build_error_msg(msg, value, name=None, location=None, kind=None):
 
 
 
+# ### SECTION
+# Article property validation functions.
+
+
+
+
+def datafeed_article_file_name(s):
+  # Example:
+  # 2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
+  pass
+
+
+
+
+def article_file_name(
+    file_name = None,
+    #article_date = None,
+    #article_author_name = None,
+    #article_title = None,
+  ):
+  # Example:
+  # 2019-04-14_stjohn_piano_a_simple_api__json_input_output.txt
+  file_name, ext = os.path.splitext(file_name)
+  if ext != '.txt':
+    raise ValueError
+  d = file_name[:10]
+  date(d)
+
+
+
+
+def signed_by_author(s):
+  permitted = 'no yes'.split()
+  if s not in permitted:
+    raise ValueError
+
+
+
+
+def date(d):
+  # Example: 2017-06-28
+  if len(d) != 10:
+    msg = 'Date [{}] must be exactly 10 characters.'.format(d)
+    raise ValueError(msg)
+  for i in [4,7]:
+    if d[i] != '-':
+      msg = 'Char {i} [{c}] in date [{d}] must be "-".'.format(i=i, c=d[i], d=d)
+      raise ValueError(msg)
+  d2 = d[:4] + d[5:7] + d[8:]
+  if not d2.isdigit():
+    msg = 'Date [{}] (with hyphens removed) must contain only digits.'.format(d)
+    raise ValueError(msg)
+
+
+
+
+def author_name(n):
+  permitted = string_module.ascii_lowercase + '_'
+  for c in n:
+    if c not in permitted:
+      msg = 'Character [{}] not permitted in article author_name.'.format(repr(c))
+      raise ValueError(msg)
+
+
+
+
+def title(t, article_type):
+  if article_type == 'checkpoint_article':
+    # Example: "checkpoint_0"
+    if t[:10] != 'checkpoint':
+      raise ValueError
+    if t[10] != '_':
+      raise ValueError
+    if not t[11:].isdigit():
+      raise ValueError
+  else:
+    # Example: Discussion:_Crypto_Messaging_Apps
+    if t[0] not in string_module.ascii_uppercase:
+      raise ValueError('First character must be uppercase')
+    permitted = string_module.ascii_letters + string_module.digits + "#&'(),-./:_" + '"'
+    for c in t:
+      if c not in permitted:
+        msg = 'Character [{}] not permitted in article title.'.format(repr(c))
+        raise ValueError(msg)
+
+
+
+
 
 
 
 
 # ### SECTION
 # Basic validation functions.
-# Functions at the bottom are the most basic.
-# Functions further up may use functions below them.
 
 
 
