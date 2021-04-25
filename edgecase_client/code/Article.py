@@ -101,19 +101,19 @@ class Article(datajack.Element):
     if sorted(self.element_children_names) != sorted(expected_names):
       msg = "Did not find child elements with expected names."
       raise ValueError(msg)
-    v.title(self.title, article_type='article')
-    v.author_name(self.author_name)
-    v.date(self.date)
-    v.signed_by_author(self.signed_by_author)
+    v.validate_title(self.title, article_type='article')
+    v.validate_author_name(self.author_name)
+    v.validate_date(self.date)
+    v.validate_signed_by_author(self.signed_by_author)
 
 
   def set_file_path(self, file_path):
-    v.string(file_path)
+    v.validate_string(file_path)
     self.file_path = file_path
     self.file_name = os.path.basename(file_path)
 
 
   def validate_file_name(self):
-    v.article_file_name(self.file_name)
+    v.validate_article_file_name(self.file_name)
 
 

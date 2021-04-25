@@ -61,10 +61,10 @@ def verify(
     verify_file_name = None,
     verify_signature = None,
   ):
-  v.string(article_path)
-  v.string(article_type)
-  v.boolean(verify_file_name)
-  v.boolean(verify_signature)
+  v.validate_string(article_path)
+  v.validate_string(article_type)
+  v.validate_boolean(verify_file_name)
+  v.validate_boolean(verify_signature)
   article_types = ("article signed_article checkpoint_article" + \
     " datafeed_article signed_datafeed_article"
   ).split()
