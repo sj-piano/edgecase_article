@@ -91,6 +91,18 @@ def main():
   )
 
   parser.add_argument(
+    '-a', '--articleType',
+    help="Type of article (default: '%(default)s').",
+    default='unspecified',
+  )
+
+  parser.add_argument(
+    '-b', '--articlePath',
+    help="Path to article file (default: '%(default)s').",
+    default='new_articles/article.txt',
+  )
+
+  parser.add_argument(
     '-l', '--logLevel', type=str,
     choices=['debug', 'info', 'warning', 'error'],
     help="Choose logging level (default: '%(default)s').",
@@ -134,7 +146,9 @@ def main():
   )
 
   # Run top-level function (i.e. the appropriate task).
-  tasks = 'hello hello2 hello3 hello4 hello5'.split()
+  tasks = ('hello hello2 hello3 hello4 hello5' + \
+    ' verify'
+  ).split()
   if a.task not in tasks:
     print("Unrecognised task: {}".format(a.task))
     stop()
@@ -197,6 +211,18 @@ def hello5(a):
   if not result:
     raise Exception("Failed to create and verify signature")
   print("Signature created and verified.")
+
+
+
+
+def verify(a):
+  article_type = a.articleType
+  article_path = a.articlePath
+  edgecase_client.code.verify.verify(
+    article_path = article_path,
+    article_type = article_type,
+  )
+
 
 
 
