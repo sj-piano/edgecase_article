@@ -10,7 +10,6 @@ from . import validate as v
 
 
 
-
 def uri_title(t):
   # Example:
   # Stalky_&_Co._by_Rudyard_Kipling:_"In_Ambush"
@@ -20,7 +19,7 @@ def uri_title(t):
   # Recipe_for_installing_Kafka_2.5.0_as_a_systemd_service_on_Ubuntu_16.04
   # becomes
   # recipe_for_installing_kafka_2_5_0_as_a_systemd_service_on_ubuntu_16_04
-  v.string(t)
+  v.validate_string(t)
   t = t.lower()
   # Remove punctuation, except for periods and hyphens.
   t2 = ''
@@ -33,4 +32,4 @@ def uri_title(t):
       # E.g. 'foo_25' in a title is distinguished from 'foo_2.5'.
       if c in '.-': c = '_'
       t2 += c
-  return t3
+  return t2
