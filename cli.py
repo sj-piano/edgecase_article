@@ -35,7 +35,7 @@ gpg = stateless_gpg.gpg
 
 
 
-# Set up logger for this module. By default, it logs at ERROR level.
+# Set up logger for this module. By default, it produces no output.
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
 logger.setLevel(logging.ERROR)
