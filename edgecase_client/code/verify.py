@@ -62,28 +62,21 @@ def verify(
     verify_signature = None,
   ):
   v.validate_string(article_path)
-  v.validate_string(article_type)
+  v.validate_string(article_type, 'article_type', 'verify.py')
   v.validate_boolean(verify_file_name)
   v.validate_boolean(verify_signature)
-  article_types = ("article signed_article checkpoint_article" + \
-    " datafeed_article signed_datafeed_article"
-  ).split()
-  if article_type != 'unspecified' and article_type not in article_types:
-    msg = "Unrecognised article_type: {}".format(article_type)
-    raise ValueError(msg)
+  if article_type != 'unspecified':
+    v.validate_article_type(article_type)
   if not isfile(article_path):
     msg = "File not found at article_path {}".format(repr(article_path))
     raise ValueError(msg)
   e = datajack.Element.from_file(article_path)
   msg = "File {} contains a valid Element.".format(article_path)
   log(msg)
+  v.validate_article_type(e.name, 'e.name (element name)', 'verify.py')
   if article_type == 'unspecified':
-    if e.name not in article_types:
-      msg = "Element name {} not in list of recognised article_types".format(repr(e.name))
-      msg += "\n{}".format(article_types)
-      raise ValueError(msg)
     article_type = e.name
-  elif e.name != article_type:
+  if e.name != article_type:
       msg = "Expected article_type {}, found element with name {}.".format(
         repr(article_type), repr(e.name),
       )
