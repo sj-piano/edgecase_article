@@ -158,9 +158,10 @@ def main():
   )
 
   # Run top-level function (i.e. the appropriate task).
-  tasks = ('hello hello2 hello3 hello4 hello5' + \
-    ' verify'
-  ).split()
+  tasks = """
+hello hello2 hello3 hello4 hello5
+verify
+""".split()
   if a.task not in tasks:
     print("Unrecognised task: {}".format(a.task))
     stop()

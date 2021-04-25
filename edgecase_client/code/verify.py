@@ -60,7 +60,7 @@ def verify(
     article_type = None,
     verify_file_name = None,
     verify_signature = None,
-  ):
+    ):
   v.validate_string(article_path)
   v.validate_string(article_type, 'article_type', 'verify.py')
   v.validate_boolean(verify_file_name)

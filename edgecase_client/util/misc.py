@@ -30,6 +30,7 @@ def uri_title(t):
       # Goal: URI titles should be selectable as a whole via a double-click.
       # We use them as "spacing" so that we can do versioning properly.
       # E.g. 'foo_25' in a title is distinguished from 'foo_2.5'.
-      if c in '.-': c = '_'
+      if c in '.-':
+        c = '_'
       t2 += c
   return t2
