@@ -56,15 +56,20 @@ class Article(datajack.Element):
 
 
   def __init__(self):
+    self.article_type = 'article'
     self.file_path = None
     self.file_name = None
 
 
   @classmethod
   def from_element(cls, element):
-    element.__class__ = Article
-    element.validate_format()
-    return element
+    e = element
+    e.__class__ = Article
+    e.validate_format()
+    e.article_type = 'article'
+    e.file_path = None
+    e.file_name = None
+    return e
 
 
   def __str__(self):
@@ -114,6 +119,11 @@ class Article(datajack.Element):
 
 
   def validate_file_name(self):
-    v.validate_article_file_name(self.file_name)
+    v.validate_article_file_name(
+      self.file_name,
+      self.date,
+      self.author_name,
+      self.uri_title,
+    )
 
 
