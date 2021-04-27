@@ -222,7 +222,7 @@ def hello5(a):
   result = gpg.verify_signature(public_key, data, signature)
   log("result = " + str(result))
   if not result:
-    raise Exception("Failed to create and verify signature")
+    raise Exception("Failed to create and verify signature.")
   print("Signature created and verified.")
 
 
