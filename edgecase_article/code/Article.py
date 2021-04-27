@@ -1,7 +1,6 @@
 # Imports
 import os
 import logging
-import pkgutil
 
 
 
@@ -14,7 +13,6 @@ from .. import submodules
 
 
 # Shortcuts
-#isfile = os.path.isfile
 v = util.validate
 datajack = submodules.datajack
 
@@ -56,9 +54,7 @@ class Article(datajack.Element):
 
 
   def __init__(self):
-    self.article_type = 'article'
-    self.file_path = None
-    self.file_name = None
+    pass
 
 
   @classmethod
@@ -125,5 +121,3 @@ class Article(datajack.Element):
       self.author_name,
       self.uri_title,
     )
-
-
