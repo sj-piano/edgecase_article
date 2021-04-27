@@ -20,6 +20,8 @@ import edgecase_article
 
 
 # Shortcuts
+isfile = os.path.isfile
+isdir = os.path.isdir
 datajack = edgecase_article.submodules.datajack
 stateless_gpg = edgecase_article.submodules.stateless_gpg
 gpg = stateless_gpg.gpg
@@ -31,6 +33,8 @@ gpg = stateless_gpg.gpg
 # - Using keyword function arguments, each of which is on its own line,
 # makes Python code easier to maintain. Arguments can be changed and
 # rearranged much more easily.
+# - I use "validate" to mean "check that this data is in the expected format".
+# - I use "verify" to mean that "check that a mathematical operation produces the expected result". Example: Check a digital signature.
 
 
 
@@ -97,11 +101,12 @@ def main():
   )
 
   parser.add_argument(
-    '-b', '--articlePath',
+    '-p', '--articlePath',
     help="Path to article file (default: '%(default)s').",
-    default='new_articles/article.txt',
+    default='new_articles/signed_article.txt',
   )
 
+  # Technically, this should be "validateFileName", but it seems more user-friendly to always use "verify" in the options.
   parser.add_argument(
     '-c', '--verifyFileName',
     action='store_true',
@@ -109,9 +114,21 @@ def main():
   )
 
   parser.add_argument(
-    '-e', '--verifySignature',
+    '-v', '--verifySignature',
     action='store_true',
     help="Checks that the article's signature(s) are valid.",
+  )
+
+  parser.add_argument(
+    '-k', '--publicKeyDir',
+    help="Path to directory containing public keys (default: '%(default)s').",
+    default=None,
+  )
+
+  parser.add_argument(
+    '-q', '--privateKeyDir',
+    help="Path to directory containing private keys (default: '%(default)s').",
+    default=None,
   )
 
   parser.add_argument(
@@ -134,13 +151,13 @@ def main():
   )
 
   parser.add_argument(
-    '-o', '--logToFile',
+    '-x', '--logToFile',
     action='store_true',
     help="Choose whether to save log output to a file.",
   )
 
   parser.add_argument(
-    '-p', '--logFilepath',
+    '-z', '--logFilepath',
     help="The path to the file that log output will be written to.",
     default='log_edgecase_article.txt',
   )
@@ -148,6 +165,15 @@ def main():
   a = parser.parse_args()
 
   log_filepath = a.logFilepath if a.logToFile else None
+
+  # Check and analyse arguments
+  if not isfile(a.articlePath):
+    msg = "File not found at articlePath {}".format(repr(a.articlePath))
+    raise FileNotFoundError(msg)
+  if a.verifySignature:
+    if not isdir(a.publicKeyDir):
+      msg = "Directory not found at publicKeyDir {}".format(repr(a.publicKeyDir))
+      raise FileNotFoundError(msg)
 
   # Setup
   setup(
@@ -234,6 +260,7 @@ def verify(a):
     article_type = a.articleType,
     verify_file_name = a.verifyFileName,
     verify_signature = a.verifySignature,
+    public_key_dir = a.publicKeyDir,
   )
 
 
