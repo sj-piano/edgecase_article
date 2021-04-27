@@ -27,16 +27,16 @@ def setup_module(pytestconfig):
 
 
 # Notes:
-# - The command { pytest3 edgecase_client/test/test_hello.py }
+# - The command { pytest3 edgecase_article/test/test_hello.py }
 # in the package directory should load and run the tests in this file.
 # - Run a specific test:
-# -- pytest3 edgecase_client/test/test_hello.py::test_hello
+# -- pytest3 edgecase_article/test/test_hello.py::test_hello
 # - Note: Using { pytest3 } will cause submodule tests to run as well, and these will fail.
 # - Run quietly:
-# -- [all tests] pytest3 -q edgecase_client/test
-# -- pytest3 -q edgecase_client/test/test_hello.py
+# -- [all tests] pytest3 -q edgecase_article/test
+# -- pytest3 -q edgecase_article/test/test_hello.py
 # - Print log output in real-time during a single test:
-# -- pytest3 -s --log-cli-level=INFO edgecase_client/test/test_hello.py::test_hello
+# -- pytest3 -s --log-cli-level=INFO edgecase_article/test/test_hello.py::test_hello
 # --- Note the use of the pytest -s option. This will cause print statements in the test code itself to also produce output.
 
 

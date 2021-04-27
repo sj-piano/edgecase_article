@@ -14,14 +14,14 @@ import logging
 
 # Local imports
 # (Can't use relative imports because this is a top-level script)
-import edgecase_client
+import edgecase_article
 
 
 
 
 # Shortcuts
-datajack = edgecase_client.submodules.datajack
-stateless_gpg = edgecase_client.submodules.stateless_gpg
+datajack = edgecase_article.submodules.datajack
+stateless_gpg = edgecase_article.submodules.stateless_gpg
 gpg = stateless_gpg.gpg
 
 
@@ -53,7 +53,7 @@ def setup(
     ):
   logger_name = 'cli'
   # Configure logger for this module.
-  edgecase_client.util.module_logger.configure_module_logger(
+  edgecase_article.util.module_logger.configure_module_logger(
     logger = logger,
     logger_name = logger_name,
     log_level = log_level,
@@ -63,10 +63,10 @@ def setup(
   )
   log('Setup complete.')
   deb('Logger is logging at debug level.')
-  # Configure logging levels for edgecase_client package.
+  # Configure logging levels for edgecase_article package.
   # By default, without setup, it logs at ERROR level.
   # Optionally, the package could be configured here to use a different log level, by e.g. passing in 'error' instead of log_level.
-  edgecase_client.setup(
+  edgecase_article.setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
@@ -81,7 +81,7 @@ def main():
   # Note: We use camelCase for option names because it's faster to type.
 
   parser = argparse.ArgumentParser(
-    description='Command-Line Interface (CLI) for using the edgecase_client package.'
+    description='Command-Line Interface (CLI) for using the edgecase_article package.'
   )
 
   parser.add_argument(
@@ -142,7 +142,7 @@ def main():
   parser.add_argument(
     '-p', '--logFilepath',
     help="The path to the file that log output will be written to.",
-    default='log_edgecase_client.txt',
+    default='log_edgecase_article.txt',
   )
 
   a = parser.parse_args()
@@ -185,7 +185,7 @@ def hello2(a):
   # Confirm:
   # - that we can run a simple task from within the package.
   # - that the package has working logging.
-  edgecase_client.code.hello.hello()
+  edgecase_article.code.hello.hello()
 
 
 
@@ -193,7 +193,7 @@ def hello2(a):
 def hello3(a):
   # Confirm:
   # - that we can run a simple package task that loads a resource file.
-  edgecase_client.code.hello.hello_resource()
+  edgecase_article.code.hello.hello_resource()
 
 
 
@@ -213,7 +213,7 @@ def hello5(a):
   # - that we can use the stateless_gpg submodule
   data = "hello world\n"
   log("data = " + data.strip())
-  data_dir = 'edgecase_client/submodules/stateless_gpg/stateless_gpg/data'
+  data_dir = 'edgecase_article/submodules/stateless_gpg/stateless_gpg/data'
   private_key_file = data_dir + '/test_key_1_private_key.txt'
   private_key = open(private_key_file).read()
   signature = gpg.make_signature(private_key, data)
@@ -229,7 +229,7 @@ def hello5(a):
 
 
 def verify(a):
-  edgecase_client.code.verify.verify(
+  edgecase_article.code.verify.verify(
     article_path = a.articlePath,
     article_type = a.articleType,
     verify_file_name = a.verifyFileName,

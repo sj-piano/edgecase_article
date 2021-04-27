@@ -5,7 +5,7 @@ import logging
 
 
 # Relative imports
-from . import edgecase_client
+from . import edgecase_article
 
 
 
@@ -18,11 +18,11 @@ from . import edgecase_client
 
 # Collect up the things that we want in the immediate namespace of the imported datajack module.
 # This file allows a script placed just above this package to run this:
-# import edgecase_client
-# edgecase_client.hello()
-hello = edgecase_client.code.hello.hello
-validate = edgecase_client.util.validate
-configure_module_logger = edgecase_client.util.module_logger.configure_module_logger
+# import edgecase_article
+# edgecase_article.hello()
+hello = edgecase_article.code.hello.hello
+validate = edgecase_article.util.validate
+configure_module_logger = edgecase_article.util.module_logger.configure_module_logger
 
 
 
@@ -44,7 +44,7 @@ def setup(
     log_filepath = None,
     ):
   # Configure logger for this module.
-  edgecase_client.util.module_logger.configure_module_logger(
+  edgecase_article.util.module_logger.configure_module_logger(
     logger = logger,
     logger_name = __name__,
     log_level = log_level,
@@ -55,7 +55,7 @@ def setup(
   log('Setup complete.')
   deb('Logger is logging at debug level.')
   # Configure modules further down in this package.
-  edgecase_client.setup(
+  edgecase_article.setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
