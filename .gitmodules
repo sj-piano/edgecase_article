@@ -1,6 +1,6 @@
-[submodule "edgecase_article/submodules/stateless_gpg"]
-	path = edgecase_article/submodules/stateless_gpg
-	url = git@github.com:sj-piano/stateless_gpg.git
 [submodule "edgecase_article/submodules/datajack"]
 	path = edgecase_article/submodules/datajack
 	url = git@github.com:sj-piano/datajack.git
+[submodule "edgecase_article/submodules/stateless_gpg"]
+	path = edgecase_article/submodules/stateless_gpg
+	url = git@github.com:sj-piano/stateless_gpg.git
