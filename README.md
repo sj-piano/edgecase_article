@@ -1,5 +1,5 @@
-# edgecase_client
-Edgecase client for datafeed operations
+# edgecase_article
+Edgecase article tool
 
 Python 3.5.2
 
