@@ -13,6 +13,7 @@ from . import Article
 from . import SignedArticle
 from . import CheckpointArticle
 from . import DatafeedArticle
+from . import SignedDatafeedArticle
 
 
 
@@ -91,6 +92,8 @@ def verify(
     a = CheckpointArticle.CheckpointArticle.from_element(element=e)
   elif article_type == 'datafeed_article':
     a = DatafeedArticle.DatafeedArticle.from_element(element=e)
+  elif article_type == 'signed_datafeed_article':
+    a = SignedDatafeedArticle.SignedDatafeedArticle.from_element(element=e)
   else:
     msg = "No class available for article_type {}".format(repr(article_type))
     raise ValueError(msg)
@@ -102,6 +105,13 @@ def verify(
       author_name = a.author_name
       public_key = load_public_key(public_key_dir, author_name)
       a.verify_signature(public_key)
+    elif a.article_type == 'signed_datafeed_article':
+      datafeed_name = 'edgecase_datafeed'  # hardcoded.
+      public_key = load_public_key(public_key_dir, datafeed_name)
+      a.verify_signature(public_key)
+    else:
+      msg = "verifySignature not possible for article_type {}".format(repr(a.article_type))
+      raise ValueError(msg)
     msg = "Signature verified for {}".format(a.__class__.__name__)
     log(msg)
 
