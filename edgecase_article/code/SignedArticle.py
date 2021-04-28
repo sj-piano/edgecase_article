@@ -73,32 +73,6 @@ class SignedArticle(datajack.Element):
     return 'SignedArticle: [{t}]'.format(t=self.title)
 
 
-  def validate_format(self):
-    names = sorted(self.element_children_names)
-    expected = 'article author_signature'
-    expected = sorted(expected.split())
-    if names != expected:
-      msg = "Found these child elements: "
-      msg += ''.join(['\n- ' + x for x in names])
-      msg += '\nBut expected these child elements:'
-      msg += ''.join(['\n- ' + x for x in expected])
-      raise ValueError(msg)
-
-
-  def set_file_path(self, file_path):
-    v.validate_string(file_path)
-    self.file_path = file_path
-    file_name = os.path.basename(file_path)
-    self.file_name = file_name
-    # Also set these values for child elements.
-    self.article.file_path = file_path
-    self.article.file_name = file_name
-
-
-  def validate_file_name(self):
-    self.article.validate_file_name()
-
-
   @property
   def title(self):
     return self.article.title
@@ -132,6 +106,32 @@ class SignedArticle(datajack.Element):
     s += data
     s += '\n-----END PGP SIGNATURE-----\n'
     return s
+
+
+  def validate_format(self):
+    names = sorted(self.element_children_names)
+    expected = 'article author_signature'
+    expected = sorted(expected.split())
+    if names != expected:
+      msg = "Found these child elements: "
+      msg += ''.join(['\n- ' + x for x in names])
+      msg += '\nBut expected these child elements:'
+      msg += ''.join(['\n- ' + x for x in expected])
+      raise ValueError(msg)
+
+
+  def set_file_path(self, file_path):
+    v.validate_string(file_path)
+    self.file_path = file_path
+    file_name = os.path.basename(file_path)
+    self.file_name = file_name
+    # Also set these values for child elements.
+    self.article.file_path = file_path
+    self.article.file_name = file_name
+
+
+  def validate_file_name(self):
+    self.article.validate_file_name()
 
 
   def verify_signature(self, public_key):
