@@ -82,6 +82,7 @@ def validate_article_file_name(
     author_name = None,
     uri_title = None,
     ):
+  # Note: To validate its filename, a signed article will call this method on its internal article.
   # Example:
   # 2019-04-14_stjohn_piano_a_simple_api__json_input_output.txt
   validate_date(date)
