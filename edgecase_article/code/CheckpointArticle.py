@@ -95,7 +95,7 @@ class CheckpointArticle(datajack.Element):
 
   @property
   def block_height(self):
-    return self.get_branch_value('block/block_height')
+    return self.get_branch_value('block/block_height').strip()
 
 
   def validate_format(self):
@@ -111,7 +111,9 @@ class CheckpointArticle(datajack.Element):
     v.validate_string_is_whole_number(self.checkpoint_id)
     v.validate_title(self.title, article_type='checkpoint_article')
     v.validate_date(self.date)
-    names2 = sorted(self.get_one('block').element_children_names)
+    # Look at block child.
+    block_e = self.get_one('block')
+    names2 = sorted(block_e.element_children_names)
     expected2 = 'blockchain_name block_height'
     expected2 = sorted(expected2.split())
     if names2 != expected2:
@@ -120,6 +122,8 @@ class CheckpointArticle(datajack.Element):
       msg += '\nBut expected these child elements:'
       msg += ''.join(['\n- ' + x for x in expected2])
       raise ValueError(msg)
+    v.validate_blockchain_name(self.blockchain_name)
+    v.validate_string_is_whole_number(self.block_height)
 
 
   def set_file_path(self, file_path):
