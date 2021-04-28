@@ -12,6 +12,7 @@ from .. import submodules
 from . import Article
 from . import SignedArticle
 from . import CheckpointArticle
+from . import DatafeedArticle
 
 
 
@@ -88,6 +89,8 @@ def verify(
     a = SignedArticle.SignedArticle.from_element(element=e)
   elif article_type == 'checkpoint_article':
     a = CheckpointArticle.CheckpointArticle.from_element(element=e)
+  elif article_type == 'datafeed_article':
+    a = DatafeedArticle.DatafeedArticle.from_element(element=e)
   else:
     msg = "No class available for article_type {}".format(repr(article_type))
     raise ValueError(msg)
