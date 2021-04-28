@@ -60,6 +60,22 @@ def validate_datafeed_article_file_name(file_name):
 
 
 
+def validate_checkpoint_article_file_name(
+    file_name = None,
+    uri_title = None,
+    ):
+  # Example:
+  # checkpoint_0.txt
+  expected = uri_title + '.txt'
+  if file_name != expected:
+    msg = "Checkpoint uri_title is {}".format(repr(uri_title))
+    msg += ", so expected checkpoint filename {}".format(repr(expected))
+    msg += ", but instead found filename {}".format(repr(file_name))
+    raise ValueError(msg)
+
+
+
+
 def validate_article_file_name(
     file_name = None,
     date = None,
