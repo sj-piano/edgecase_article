@@ -1,7 +1,6 @@
 # Imports
 import os
 import logging
-import pkgutil
 
 
 
