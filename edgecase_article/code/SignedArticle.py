@@ -76,8 +76,9 @@ class SignedArticle(datajack.Element):
 
   def validate_format(self):
     names = sorted(self.element_children_names)
-    expected = 'article author_signature'.split()
-    if names != sorted(expected):
+    expected = 'article author_signature'
+    expected = sorted(expected.split())
+    if names != expected:
       msg = "Found these child elements: "
       msg += ''.join(['\n-' + x for x in names])
       msg += '\nBut expected these child elements:'
@@ -147,10 +148,3 @@ class SignedArticle(datajack.Element):
       msg = "Invalid signature"
       raise ValueError(msg)
     return result
-
-
-
-
-
-
-
