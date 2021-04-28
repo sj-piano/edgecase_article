@@ -171,6 +171,9 @@ def main():
     msg = "File not found at articlePath {}".format(repr(a.articlePath))
     raise FileNotFoundError(msg)
   if a.verifySignature:
+    if a.publicKeyDir is None:
+      msg = "To use verifySignature, need to specify a publicKeyDir."
+      raise ValueError(msg)
     if not isdir(a.publicKeyDir):
       msg = "Directory not found at publicKeyDir {}".format(repr(a.publicKeyDir))
       raise FileNotFoundError(msg)
