@@ -89,7 +89,7 @@ class Article(datajack.Element):
 
   @property
   def date(self):
-    return self.get_branch_value('date')
+    return self.get_value('date')
 
 
   @property
