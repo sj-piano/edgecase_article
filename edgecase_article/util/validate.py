@@ -114,6 +114,17 @@ def validate_article_file_name(
 
 
 
+def validate_datafeed_name(s):
+  # For now, this check is sufficient.
+  expected = 'edgecase_datafeed'
+  if s != expected:
+    msg = "Expected datafeed_name {}".format(repr(expected))
+    msg += ", but found {}".format(repr(s))
+    raise ValueError(msg)
+
+
+
+
 def validate_blockchain_name(s):
   # For now, this check is sufficient.
   expected = 'bitcoin'
