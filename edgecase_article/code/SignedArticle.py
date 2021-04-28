@@ -79,9 +79,9 @@ class SignedArticle(datajack.Element):
     expected = sorted(expected.split())
     if names != expected:
       msg = "Found these child elements: "
-      msg += ''.join(['\n-' + x for x in names])
+      msg += ''.join(['\n- ' + x for x in names])
       msg += '\nBut expected these child elements:'
-      msg += ''.join(['\n-' + x for x in expected])
+      msg += ''.join(['\n- ' + x for x in expected])
       raise ValueError(msg)
 
 

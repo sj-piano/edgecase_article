@@ -104,9 +104,9 @@ class CheckpointArticle(datajack.Element):
     expected = sorted(expected.split())
     if names != expected:
       msg = "Found these child elements: "
-      msg += ''.join(['\n-' + x for x in names])
+      msg += ''.join(['\n- ' + x for x in names])
       msg += '\nBut expected these child elements:'
-      msg += ''.join(['\n-' + x for x in expected])
+      msg += ''.join(['\n- ' + x for x in expected])
       raise ValueError(msg)
     v.validate_string_is_whole_number(self.checkpoint_id)
     v.validate_title(self.title, article_type='checkpoint_article')
@@ -116,9 +116,9 @@ class CheckpointArticle(datajack.Element):
     expected2 = sorted(expected2.split())
     if names2 != expected2:
       msg = "For child 'block', found these child elements: "
-      msg += ''.join(['\n-' + x for x in names2])
+      msg += ''.join(['\n- ' + x for x in names2])
       msg += '\nBut expected these child elements:'
-      msg += ''.join(['\n-' + x for x in expected2])
+      msg += ''.join(['\n- ' + x for x in expected2])
       raise ValueError(msg)
 
 
