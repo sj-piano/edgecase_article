@@ -114,6 +114,17 @@ def validate_article_file_name(
 
 
 
+def validate_blockchain_name(s):
+  # For now, this check is sufficient.
+  expected = 'bitcoin'
+  if s != expected:
+    msg = "Expected blockchain_name {}".format(repr(expected))
+    msg += ", but found {}".format(repr(s))
+    raise ValueError(msg)
+
+
+
+
 def validate_signed_by_author(s):
   permitted = 'no yes'.split()
   if s not in permitted:
