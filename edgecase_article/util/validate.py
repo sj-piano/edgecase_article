@@ -144,18 +144,21 @@ def validate_signed_by_author(s):
 
 
 
-def validate_date(d):
+def validate_date(d, name=None, location=None, kind='date'):
   # Example: 2017-06-28
   if len(d) != 10:
-    msg = 'Date ({}) must be exactly 10 characters.'.format(repr(d))
+    msg = "which is {} chars, but must be 10 chars.".format(len(d))
+    msg = build_error_msg(msg, d, name, location, kind)
     raise ValueError(msg)
   for i in [4, 7]:
     if d[i] != '-':
-      msg = "Char {i} [{c}] in date {d} must be '-'.".format(i=i, c=d[i], d=repr(d))
+      msg = "where char {i} ('{c}') in {d} must be a hyphen ('-'), but isn't.".format(i=i, c=d[i], d=repr(d))
+      msg = build_error_msg(msg, d, name, location, kind)
       raise ValueError(msg)
   d2 = d[:4] + d[5:7] + d[8:]
   if not d2.isdigit():
-    msg = 'Date ({}), with hyphens removed, must contain only digits.'.format(repr(d))
+    msg = "where, once hyphens are removed, the date must contain only digits, but doesn't."
+    msg = build_error_msg(msg, d, name, location, kind)
     raise ValueError(msg)
 
 
