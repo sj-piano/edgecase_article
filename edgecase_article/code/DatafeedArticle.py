@@ -76,10 +76,10 @@ class DatafeedArticle(datajack.Element):
       e.article = SignedArticle.SignedArticle.from_element(e2)
     elif e.child_article_type == 'checkpoint_article':
       e.article = CheckpointArticle.CheckpointArticle.from_element(e2)
-    e.validate_format()
     e.article_type = 'datafeed_article'
     e.file_path = None
     e.file_name = None
+    e.validate_format()
     return e
 
 
@@ -109,7 +109,7 @@ class DatafeedArticle(datajack.Element):
 
   @property
   def uri_title(self):
-    return util.misc.uri_title(self.title)
+    return self.article.uri_title
 
 
   @property

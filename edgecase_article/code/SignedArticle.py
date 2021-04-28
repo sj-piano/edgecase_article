@@ -60,12 +60,12 @@ class SignedArticle(datajack.Element):
   def from_element(cls, element):
     e = element
     e.__class__ = SignedArticle
-    e.validate_format()
+    e.article = Article.Article.from_element(e.get_one('article'))
+    e.author_signature = e.get_one('author_signature')
     e.article_type = 'signed_article'
     e.file_path = None
     e.file_name = None
-    e.article = Article.Article.from_element(e.get_one('article'))
-    e.author_signature = e.get_one('author_signature')
+    e.validate_format()
     return e
 
 
@@ -80,7 +80,7 @@ class SignedArticle(datajack.Element):
 
   @property
   def uri_title(self):
-    return util.misc.uri_title(self.title)
+    return self.article.uri_title
 
 
   @property

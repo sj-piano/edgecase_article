@@ -57,10 +57,10 @@ class CheckpointArticle(datajack.Element):
   def from_element(cls, element):
     e = element
     e.__class__ = CheckpointArticle
-    e.validate_format()
     e.article_type = 'checkpoint_article'
     e.file_path = None
     e.file_name = None
+    e.validate_format()
     return e
 
 
