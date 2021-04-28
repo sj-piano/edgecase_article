@@ -52,10 +52,67 @@ def build_error_msg(msg, value, name=None, location=None, kind=None):
 
 
 
-def validate_datafeed_article_file_name(file_name):
-  # Example:
+def validate_datafeed_article_file_name(
+    file_name = None,
+    date = None,
+    article = None,
+    ):
+  # Examples:
   # 2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
-  pass
+  # 2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt
+  datafeed_name = 'edgecase_datafeed'
+  child_article_type = article.article_type
+  location = 'validate.py::validate_datafeed_article_file_name'
+  validate_date(date)
+  file_name, ext = os.path.splitext(file_name)
+  if ext != '.txt':
+    raise ValueError
+  d = file_name[:10]
+  validate_date(d, 'date (in file name)', location)
+  if d != date:
+    msg = "Date in datafeed article filename ({}) differs from date in article ({}).".format(d, date)
+    raise ValueError(msg)
+  if file_name[10] != '_':
+    raise ValueError
+  n = len(datafeed_name)
+  dn = file_name[11:11+n]
+  if dn != datafeed_name:
+    raise ValueError
+  i = 11+n
+  expected = '_article_'
+  n2 = len(expected)
+  i2 = i + n2
+  if file_name[i:i2] != expected:
+    raise ValueError
+  section = file_name[i2:]
+  # Example section:
+  # 1_2017-06-28_stjohn_piano_viewpoint
+  if '_' not in section:
+    raise ValueError
+  # Confirming that an underscore is present allows us to now split by underscore.
+  article_id = section.split('_')[0]
+  validate_string_is_whole_number(article_id)
+  n3 = len(article_id + '_')
+  remaining = section[n3:]
+  # The remaining section is the child article's filename.
+  child_file_name = remaining + '.txt'
+  # Example child_file_name:
+  # 2017-06-28_stjohn_piano_viewpoint.txt
+  # Select a validation function based on the child article type.
+  if child_article_type in 'article signed_article'.split():
+    validate_article_file_name(
+      file_name = child_file_name,
+      date = article.date,
+      author_name = article.author_name,
+      uri_title = article.uri_title,
+    )
+  elif child_article_type == 'checkpoint_article':
+    validate_checkpoint_article_file_name(
+      file_name = child_file_name,
+      uri_title = article.uri_title,
+    )
+  else:
+    raise ValueError
 
 
 
