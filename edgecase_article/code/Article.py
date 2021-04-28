@@ -98,9 +98,14 @@ class Article(datajack.Element):
 
 
   def validate_format(self):
-    expected_names = 'title author_name date signed_by_author content'.split()
-    if sorted(self.element_children_names) != sorted(expected_names):
-      msg = "Did not find child elements with expected names."
+    names = sorted(self.element_children_names)
+    expected = 'title author_name date signed_by_author content'
+    expected = sorted(expected.split())
+    if names != expected:
+      msg = "Found these child elements: "
+      msg += ''.join(['\n-' + x for x in names])
+      msg += '\nBut expected these child elements:'
+      msg += ''.join(['\n-' + x for x in expected])
       raise ValueError(msg)
     v.validate_title(self.title, article_type='article')
     v.validate_author_name(self.author_name)
