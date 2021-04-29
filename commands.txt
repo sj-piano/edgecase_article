@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+[normal]
+./cli.py --task verify --logLevel info
+
+
+[verify content]
+./cli.py --task verify --logLevel info --verifyContent
+
+
+[verify filename]
+./cli.py --task verify --logLevel info --verifyFileName
+
+
+[specify the article]
+./cli.py --task verify --logLevel info --verifyFileName --articlePath new_articles/2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
+
+
+[verify signature]
+./cli.py --task verify --logLevel info --verifyFileName --articlePath new_articles/2017-06-28_stjohn_piano_viewpoint.txt --verifySignature --publicKeyDir ../public_keys
+
+
+
+
+Types of article:
+
+./cli.py --task verify --logLevel info --articlePath new_articles/article.txt
+
+./cli.py --task verify --logLevel info --articlePath new_articles/signed_article.txt
+
+./cli.py --task verify --logLevel info --articlePath new_articles/checkpoint_article.txt
+
+./cli.py --task verify --logLevel info --articlePath new_articles/datafeed_article.txt
+
+./cli.py --task verify --logLevel info --articlePath new_articles/signed_datafeed_article.txt
+
+
+
+SignedDatafeedArticle:
+
+[verify filename]
+./cli.py --task verify --logLevel info --articlePath new_articles/2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt --verifyFileName
+
+
+[verify signature]
+./cli.py --task verify --logLevel info --articlePath new_articles/2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt --verifyFileName --verifySignature --publicKeyDir ../public_keys
+
+
+
+
+pycodestyle --filename=*.py --exclude edgecase_article/submodules
+
+
+
+pycodestyle edgecase_article/code/Article.py --statistics
+
+
+
+
+
+
+
