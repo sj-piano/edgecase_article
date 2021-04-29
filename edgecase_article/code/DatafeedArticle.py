@@ -116,6 +116,11 @@ class DatafeedArticle(datajack.Element):
     return self.get_branch_value('date').strip()
 
 
+  @property
+  def content_element(self):
+    return self.article.get_one('content')
+
+
   def validate_format(self):
     names = sorted(self.element_children_names)
     expected = 'datafeed_name datafeed_article_id date previous_checkpoint'

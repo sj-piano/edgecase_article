@@ -96,6 +96,11 @@ class Article(datajack.Element):
     return self.get_value('signed_by_author')
 
 
+  @property
+  def content_element(self):
+    return self.get_one('content')
+
+
   def validate_format(self):
     names = sorted(self.element_children_names)
     expected = 'title author_name date signed_by_author content'

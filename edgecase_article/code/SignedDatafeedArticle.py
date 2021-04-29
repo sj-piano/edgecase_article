@@ -98,6 +98,11 @@ class SignedDatafeedArticle(datajack.Element):
     return s
 
 
+  @property
+  def content_element(self):
+    return self.article.get_one('content')
+
+
   def validate_format(self):
     names = sorted(self.element_children_names)
     expected = 'datafeed_article datafeed_signature'

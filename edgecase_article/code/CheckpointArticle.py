@@ -97,6 +97,11 @@ class CheckpointArticle(datajack.Element):
     return self.get_branch_value('block/block_height').strip()
 
 
+  @property
+  def content_element(self):
+    return self.get_one('content')
+
+
   def validate_format(self):
     names = sorted(self.element_children_names)
     expected = 'checkpoint_id title date block content'
