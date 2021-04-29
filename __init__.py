@@ -52,8 +52,7 @@ def setup(
     log_timestamp = log_timestamp,
     log_filepath = log_filepath,
   )
-  log('Setup complete.')
-  deb('Logger is logging at debug level.')
+  deb('Setup complete.')
   # Configure modules further down in this package.
   edgecase_article.setup(
     log_level = log_level,
