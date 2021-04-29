@@ -107,7 +107,7 @@ def main():
 
   # Technically, this should be "validateFileName", but it seems more user-friendly to always use "verify" in the options.
   parser.add_argument(
-    '-c', '--verifyFileName',
+    '-n', '--verifyFileName',
     action='store_true',
     help="Checks that the article's filename is in the proper format.",
   )
@@ -116,6 +116,12 @@ def main():
     '-v', '--verifySignature',
     action='store_true',
     help="Checks that the article's signature(s) are valid.",
+  )
+
+  parser.add_argument(
+    '-c', '--verifyContent',
+    action='store_true',
+    help="Validates the content element within an article.",
   )
 
   parser.add_argument(
@@ -262,9 +268,9 @@ def verify(a):
     article_type = a.articleType,
     verify_file_name = a.verifyFileName,
     verify_signature = a.verifySignature,
+    verify_content = a.verifyContent,
     public_key_dir = a.publicKeyDir,
   )
-
 
 
 
