@@ -2,6 +2,8 @@
 import os
 import logging
 import pkgutil
+import sys
+import traceback
 
 
 
@@ -69,7 +71,13 @@ def verify(
   v.validate_boolean(verify_signature)
   if article_type != 'unspecified':
     v.validate_article_type(article_type)
-  e = datajack.Element.from_file(article_path)
+  try:
+    e = datajack.Element.from_file(article_path)
+  except Exception as ex:
+    traceback.print_exception(type(ex), ex, ex.__traceback__) # !
+    msg = "\nError summary: Unable to parse file into an EML Element."
+    msg += "\n- File path: {}".format(article_path)
+    stop(msg)
   msg = "File {} contains a valid Element.".format(article_path)
   log(msg)
   v.validate_article_type(e.name, 'e.name (element name)', 'verify.py')
