@@ -102,7 +102,7 @@ def main():
   parser.add_argument(
     '-p', '--articlePath',
     help="Path to article file (default: '%(default)s').",
-    default='new_articles/signed_article.txt',
+    default='new_articles/new_article.txt',
   )
 
   # Technically, this should be "validateFileName", but it seems more user-friendly to always use "verify" in the options.
