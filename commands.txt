@@ -22,7 +22,7 @@
 
 
 [verify signature]
-./cli.py --task verify --logLevel info --verifyFileName --articlePath new_articles/2017-06-28_stjohn_piano_viewpoint.txt --verifySignature --publicKeyDir ../public_keys
+./cli.py --task=verify --logLevel=info --articlePath=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --publicKeyDir=../public_keys --verifySignature
 
 
 
