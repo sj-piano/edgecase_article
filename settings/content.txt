@@ -13,16 +13,28 @@ element_trees: Certain elements (e.g. "link") have children / descendants that m
 
 
 <element_names>
+bold
+bold_lines
 chat
+code
+code_lines
+code_title
 data
 data_lines
+datablock
+datablock_lines
 footnote
 footnote_lines
 italic
 italic_lines
+language
 latin-1
+lined_code
+line_numbers
 link
 name
+preserve_whitespace
+preserve_whitespace_lines
 reference
 separator
 text
@@ -30,7 +42,15 @@ type
 </element_names>
 
 
+
+
+
+
+
+
 <element_trees>
+
+
 
 
 <chat>
@@ -40,14 +60,60 @@ type
 </chat>
 
 
+
+
 <link>
-<type></type>
+<type>hyperlink</type>
 <reference></reference>
 <text></text>
 </link>
 
+<link>
+<type>article</type>
+<article_title></article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id></datafeed_article_id>
+<text></text>
+</link>
+
+<link>
+<type>asset</type>
+<filename></filename>
+<text></text>
+<sha256></sha256>
+</link>
+
+<link>
+<type>asset_of_another_article</type>
+<article_title></article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id></datafeed_article_id>
+<filename></filename>
+<text></text>
+<sha256></sha256>
+</link>
+
+
+
+
+<lined_code>
+<data_lines>
+</data_lines>
+</lined_code>
+
+
+
+
+
+
 
 </element_trees>
+
+
+
+
+
+
 
 
 </settings>
