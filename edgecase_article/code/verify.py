@@ -111,6 +111,13 @@ def verify(
       datafeed_name = 'edgecase_datafeed'  # hardcoded.
       public_key = load_public_key(public_key_dir, datafeed_name)
       a.verify_signature(public_key)
+      # If it contains a signed article, then verify its signature also.
+      if a.article.article_type == 'signed_article':
+        author_name = a.article.author_name
+        public_key2 = load_public_key(public_key_dir, author_name)
+        a.article.verify_signature(public_key2)
+        msg = "Signature verified for internal {}".format(a.article.__class__.__name__)
+        log(msg)
     else:
       msg = "verifySignature not possible for article_type {}".format(repr(a.article_type))
       raise ValueError(msg)
