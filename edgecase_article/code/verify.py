@@ -69,6 +69,8 @@ def verify(
   v.validate_string(article_type, 'article_type', 'verify.py')
   v.validate_boolean(verify_file_name)
   v.validate_boolean(verify_signature)
+  v.validate_boolean(verify_content)
+  v.validate_string(public_key_dir)
   if article_type != 'unspecified':
     v.validate_article_type(article_type)
   try:
