@@ -175,7 +175,7 @@ def verify(
           raise ValueError(msg)
     msg = "Content element: All descendant elements have been checked against the list of permitted tree structures."
     log(msg)
-
+  return a
 
 
 
