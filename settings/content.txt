@@ -35,6 +35,7 @@ link
 name
 preserve_whitespace
 preserve_whitespace_lines
+quote_lines
 reference
 separator
 text
