@@ -21,8 +21,14 @@
 ./cli.py --task verify --logLevel info --verifyFileName --articlePath new_articles/2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
 
 
+[sign the article]
+./cli.py --task sign --logLevel info --articlePath new_articles/2021-01-05_stjohn_piano_blockchain_companies.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --outputDir=.
+
+
 [verify signature]
 ./cli.py --task=verify --logLevel=info --articlePath=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --publicKeyDir=../public_keys --verifySignature
+
+
 
 
 
