@@ -70,7 +70,8 @@ def verify(
   v.validate_boolean(verify_file_name)
   v.validate_boolean(verify_signature)
   v.validate_boolean(verify_content)
-  v.validate_string(public_key_dir)
+  # Don't validate public_key_dir. We may be only verifying an article.
+  #v.validate_string(public_key_dir)
   if article_type != 'unspecified':
     v.validate_article_type(article_type)
   try:
