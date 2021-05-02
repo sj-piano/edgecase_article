@@ -8,6 +8,7 @@ import logging
 from .. import util
 from . import hello
 from . import verify
+from . import sign
 
 
 
@@ -46,6 +47,12 @@ def setup(
     log_filepath = log_filepath,
   )
   verify.setup(
+    log_level = log_level,
+    debug = debug,
+    log_timestamp = log_timestamp,
+    log_filepath = log_filepath,
+  )
+  sign.setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
