@@ -64,31 +64,41 @@ def validate_datafeed_article_file_name(
   child_article_type = article.article_type
   location = 'validate.py::validate_datafeed_article_file_name'
   validate_date(date)
+  file_name_original = file_name
   file_name, ext = os.path.splitext(file_name)
   if ext != '.txt':
-    raise ValueError
+    msg = "Datafeed article filename ({}) does not have extension '.txt'.".format(file_name_original)
+    raise ValueError(msg)
   d = file_name[:10]
   validate_date(d, 'date (in file name)', location)
   if d != date:
-    msg = "Date in datafeed article filename ({}) differs from date in article ({}).".format(d, date)
+    msg = "Date ('{}') in datafeed article filename ({}) differs from date in article ('{}').".format(d, file_name_original, date)
     raise ValueError(msg)
   if file_name[10] != '_':
-    raise ValueError
+    msg = "In datafeed article filename ('{}'), expected char 11 to be an underscore ('_').".format(file_name_original)
+    raise ValueError(msg)
   n = len(datafeed_name)
   dn = file_name[11:11+n]
   if dn != datafeed_name:
-    raise ValueError
+    msg = "Datafeed name ('{}') in datafeed article filename ({}) is not '{}'.".format(dn, file_name_original, datafeed_name)
+    raise ValueError(msg)
   i = 11+n
   expected = '_article_'
   n2 = len(expected)
   i2 = i + n2
   if file_name[i:i2] != expected:
-    raise ValueError
+    msg = "In datafeed article filename ({f}), expected that chars {a}-{b} would be '{c}', not '{d}'.".format(
+      f=file_name_original, a=i+1, b=i2+1, c=expected, d=file_name[i:i2]
+    )
+    raise ValueError(msg)
   section = file_name[i2:]
   # Example section:
   # 1_2017-06-28_stjohn_piano_viewpoint
   if '_' not in section:
-    raise ValueError
+    msg = "In datafeed article filename ({f}), in article filename section ({f2}), did not find an underscore ('_').".format(
+      f=file_name_original, f2=section
+    )
+    raise ValueError(msg)
   # Confirming that an underscore is present allows us to now split by underscore.
   article_id = section.split('_')[0]
   validate_string_is_whole_number(article_id)
@@ -112,7 +122,8 @@ def validate_datafeed_article_file_name(
       uri_title = article.uri_title,
     )
   else:
-    raise ValueError
+    msg = "Datafeed article contains an unrecognised article type: {}".format(child_article_type)
+    raise ValueError(msg)
 
 
 
@@ -145,20 +156,24 @@ def validate_article_file_name(
   validate_date(date)
   validate_author_name(author_name)
   validate_uri_title(uri_title)
+  file_name_original = file_name
   file_name, ext = os.path.splitext(file_name)
   if ext != '.txt':
-    raise ValueError
+    msg = "Article filename ({}) does not have extension '.txt'.".format(file_name_original)
+    raise ValueError(msg)
   d = file_name[:10]
   validate_date(d)
   if d != date:
-    msg = "Date in filename ({}) differs from date in article ({}).".format(d, date)
+    msg = "Date ('{}') in article filename ({}) differs from date in article ('{}').".format(d, file_name_original, date)
     raise ValueError(msg)
   if file_name[10] != '_':
-    raise ValueError
+    msg = "In article filename ('{}'), expected char 11 to be an underscore ('_').".format(file_name_original)
+    raise ValueError(msg)
   n = len(author_name)
   an = file_name[11:11+n]
   if an != author_name:
-    raise ValueError
+    msg = "Author name ('{}') in datafeed article filename ({}) is not the author name found within the article ('{}').".format(an, file_name_original, author_name)
+    raise ValueError(msg)
   i = 11+n
   if file_name[i] != '_':
     msg = 'Char between author_name and uri_title (index {i}, in this case) must be an underscore. Instead, it is {c}.'.format(i=i, c=file_name[i])
@@ -196,7 +211,8 @@ def validate_blockchain_name(s):
 def validate_signed_by_author(s):
   permitted = 'no yes'.split()
   if s not in permitted:
-    raise ValueError
+    msg = "Expected a 'signed_by_author' value in the list {}. Instead, found '{}'.".format(permitted, s)
+    raise ValueError(msg)
 
 
 
@@ -428,7 +444,3 @@ def validate_string(s, name=None, location=None, kind='string'):
 
 
 s = validate_string
-
-
-
-
