@@ -16,6 +16,7 @@ from . import SignedArticle
 from . import CheckpointArticle
 from . import DatafeedArticle
 from . import SignedDatafeedArticle
+from . import keys
 
 
 
@@ -116,16 +117,16 @@ def verify(
   if verify_signature:
     if a.article_type == 'signed_article':
       author_name = a.author_name
-      public_key = load_public_key(public_key_dir, author_name)
+      public_key = keys.load_public_key(public_key_dir, author_name)
       a.verify_signature(public_key)
     elif a.article_type == 'signed_datafeed_article':
       datafeed_name = 'edgecase_datafeed'  # hardcoded.
-      public_key = load_public_key(public_key_dir, datafeed_name)
+      public_key = keys.load_public_key(public_key_dir, datafeed_name)
       a.verify_signature(public_key)
       # If it contains a signed article, then verify its signature also.
       if a.article.article_type == 'signed_article':
         author_name = a.article.author_name
-        public_key2 = load_public_key(public_key_dir, author_name)
+        public_key2 = keys.load_public_key(public_key_dir, author_name)
         a.article.verify_signature(public_key2)
         msg = "Signature verified for internal {}".format(a.article.__class__.__name__)
         log(msg)
@@ -177,24 +178,6 @@ def verify(
     msg = "Content element: All descendant elements have been checked against the list of permitted tree structures."
     log(msg)
   return a
-
-
-
-
-def load_public_key(public_key_dir, author_name):
-  # Example public key file name:
-  # stjohn_piano_public_key.txt
-  pk_ext = '_public_key.txt'
-  items = os.listdir(public_key_dir)
-  key_file_names = [x for x in items if os.path.splitext(x)[1] == '.txt']
-  author_names = [x.replace(pk_ext, '') for x in key_file_names]
-  if author_name not in author_names:
-    msg = "Did not find any public key with author name {} in public key directory {}.".format(repr(author_name), repr(public_key_dir))
-    raise FileNotFoundError(msg)
-  key_file_name = author_name + pk_ext
-  key_file = os.path.join(public_key_dir, key_file_name)
-  public_key = open(key_file).read().strip()
-  return public_key
 
 
 
