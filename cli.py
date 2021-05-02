@@ -35,6 +35,7 @@ gpg = stateless_gpg.gpg
 # rearranged much more easily.
 # - I use "validate" to mean "check that this data is in the expected format".
 # - I use "verify" to mean that "check that a mathematical operation produces the expected result". Example: Check a digital signature.
+# - An article and the corresponding signed article have the same filenames. To distinguish between them, a newly created signed article has the additional extension '.signed'. It will fail filename verification but will pass all other checks. This extra extension means that an article and its signed equivalent can exist in the same directory.
 
 
 
@@ -137,6 +138,12 @@ def main():
   )
 
   parser.add_argument(
+    '-o', '--outputDir',
+    help="Specify an output directory. (default: '%(default)s').",
+    default=None,
+  )
+
+  parser.add_argument(
     '-l', '--logLevel', type=str,
     choices=['debug', 'info', 'warning', 'error'],
     help="Choose logging level (default: '%(default)s').",
@@ -182,6 +189,18 @@ def main():
     if not isdir(a.publicKeyDir):
       msg = "Directory not found at publicKeyDir {}".format(repr(a.publicKeyDir))
       raise FileNotFoundError(msg)
+  if a.task == 'sign':
+    if not a.publicKeyDir:
+      msg = "To use the 'sign' task, need to specify a publicKeyDir."
+      raise ValueError(msg)
+    if not isdir(a.publicKeyDir):
+      msg = "Directory not found at publicKeyDir {}".format(repr(a.publicKeyDir))
+    if not a.privateKeyDir:
+      msg = "To use the 'sign' task, need to specify a privateKeyDir."
+      raise ValueError(msg)
+    if not isdir(a.privateKeyDir):
+      msg = "Directory not found at privateKeyDir {}".format(repr(a.privateKeyDir))
+      raise FileNotFoundError(msg)
 
   # Setup
   setup(
@@ -194,7 +213,7 @@ def main():
   # Run top-level function (i.e. the appropriate task).
   tasks = """
 hello hello2 hello3 hello4 hello5
-verify
+verify sign
 """.split()
   if a.task not in tasks:
     print("Unrecognised task: {}".format(a.task))
@@ -271,6 +290,33 @@ def verify(a):
     verify_content = a.verifyContent,
     public_key_dir = a.publicKeyDir,
   )
+
+
+
+
+def sign(a):
+  signed_article = edgecase_article.code.sign.sign(
+    article_path = a.articlePath,
+    public_key_dir = a.publicKeyDir,
+    private_key_dir = a.privateKeyDir,
+  )
+  # By default, write the output file to the same directory as the original article.
+  output_file = signed_article.file_path + '.signed'
+  output_dir = a.outputDir
+  if output_dir:
+    # If an output directory was specified, write the file there instead.
+    if not isdir(output_dir):
+      msg = "Output dir ({}) not found.".format(output_dir)
+      raise FileNotFoundError(msg)
+    output_file_name = signed_article.file_name + '.signed'
+    output_file = os.path.join(output_dir, output_file_name)
+  if isfile(output_file):
+    msg = "Error: Output file ({}) already exists.".format(output_file)
+    stop(msg)
+  with open(output_file, 'w') as f:
+    f.write(signed_article.data + '\n')
+  msg = "Signed article written to {}".format(output_file)
+  log(msg)
 
 
 
