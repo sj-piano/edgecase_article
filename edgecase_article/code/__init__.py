@@ -46,13 +46,13 @@ def setup(
     log_timestamp = log_timestamp,
     log_filepath = log_filepath,
   )
-  verify.setup(
+  sign.setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
     log_filepath = log_filepath,
   )
-  sign.setup(
+  verify.setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
