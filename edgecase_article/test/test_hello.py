@@ -37,7 +37,7 @@ def setup_module(pytestconfig):
 # -- pytest3 -q edgecase_article/test/test_hello.py
 # - Print log output in real-time during a single test:
 # -- pytest3 -s --log-cli-level=INFO edgecase_article/test/test_hello.py::test_hello
-# --- Note the use of the pytest -s option. This will cause print statements in the test code itself to also produce output.
+# --- Note the use of the pytest -s option. This will also cause print statements in the test code itself to produce output.
 
 
 
