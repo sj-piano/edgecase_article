@@ -46,6 +46,12 @@ def setup(
     log_timestamp = log_timestamp,
     log_filepath = log_filepath,
   )
+  keys.setup(
+    log_level = log_level,
+    debug = debug,
+    log_timestamp = log_timestamp,
+    log_filepath = log_filepath,
+  )
   sign.setup(
     log_level = log_level,
     debug = debug,
