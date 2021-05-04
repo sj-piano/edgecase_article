@@ -78,7 +78,7 @@ def verify(
   try:
     e = datajack.Element.from_file(article_path)
   except Exception as ex:
-    traceback.print_exception(type(ex), ex, ex.__traceback__) # !
+    traceback.print_exception(type(ex), ex, ex.__traceback__)
     msg = "\nError summary: Unable to parse file into an EML Element."
     msg += "\n- File path: {}".format(article_path)
     stop(msg)
