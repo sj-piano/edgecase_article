@@ -239,7 +239,7 @@ def validate_date(d, name=None, location=None, kind='date'):
 
 def validate_author_name(n):
   # Example: stjohn_piano
-  permitted = string.ascii_lowercase + '_'
+  permitted = string.ascii_lowercase + string.digits + '_'
   for c in n:
     if c not in permitted:
       msg = 'Character [{}] not permitted in article author_name.'.format(repr(c))
