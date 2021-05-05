@@ -100,7 +100,7 @@ class SignedDatafeedArticle(datajack.Element):
 
   @property
   def content_element(self):
-    return self.article.get_one('content')
+    return self.article.content_element
 
 
   def validate_format(self):
