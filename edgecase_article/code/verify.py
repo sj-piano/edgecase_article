@@ -71,8 +71,6 @@ def verify(
   v.validate_boolean(verify_file_name)
   v.validate_boolean(verify_signature)
   v.validate_boolean(verify_content)
-  # Don't validate public_key_dir. We may be only verifying an article.
-  #v.validate_string(public_key_dir)
   if article_type != 'unspecified':
     v.validate_article_type(article_type)
   try:
@@ -115,6 +113,7 @@ def verify(
     msg = "File name verified for {}".format(a.__class__.__name__)
     log(msg)
   if verify_signature:
+    v.validate_string(public_key_dir)
     if a.article_type == 'signed_article':
       author_name = a.author_name
       public_key = keys.load_public_key(public_key_dir, author_name)
