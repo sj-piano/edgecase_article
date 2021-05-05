@@ -252,7 +252,7 @@ def validate_uri_title(u):
   # Examples:
   # stalky__co__by_rudyard_kipling_in_ambush
   # recipe_for_installing_kafka_2_5_0_as_a_systemd_service_on_ubuntu_16_04
-  permitted = string.ascii_lowercase + '_'
+  permitted = string.ascii_lowercase + string.digits + '_'
   for c in u:
     if c not in permitted:
       msg = 'Character [{}] not permitted in uri_title.'.format(repr(c))
