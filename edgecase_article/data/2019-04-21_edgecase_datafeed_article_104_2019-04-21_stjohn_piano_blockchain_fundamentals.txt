@@ -1,0 +1,136 @@
+<signed_datafeed_article>
+<datafeed_article>
+<datafeed_name>edgecase_datafeed</datafeed_name>
+<datafeed_article_id>104</datafeed_article_id>
+<date>2019-04-21
+<note>This is the date at the time of creation of this datafeed article. A checkpoint article containing a hash of this datafeed article may be created on this date or at a later date.</note>
+</date>
+<previous_checkpoint>
+<datafeed_article_id>62</datafeed_article_id>
+<checkpoint_id>7</checkpoint_id>
+<date>2018-10-01</date>
+<transaction>
+<blockchain_name>bitcoin</blockchain_name>
+<transaction_id>8b53df721231f95e4e1843a74fd560fcfd6512d2e258ba1a2fc0472a8230b467</transaction_id>
+<block_height>543904</block_height>
+<source_address>33jEsi2kqFwMtagFqBuHuzCeYPVdDkR8zP</source_address>
+<destination_address>1DaAgMor4bZiAuLgZWdz4W5RkoYVQFvDKp</destination_address>
+</transaction>
+</previous_checkpoint>
+<signed_article>
+<article>
+<title>Blockchain_Fundamentals</title>
+<author_name>stjohn_piano</author_name>
+<date>2019-04-21</date>
+<signed_by_author>yes</signed_by_author>
+<content>
+
+
+
+
+Blockchain is a powerful new technology. It can be used to tackle several difficult problems:
+
+1) Distributed data storage and synchronisation
+
+2) Auditable data history
+
+3) Transaction authentication
+
+
+Various solutions to these problems are already in use, but blockchain weaves these solutions into a single tool. 
+
+
+There is another problem, a very difficult one:
+
+4) Data synchronisation between untrusted counterparties <footnote_lines>
+People often say that Bitcoin permits agreement between "unknown" counterparties, but this is only because people are used to thinking of human faces, names, voices, etc as identities. In the Bitcoin world, public keys are identities, and these are in fact known. When someone adds a new transaction to the blockchain, the public key with which they make the signature is included. This must be so, else other parties could not verify the signature. So, in Bitcoin, counterparties are known, but not necessarily trusted.
+</footnote_lines>
+
+
+Usually, problem 4 is solved by some aspect of the physical universe that humans are unable to ignore. Examples: Gold bars (we agree that gold is valuable because it is scarce and hard to counterfeit), physical force (we agree to pay you tribute because your army is much larger than ours).
+
+
+The first blockchain, Bitcoin, solves all four of these problems at the same time. Problem 4 is solved very expensively via the enormous expenditure of computer processing power. The result of solving these problems is that the Bitcoin blockchain allows its users to have a distributed, synchronised, auditable, authenticated, and trustless record of ownership of bitcoin amounts. 
+
+
+Bitcoin is a public blockchain. Anyone can join it (add processing power to the network) and use it (create transactions that alter its data). 
+
+
+The normal existing solutions to problems 1-3 are:
+- For problem 1: Backup systems that regularly copy data from a database and store it in one or more secondary databases. Hashes or hash trees are used to check synchronisation. Examples: Archive all the code files in a software project and transfer the archive to another system. Dump the contents of a PostgreSQL database to a file and transfer the file to another system. 
+- For problem 2: Patch systems, where data is never deleted, but only altered by applying patches to the existing data in a linear sequence. The entire history of the data can be replayed from the beginning. Examples: Git version control, continuous archival of PostgreSQL write-ahead logs. 
+- For problem 3: An authentication system, in which transactions (i.e. changes to the data) are linked to an identity. Examples: Digital signatures (signing the transaction with public-key cryptography), username + password access to a remote system on which the transaction is created. Note that username + password access to Internet-connected systems functions on top of a digital signature system. 
+
+
+Some organisations may want to operate private blockchains. These can be used to solve any combination of problems 1-3, or all of them together. 
+
+
+A private blockchain could be useful when:
+- The organisation needs to store and manage important data.
+- The organisation is large - not all of its agents know each personally. 
+- The organisation has multiple branches that need to have a single consistent data record so that they can cooperate effectively. 
+- The history of a particular datum must be completely replayable from the beginning.
+- For any change to the data, it is necessary to know which agent within the organisation made it.
+
+
+The organisation will need to operate a web of trust, in order to track the identities of the organisation's agents, to control their ability to add new transactions to the blockchain, and to audit their decisions. 
+
+
+The blockchain design could vary somewhat, depending on the application. In some cases, it may only be necessary to store a year's history for data, rather than the entire history. 
+
+
+If the application produces a lot of data very rapidly, this is not a good candidate for a private blockchain. A blockchain-based solution generally be slower and more resource-intensive than a standard solution. 
+
+
+A further consideration is the permissions system that will control access to the data on the private blockchain. There may be some transparency advantage from allowing anyone on the Internet to view the data, but this can be expensive. 
+
+
+Example situations in which a private blockchain could be the right solution:
+- Tracking shipping containers as they move between ships, ports, and countries. A port agent would create a transaction that stated that a particular container had arrived in that port.
+- A land registry. The blockchain would be an updateable record of who owned which property. 
+- A contract archive. It might be useful for all legal firms within a particular jurisdiction to use a single distributed record of important contracts. 
+
+
+
+
+
+
+
+
+
+
+</content>
+</article>
+<author_signature>
+iQIcBAABCgAGBQJcvMs3AAoJEC8RP+HmG9MXGNEP/AtbUIyLOcJZSAuRtl1BtVWl
+2QyhB55/CD4jKdaBZAgXToZoDRozylk7aoiA2JbkL8c/Tu40KZhwM5g7ruD93KQX
+WRiSf7sGIESVsk5PO0DCANXuJuC+ee51j/XefVvY9GwAxdd7YhuTVERaFjB4ce6Q
+WJlk54iF6QEv1h1i0pF0WSXEWwIcE4JYHpMAxQt4Ba8H0eF5JGtkBJlIDLkJm6w9
+HOM5LzaVOCFDs+ZVGf5XMIhYJofH3dp5X6+88oxPkRxPvqXds+y9kVyqOmGXu/ig
+YcyT+Ck0FiQZje1DzEGY8N7YV3RPcSqUT4HWS7ES2m/54YeXh9TQomDw+EdbTS3Q
+CxZKg1DZ1ncfceZASgbnz5ls3kEhCwOufGkMg6mOCHrhf56S2WLPriujmmlCDyof
+0furY4FV+CmBLctHeyGOk3keOnep//iJ1pH9x/ZZ2WBOk8DcHpNMDUfLeOfHrFXO
++dILoPFOzaNNoXTK10MaRBpmFKo49rub0SxlNQDeqh54ef3pTzPJBGYKdxt91NZO
+jVKsfTnLJqZYiPap8IY5QpO5e1pvcfiZX17D7RvKSCfmn3VG1eQAjayvup7LXO6B
+nlMtkelBRHL0aQLH3BPc6R0UGqvskryxpCxWOv98TeVsCFFbu9kwg2eZn43gHCrH
+H2gcG/ef5W5Wu5gB4yAL
+=igNq
+</author_signature>
+</signed_article>
+</datafeed_article>
+<datafeed_signature>
+iQIcBAABCgAGBQJcvMt/AAoJECL1OzZgiBhw6msP/RvBjNHOcMRpZEiFladpn1uv
+qVe4rUmDDQ6gItgkTYPbINjSmHGCa90VFAF+BcHR6bCf468QvUTfYJ8GZsC/9qw+
+N3E4mRpnPl4+JC2SPa2M2YppsxMytsMStswdBADsdGkYNJPAN4dJMFeE29Ez0mkE
+sHkic3nyUGliaib3JiNYrPhyhYTkfuFGKj1RYyswR8i4XyKIv31qQ9dq+OWHn5u4
+oimsvARBFX0Opmfb3AuxIzuL2sirm9X7D6kME0vENCMrhdtRx+T2ABz4ZYRJOoRC
+dFs9rAvC7v4bjFFOZx0ekrRxXFafPAxSg+FfTViX0kowRZ8dVlKtduqV5n1RvWSC
+xDaC9XVsU1nVFYuuKL9Y/L0mcH5dQ61IlpMviIDhDTw4nnpc+4VYliFBq1Symux9
+Q/PNLfyRwXDU6yhVRm/0G++zHxEQ6FYdjnZdqYObN26v11TsD7+vUiifg/sd2JaK
+5pQFQcs2l58psb1MnPIFtx/gNh2n4SELHL4B/N1gwyIKJqsM01P4FO6+ZEWDWKlH
+w4m2W14HlHMtpfRO0yUyfxsGp3pTu31fGfcG0w7Z6wd0Kb0/4RNCXUU0fOetuj5y
+jdTccFhK3F7+DgUALYKdi1dLEj/eOv5KbV915SLTl/c3NncABZ+Py7XsqwNR6rvq
+Mu19z5yaAbUvouXH4ZNL
+=HLwQ
+</datafeed_signature>
+</signed_datafeed_article>

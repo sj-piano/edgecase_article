@@ -1,0 +1,16 @@
+<checkpoint_article>
+<checkpoint_id>0</checkpoint_id>
+<title>checkpoint_0</title>
+<date>2017-06-28
+<note>This is the date at the time of creation of this checkpoint article. A block containing a transaction confirming this checkpoint may appear on this date or at a later date.</note>
+</date>
+<block>
+<blockchain_name>bitcoin</blockchain_name>
+<block_height>473264
+<note>This is the approximate block height at the time of creation of this checkpoint article. A transaction confirming this checkpoint will appear in a later block.</note>
+</block_height>
+</block>
+<content>
+This is the first checkpoint in the edgecase datafeed.
+</content>
+</checkpoint_article>

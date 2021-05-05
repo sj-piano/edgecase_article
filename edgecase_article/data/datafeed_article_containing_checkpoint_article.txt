@@ -1,0 +1,50 @@
+<datafeed_article>
+<datafeed_name>edgecase_datafeed</datafeed_name>
+<datafeed_article_id>2</datafeed_article_id>
+<date>2017-06-28
+<note>This is the date at the time of creation of this datafeed article. A block containing a transaction confirming this datafeed article may appear on this date or at a later date.</note>
+</date>
+<previous_checkpoint>
+<datafeed_article_id>0</datafeed_article_id>
+<checkpoint_id>0</checkpoint_id>
+<date>2017-06-28</date>
+<transaction>
+<blockchain_name>bitcoin</blockchain_name>
+<transaction_id>b2f093a08e80f281889bc19b1ae441d3ead93cd10e58c640202916beb25d1670</transaction_id>
+<block_height>473266</block_height>
+<source_address>13a43uE6YPeF36Uf8pzy6x4zvZnerPtwqv</source_address>
+<destination_address>17rEGTR4ss7xhVVMwL969Y8xszS7FaFsae</destination_address>
+</transaction>
+</previous_checkpoint>
+<checkpoint_article>
+<checkpoint_id>1</checkpoint_id>
+<title>checkpoint_1</title>
+<date>2017-06-28
+<note>This is the date at the time of creation of this checkpoint article. A block containing a transaction confirming this checkpoint may appear on this date or at a later date.</note>
+</date>
+<block>
+<blockchain_name>bitcoin</blockchain_name>
+<block_height>473274
+<note>This is the approximate block height at the time of creation of this checkpoint article. A transaction confirming this checkpoint will appear in a later block.</note>
+</block_height>
+</block>
+<content>
+Articles included at this checkpoint: 1
+
+<datafeed_article_description>
+<datafeed_article_id>1</datafeed_article_id>
+<datafeed_signing_date>2017-06-28</datafeed_signing_date>
+<title>Viewpoint</title>
+<author_name>stjohn_piano</author_name>
+<date>2017-06-28</date>
+<signed_by_author>yes</signed_by_author>
+<hash>
+<algorithm>SHA256</algorithm>
+<hex_value>e7beffdee3ef01baedba6301a5c5b0fea010e99e2484884861e5ce9866d25c7f</hex_value>
+</hash>
+<number_of_characters>7411</number_of_characters>
+</datafeed_article_description>
+
+</content>
+</checkpoint_article>
+</datafeed_article>

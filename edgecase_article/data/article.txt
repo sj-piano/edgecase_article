@@ -1,0 +1,9 @@
+<article>
+<title>Test_Article</title>
+<author_name>test_key_1</author_name>
+<date>2021-05-05</date>
+<signed_by_author>yes</signed_by_author>
+<content>
+This is a test article.
+</content>
+</article>

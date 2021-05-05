@@ -1,0 +1,100 @@
+<datafeed_article>
+<datafeed_name>edgecase_datafeed</datafeed_name>
+<datafeed_article_id>1</datafeed_article_id>
+<date>2017-06-28
+<note>This is the date at the time of creation of this datafeed article. A checkpoint article containing a hash of this datafeed article may be created on this date or at a later date.</note>
+</date>
+<previous_checkpoint>
+<datafeed_article_id>0</datafeed_article_id>
+<checkpoint_id>0</checkpoint_id>
+<date>2017-06-28</date>
+<transaction>
+<blockchain_name>bitcoin</blockchain_name>
+<transaction_id>b2f093a08e80f281889bc19b1ae441d3ead93cd10e58c640202916beb25d1670</transaction_id>
+<block_height>473266</block_height>
+<source_address>13a43uE6YPeF36Uf8pzy6x4zvZnerPtwqv</source_address>
+<destination_address>17rEGTR4ss7xhVVMwL969Y8xszS7FaFsae</destination_address>
+</transaction>
+</previous_checkpoint>
+<signed_article>
+<article>
+<title>Viewpoint</title>
+<author_name>stjohn_piano</author_name>
+<date>2017-06-28</date>
+<signed_by_author>yes</signed_by_author>
+<content>
+"Human behavior is economic behavior. The particulars may vary, but competition for limited resources remains a constant."
+~ Nwabudike Morgan
+
+"In an information-rich world, the wealth of information means a dearth of something else: a scarcity of whatever it is that information consumes. What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention and a need to allocate that attention efficiently among the overabundance of information sources that might consume it."
+~ Herbert A. Simon
+
+"Nature is disordered, powerful and chaotic, and through fear of the chaos we impose system on it. We abhor complexity, and seek to simplify things whenever we can by whatever means we have at hand. We need to have an overall explanation of what the universe is and how it functions. In order to achieve this overall view we develop explanatory theories which will give structure to natural phenomena: we classify nature into a coherent system which appears to do what we say it does."
+~ James Burke
+
+"Essentially, all models are wrong, but some are useful."
+~ George E. P. Box
+
+"Even a single taboo can have an all-round crippling effect upon the mind, because there is always the danger that any thought which is freely followed up may lead to the forbidden thought."
+~ George Orwell
+
+"It occurs to me that the man and his religion are one and the same thing. The unknown exists. Each man projects on the blankness the shape of his own particular world-view. He endows his creation with his personal volitions and attitudes. The religious man stating his case is in essence explaining himself. When a fanatic is contradicted he feels a threat to his own existence; he reacts violently."
+~ Adam Reith, in The Wannek, by Jack Vance
+
+"People want to feel different and special, but they also want to feel embattled. They want a compelling conflict narrative that gives their lives meaning, whether they are standing up for the 'oppressed' or standing against the tide of unwanted change. Few want what Pariser called a 'balanced diet' of information."
+~ Jack Donovan
+
+"Kergan Banbeck threw up his hands, turned once more to the sacerdote. 'How can I halt his nonsense? How can I make him see reason?'
+The sacerdote reflected. 'He speaks not nonsense, but rather a language you fail to understand. You can make him understand your language by erasing all knowledge and training from his mind, and replacing it with patterns of your own.'"
+~ from The Dragon Masters, by Jack Vance
+
+"Freedom, when done properly, is not necessarily easy, or nice, or expedient, it's just freedom; and the interesting thing about it is that every other citizen has it as well, which is where, of course, the fun starts."
+~ Lord Vetinari, in The Compleat Ankh-Morpork, by Terry Pratchett
+
+Lu Tze: "Someone in Uberwald built this clock out of glass. Powered by lightning, as I recall. It somehow got down to a level where it could tick with the universe."
+Lobsang Ludd: "Why did he want to do that?"
+Lu Tze: "Listen, he lived in a big old castle on a crag in Uberwald. People like that don't need a reason apart from 'because I can'."
+~ from Thief of Time, by Terry Pratchett
+
+"And always, he fought the temptation to choose a clear, safe course, warning 'That path leads ever down into stagnation.'"
+~ from Dune, by Frank Herbert
+
+"Caminante, no hay camino, se hace camino al andar."
+~ Antonio Machado
+
+"It is not for me to tell you what you should have done or not done. The world in which you seek to undo the mistakes that you made is different from the world where the mistakes were made. You are now at the crossing. And you want to choose, but there is no choosing there. There's only accepting. The choosing was done a long time ago."
+~ Jefe, from The Counselor, screenplay by Cormac McCarthy
+
+King Henry VIII: "In these last days I have been thinking a great deal about loss. What loss, Your Grace, is to man most irrecoverable?"
+Duke of Suffolk: "His virtue."
+King Henry VIII: "No. For by his actions, he may redeem his virtue."
+Duke of Suffolk: "Then his honour."
+King Henry VIII: "No. For again he may find the means to recover it, even as a man recovers some fortune he has lost."
+Duke of Suffolk: "Then I cannot say, Your Majesty."
+King Henry VIII: "Time, Your Grace. Of all losses, time is the most irrecuperable, for it can never be redeemed."
+~ from Death of a Monarchy, season 4 episode 10, The Tudors, screenplay by Michael Hirst
+
+"'Tis all a Chequer-board of Nights and Days
+Where Destiny with Men for Pieces plays:
+Hither and thither moves, and mates, and slays,
+And one by one back in the Closet lays."
+~ from Rubaiyat of Omar Khayyam, by Edward FitzGerald
+</content>
+</article>
+<author_signature>
+iQIcBAABCgAGBQJZVAS5AAoJEC8RP+HmG9MXdTwQALi2J8aHCiajjV+dTTtVws6J
+GECE4tSWdB7rreyOCvvxDULRtXiLY+vCtRoLI5yNk1lHRxjnCGpMYt90N7AZcQII
+08IF8ixgHyibr3+CCTxzgfsqeacWdpL/VS5MyKQwj/vEDNWW/gnv+tfvTAPW00DR
+rOv6rJHAsJxWOewfF4YgjqLyMPYIdFlCddC4sek6F4c12zC3c8ANSza1r2tX9U9/
+f32DqsyqAayOxPr7HdX90FM6c0bPxSjZ6SPNGYSt+9N0oqafh9LIGfQ3fzfMv0RE
+6PhdGAXnUmTHYHhQ9A93D1tJvscxX5qPASTYSlYcwjyp/yPYED5S6knhe+No0eRo
+9WJCaRPYfSrohEyCgCa837HiDI49LzDf8cvQRqDGaOAW8FMbFt3TSae0XxV8/CC5
+0kaW02sHcPCfNbaeqYnRQK+3KWjjgaJZcUItWq9NKX7f4VPGtO6JjoilAtiufctg
+G5C/7vbmaQoPcQ3Lnu+FY3SCavSz66iX5dNx471McLfQPvntMLvjk7XNvYzZIm1o
+2gTU20T7aN1/Kxg9rpjeazxJbjVk4FL/YZScveqLidzWS/vNFkZhdDWvOovvEbSc
+A70VAelCAMtRLPs8o9Z1fBw6aEKSFWeaL44s1/S6ApA4m+lLrdvuCO6f3w/wJvqj
+1T2KMnHmqQ36jVVsWgbA
+=/JBI
+</author_signature>
+</signed_article>
+</datafeed_article>
