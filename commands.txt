@@ -18,7 +18,7 @@
 
 
 [specify the article]
-./cli.py --task verify --logLevel info --verifyFileName --articlePath new_articles/2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
+./cli.py --task verify --logLevel info --articlePath new_articles/2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
 
 
 [sign the article]
@@ -27,6 +27,8 @@
 
 [verify signature]
 ./cli.py --task=verify --logLevel=info --articlePath=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --publicKeyDir=../public_keys --verifySignature
+
+
 
 
 
@@ -59,11 +61,67 @@ SignedDatafeedArticle:
 
 
 
+
+### CODE QUALITY
+
+
+
 pycodestyle --filename=*.py --exclude edgecase_article/submodules
 
 
 
 pycodestyle edgecase_article/code/Article.py --statistics
+
+
+
+
+
+### TESTS
+
+
+
+- The command { pytest3 edgecase_article/test/test_hello.py }
+in the package directory should load and run the tests in this file.
+- Run a specific test:
+-- pytest3 edgecase_article/test/test_hello.py::test_hello
+- Note: Using { pytest3 } will cause submodule tests to run as well, and these will fail.
+- Run quietly:
+-- [all tests] pytest3 -q edgecase_article/test
+-- pytest3 -q edgecase_article/test/test_hello.py
+- Print log output in real-time during a single test:
+-- pytest3 -s --log-cli-level=INFO edgecase_article/test/test_hello.py::test_hello
+--- Note the use of the pytest -s option. This will cause print statements in the test code itself to also produce output.
+
+
+
+pytest3 -s edgecase_article/test/test_keys.py
+
+pytest3 -s edgecase_article/test/test_keys.py --log-cli-level=INFO
+
+
+
+pytest3 -s --log-cli-level=INFO edgecase_article/test/test_verify.py::test_verify_signed_article
+
+
+
+
+
+
+
+
+### SCRATCHPAD
+
+
+
+./cli.py --task verify --logLevel info --verifySignature --verifyFileName --publicKeyDir=../public_keys --articlePath signed_datafeed_articles/2017-07-24_edgecase_datafeed_article_5_2017-07-21_stjohn_piano_james_sullivan_on_the_nature_of_banks.txt
+
+
+
+
+
+
+
+
 
 
 
