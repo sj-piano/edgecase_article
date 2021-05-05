@@ -1,4 +1,3 @@
-<signed_datafeed_article>
 <datafeed_article>
 <datafeed_name>edgecase_datafeed</datafeed_name>
 <datafeed_article_id>216</datafeed_article_id>
@@ -151,19 +150,3 @@ Note: This discussion took place on 2021-02-02, prior to the 2021-04-06 announce
 </content>
 </article>
 </datafeed_article>
-<datafeed_signature>
-iQIcBAABCgAGBQJgdDH0AAoJECL1OzZgiBhwylwP/1Yl7mabEN/uHUCEqgE/G3pv
-9MmpqGiFrgXTx11QQv3qANIZYK28h9L/x1c0NwyXCA/kQEDMCb7B8PgSwrB2Wc7k
-aRPgI8C0h6mnxURgZ6feUxPE55WS6YtPqsU/Zf4B7g13SKmduMLAXlJz6/R7lMRK
-SHVXwZe/QNd5q3wcJKR7E3TwS3ACvJKURhMriRUuIO/LsOCkcH6WK3ju9e7IsLqc
-876VX6EgXYFDacKMj/7ncUKH2Wu8usXHideawwcf/WGmuV7m169tT2/FNnAcM+ch
-6f072XtRN5p8OkXoHsfRC0xDN6fFSGo/toqfSg/T2eFOXxaNwUA9IJAWXf6a6BT1
-TVT0SL0vEq8f4HsOlbA+JO0RF3hdMPQ0mMz7wF6M2EFgGJSjjaICKfK+AVup3xRb
-RaussJ3PmmQgjec+Y+iDQi3N5oVtxk7s0/YSuaE+NjxKllcisN4ED4V1GzwvDiA8
-LFxTqiixh7zLBXyqRtYA6ZoP2ES18OFqfmR6n7ZHM0liGMR0qPPtbZVFvXpvTxfS
-jU+p+g6KhkEXiqs1nRtcxQXnyzYEIxUljtMOZ962uLVzKrg+UwKFHi74oz48cSv1
-gYKohlcDmncK+wdMsuvuiQzH1oQqizxEdntV2F1r7+3JIJzzmu16/Vc37qyhsMTL
-xTqKk07XrqiYT+a93Xeq
-=cCle
-</datafeed_signature>
-</signed_datafeed_article>
