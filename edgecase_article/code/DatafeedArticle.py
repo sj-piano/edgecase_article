@@ -118,7 +118,7 @@ class DatafeedArticle(datajack.Element):
 
   @property
   def content_element(self):
-    return self.article.get_one('content')
+    return self.article.content_element
 
 
   def validate_format(self):
@@ -140,22 +140,23 @@ class DatafeedArticle(datajack.Element):
     v.validate_string_is_whole_number(self.datafeed_article_id)
     v.validate_date(self.date)
     # Look at previous_checkpoint child.
-    pc_e = self.get_one('previous_checkpoint')
-    pc_daid = pc_e.get_value('datafeed_article_id')
-    v.validate_string_is_whole_number(pc_daid)
-    pc_cid = pc_e.get_value('checkpoint_id')
-    v.validate_string_is_whole_number(pc_cid)
-    pc_date = pc_e.get_value('date')
-    v.validate_date(pc_date)
-    # Look at previous_checkpoint/transaction descendant.
-    t_e = self.get_one('previous_checkpoint/transaction')
-    t_txid = t_e.get_value('transaction_id')
-    v.validate_hex_length(t_txid, 32)
-    t_block_height = t_e.get_value('block_height')
-    v.validate_string_is_whole_number(t_block_height)
-    t_sa = t_e.get_all('source_address')
-    t_da = t_e.get_all('destination_address')
-    # Future: Verify the source address(es) and destination address(es).
+    if self.datafeed_article_id != '0':  # first checkpoint.
+      pc_e = self.get_one('previous_checkpoint')
+      pc_daid = pc_e.get_value('datafeed_article_id')
+      v.validate_string_is_whole_number(pc_daid)
+      pc_cid = pc_e.get_value('checkpoint_id')
+      v.validate_string_is_whole_number(pc_cid)
+      pc_date = pc_e.get_value('date')
+      v.validate_date(pc_date)
+      # Look at previous_checkpoint/transaction descendant.
+      t_e = self.get_one('previous_checkpoint/transaction')
+      t_txid = t_e.get_value('transaction_id')
+      v.validate_hex_length(t_txid, 32)
+      t_block_height = t_e.get_value('block_height')
+      v.validate_string_is_whole_number(t_block_height)
+      t_sa = t_e.get_all('source_address')
+      t_da = t_e.get_all('destination_address')
+      # Future: Verify the source address(es) and destination address(es).
 
 
   def set_file_path(self, file_path):
