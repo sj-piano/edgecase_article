@@ -113,12 +113,13 @@ def verify(
     msg = "File name verified for {}".format(a.__class__.__name__)
     log(msg)
   if verify_signature:
-    v.validate_string(public_key_dir)
     if a.article_type == 'signed_article':
+      v.validate_string(public_key_dir)
       author_name = a.author_name
       public_key = keys.load_public_key(public_key_dir, author_name)
       a.verify_signature(public_key)
     elif a.article_type == 'signed_datafeed_article':
+      v.validate_string(public_key_dir)
       datafeed_name = 'edgecase_datafeed'  # hardcoded.
       public_key = keys.load_public_key(public_key_dir, datafeed_name)
       a.verify_signature(public_key)
