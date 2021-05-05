@@ -13,6 +13,10 @@ element_trees: Certain elements (e.g. "link") have children / descendants that m
 
 
 <element_names>
+algorithm
+author_name
+blockquote
+blockquote_lines
 bold
 bold_lines
 chat
@@ -23,8 +27,14 @@ data
 data_lines
 datablock
 datablock_lines
+datafeed_article_description
+datafeed_article_id
+datafeed_signing_date
+date
 footnote
 footnote_lines
+hash
+hex_value
 italic
 italic_lines
 language
@@ -33,12 +43,15 @@ lined_code
 line_numbers
 link
 name
+number_of_characters
 preserve_whitespace
 preserve_whitespace_lines
 quote_lines
 reference
 separator
+signed_by_author
 text
+title
 type
 </element_names>
 
@@ -103,6 +116,21 @@ type
 </lined_code>
 
 
+
+
+<datafeed_article_description>
+<datafeed_article_id></datafeed_article_id>
+<datafeed_signing_date></datafeed_signing_date>
+<title></title>
+<author_name></author_name>
+<date></date>
+<signed_by_author></signed_by_author>
+<hash>
+<algorithm>SHA256</algorithm>
+<hex_value></hex_value>
+</hash>
+<number_of_characters></number_of_characters>
+</datafeed_article_description>
 
 
 
