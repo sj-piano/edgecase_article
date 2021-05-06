@@ -47,6 +47,7 @@ def conf():
 
 
 # ### SECTION
+# These tests are expected to work.
 
 
 def test_verify_article(conf):
@@ -318,3 +319,23 @@ def test_verify_signed_datafeed_article_containing_checkpoint_article_file_name(
     public_key_dir = conf['public_key_dir'],
   )
   assert article.title == 'checkpoint_2'
+
+
+
+
+# ### SECTION
+# These tests are expected to fail.
+
+
+def test_verify_signed_datafeed_article_bad_signature(conf):
+  article_name = '2017-07-24_edgecase_datafeed_article_5_2017-07-21_stjohn_piano_james_sullivan_on_the_nature_of_banks.txt'
+  article_file = join(conf['data_dir'], article_name)
+  with pytest.raises(ValueError):
+    article = verify(
+      article_path = article_file,
+      article_type = 'unspecified',
+      verify_file_name = False,
+      verify_signature = True,
+      verify_content = False,
+      public_key_dir = conf['public_key_dir'],
+    )
