@@ -1,6 +1,8 @@
 <settings>
 
 
+
+
 <notes>
 
 This file contains settings for the "content" element in a datafeed article.
@@ -9,50 +11,127 @@ element_names: The names that are permitted for the descendant elements of the c
 
 element_trees: Certain elements (e.g. "link") have children / descendants that must be present. We store these structures directly as element trees.
 
+old_element_names: Names that were used in old articles but are now forbidden.
+
 </notes>
+
+
 
 
 <element_names>
 algorithm
+align_center
+align_center_lines
+align_left_lines
+align_right
+align_right_lines
+article_title
 author_name
+bash
+bash_lines
+block
+block_height
+blockchain_name
 blockquote
 blockquote_lines
 bold
 bold_lines
+c
+caption
+chapter
 chat
 code
 code_lines
 code_title
+column
+column_separator
+contract
+contract_author
+contract_id
 data
 data_lines
 datablock
 datablock_lines
+datafeed
 datafeed_article_description
 datafeed_article_id
 datafeed_signing_date
 date
+divider
+double_underline_lines
+embed_asset
+embedded_video
+entity
+escape_character
+excerpt
+file
+filename
+fingerprint
+first_line_number
+font
 footnote
 footnote_lines
+format
+gpg_public_key
+greek-1
+greek-1_lines
 hash
+heading_lines
 hex_value
+indent_lines
+index
+input
+input_lines
 italic
 italic_lines
+keyname
+key_data_lines
+key_name
 language
 latin-1
-lined_code
 line_numbers
+lined_code
+lined_code_lines
 link
+merge_columns
+merge_rows
+mild_warning_lines
+monospace
+monospace_lines
 name
+no_italic
+note
+notes
 number_of_characters
+number_of_columns
+number_of_rows
+pages
+parties
+presentation
 preserve_whitespace
 preserve_whitespace_lines
+public_key
 quote_lines
 reference
+repl_lines
+row
+row_separator
 separator
+sha256
 signed_by_author
+size
+structure
+style
+table
+table_name
 text
+text_lines
 title
 type
+warning_lines
+underline
+underline_lines
+value
 </element_names>
 
 
@@ -134,9 +213,77 @@ type
 
 
 
+<embedded_video>
+<filename></filename>
+</embedded_video>
+
+
+<font>
+<size></size>
+<text_lines></text_lines>
+</font>
+
+
+
+<embed_asset>
+<type></type>
+<caption></caption>
+</embed_asset>
+
+
+
+<excerpt>
+<pages></pages>
+</excerpt>
+
+
+
+<file>
+<filename></filename>
+<data_lines>
+</data_lines>
+</file>
+
+
+
+<public_key>
+<name></name>
+<key_name></key_name>
+<type></type>
+<fingerprint></fingerprint>
+<key_data_lines>
+</key_data_lines>
+</public_key>
+
+
+
+
+
 
 
 </element_trees>
+
+
+
+
+
+<old_element_names>
+
+
+<article>
+<id>8</id>
+<element_names>
+h
+v
+</element_names>
+</article>
+
+
+
+
+</old_element_names>
+
+
 
 
 
