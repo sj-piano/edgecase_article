@@ -117,12 +117,7 @@ pytest3 -s --log-cli-level=INFO edgecase_article/test/test_verify.py::test_verif
 
 
 
-
-
-
-
-
-
+./cli.py --task verify --logLevel info --verifySignature --verifyFileName --publicKeyDir=../public_keys --articlePath signed_datafeed_articles/2017-06-28_edgecase_datafeed_article_0_checkpoint_0.txt
 
 
 
