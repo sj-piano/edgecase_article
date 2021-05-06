@@ -1,0 +1,65 @@
+<signed_datafeed_article>
+<datafeed_article>
+<datafeed_name>edgecase_datafeed</datafeed_name>
+<datafeed_article_id>5</datafeed_article_id>
+<date>2017-07-24
+<note>This is the date at the time of creation of this datafeed article. A checkpoint article containing a hash of this datafeed article may be created on this date or at a later date.</note>
+</date>
+<previous_checkpoint>
+<datafeed_article_id>4</datafeed_article_id>
+<checkpoint_id>2</checkpoint_id>
+<date>2017-07-13</date>
+<transaction>
+<blockchain_name>bitcoin</blockchain_name>
+<transaction_id>062e4c0b147bcc92ca8a7dd8fbdb759c0a5d62e1ecc03d85984582dd72f4f6d5</transaction_id>
+<block_height>475626</block_height>
+<source_address>1KdVW4QWhq64cNhr9j8n8QirLqwy3dsZ59</source_address>
+<destination_address>1A7KeGLhnQXhpStcUGfrS1La9QdsscJzf5</destination_address>
+</transaction>
+</previous_checkpoint>
+<article>
+<title>James_Sullivan_on_the_nature_of_banks</title>
+<author_name>stjohn_piano</author_name>
+<date>2017-07-21</date>
+<signed_by_author>no</signed_by_author>
+<content>
+This is an excerpt from The Path to Riches by James Sullivan, printed by J. Belch in Boston in 1809. 
+
+The book has this subtitle: "An inquiry into the origin and use of money; and into the principles of stocks & banks. To which are subjoined, some thoughts respecting a bank for the commonwealth of Massachusetts." 
+
+I downloaded a PDF version of this book from <link>
+<type>hyperlink</type>
+<reference>https://archive.org/details/pathtorichesani00sullgoog</reference>
+<text>here</text>
+</link>. 
+
+Below is an excerpt taken from pages 11-12. I have removed some spaces and word-breaking hyphens. I have also set three words in italic text (the latter three of the four italicised words).
+
+<blockquote>
+The word <italic>bank</italic> is derived from the Italian word <italic>banco</italic>, or <italic>banca</italic>; because those of that nation who used to exercise themselves in this kind of business in the public places of trading cities, seated themselves upon forms with benches to write their letters, count their money, or to draw their bills of exchange. When they failed, and became unable to pay their debts, their benches were broken as a mark of infamy: from which the word <italic>bankrupt</italic> is derived. 
+
+A bank now signifies a public office for keeping or circulating money, to be employed in exchanges, discounts, the loans of government, &c. 
+
+Banks are kept by private men on their own account, or by public bodies incorporated by an act of government for that purpose. 
+
+Private bankers are generally men of large property; their business is lucrative according to their stocks and reputation. By obtaining a credit, and by creating a confidence in the public mind, they induce men who have their property in cash, to deposit it in their hands for security; for which the banker gives a paper evidence of the property, assuring the punctuality of its being redelivered on demand. This paper being, by its tenor, transferable, the possessor of it can immediately, if his banker is known, exchange it for money or for any article in commerce, without any discount or depreciation; and derives all the benefits from it which he could derive from real money, without a liability to those accidents which would attend the keeping a large quantity of coin by him. But the value of this paper is founded altogether upon the assurance that the money is ready when called for. While this assurance exists, the bill will continue to circulate with all the credit of real specie; but the moment there arises a doubt on this point, it falls into a useless, worthless state.
+</blockquote>
+</content>
+</article>
+</datafeed_article>
+<datafeed_signature>
+iQIcBAABCgAGBQJZdm2hAAoJECL1OzZgiBhwFDwQAKlATm4zWh9zlK2zPXpgTgZb
+4R8C8F7lGSKNJTczptn1bkRt+pQSZ/Dt5SJa48NRaymPfhv/PWP5ELhkPRHnvJ3u
+ET+HI4/ClnPOLHGs3rmYt3o0AU7NIAOrN1/GzLn6wTLc2jPihRoNXYC9Ls+I75vX
+j+754a8nuAX2ZkzsUdX9WYzIoBuEaGLcL3sZ11BdVEyD3wv5NrdPwCos6dfd/Mab
+K89q20RvThT30I28TqtX2GumiaPK8RlArPaKgNM7Xcpgsv0y05KH/6B+l6YfSBbD
+My56jxJ6jIRfOjfrEOvMm5H2UFPZVU2ebdd1tzArMkOo4W6oIfVSVC6Z3W1d7FBR
+YJbr75wdQ+mvmbL1paLgLjdVTwgjshqiibn03VIbIwEDLhynpdebctjVWc8RAenq
++LdQjKC7LTrUUCwO2wMI+zzsofhBXjkmzBI3pQunDJHxUMAmBbHZfcOvxLwTXeHp
+FFZXrf1Kl6unlzzKi6tkXpAsjYT46spTx9U3Dfape5ScBqUBq9KXvSmhaNAnm7Bv
+dOa1rg3xeEKXOXxpMn00fxRu9t9PQZEsWi2etFJqgqnShNkDXWhmuthUwvYg3FT1
+ZYxH/7Yb3oxzhFBuEFzGe6D1kbKMzzZw37oFF/E8CU0YEyFLxTNPMI2+/weN9k+9
+9mNC4099kprg21C/U8Fr
+=H3uT
+</datafeed_signature>
+</signed_datafeed_article>
