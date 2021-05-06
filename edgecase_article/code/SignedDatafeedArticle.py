@@ -74,6 +74,21 @@ class SignedDatafeedArticle(datajack.Element):
 
 
   @property
+  def datafeed_name(self):
+    return self.datafeed_article.datafeed_name
+
+
+  @property
+  def datafeed_article_id(self):
+    return self.datafeed_article.datafeed_article_id
+
+
+  @property
+  def daid(self):
+    return self.datafeed_article.daid
+
+
+  @property
   def title(self):
     return self.article.title
 
