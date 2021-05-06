@@ -143,6 +143,13 @@ def verify(
     cs_e = datajack.Element.from_string(cs)
     permitted_names = cs_e.get_one('element_names').text
     permitted_names = permitted_names.strip().split('\n')
+    if a.article_type in ['datafeed_article', 'signed_datafeed_article']:
+      old_articles = cs_e.get('old_element_names/article[@id={}]'.format(a.daid))
+      if len(old_articles) > 0:
+        # This datafeed article contains some obsolete element names.
+        old_names = old_articles[0].get_one('element_names').text
+        old_names = old_names.strip().split('\n')
+        permitted_names.extend(old_names)
     for d_e in a.content_element.element_descendants:
       if d_e.name not in permitted_names:
         msg = "Permitted names:"
