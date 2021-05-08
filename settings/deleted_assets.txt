@@ -1,0 +1,25 @@
+<deleted_assets>
+
+
+
+
+<notes>
+
+This file contains information about assets that have been deleted.
+
+</notes>
+
+
+
+<article>
+<id>28</id>
+<asset_names>
+centos-6.9-x86_64-minimal.iso
+</asset_names>
+</article>
+
+
+
+
+
+</deleted_assets>
