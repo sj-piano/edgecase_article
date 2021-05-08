@@ -2,6 +2,7 @@
 from . import module_logger
 from . import validate
 from . import misc
+from . import sha256
 
 
 
