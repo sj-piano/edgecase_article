@@ -174,6 +174,16 @@ value
 </link>
 
 <link>
+<type>asset</type>
+<filename></filename>
+<embed_asset>
+  <type>image</type>
+  <caption></caption>
+</embed_asset>
+<sha256></sha256>
+</link>
+
+<link>
 <type>asset_of_another_article</type>
 <article_title></article_title>
 <datafeed>edgecase</datafeed>
@@ -248,8 +258,6 @@ value
 <key_name></key_name>
 <type></type>
 <fingerprint></fingerprint>
-<key_data_lines>
-</key_data_lines>
 </public_key>
 
 
