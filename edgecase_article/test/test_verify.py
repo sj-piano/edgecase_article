@@ -321,6 +321,21 @@ def test_verify_signed_datafeed_article_containing_checkpoint_article_file_name(
   assert article.title == 'checkpoint_2'
 
 
+def test_verify_signed_datafeed_article_with_asset(conf):
+  article_name = '2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt'
+  article_file = join(conf['data_dir'], article_name)
+  article = verify(
+    article_path = article_file,
+    article_type = 'unspecified',
+    verify_file_name = True,
+    verify_signature = True,
+    verify_content = True,
+    public_key_dir = conf['public_key_dir'],
+    verify_assets = True,
+  )
+  assert article.title == 'Public_Key:_Nicholas_Piano'
+
+
 
 
 # ### SECTION
