@@ -68,7 +68,7 @@ def verify(
     verify_signature = None,
     verify_content = None,
     public_key_dir = None,
-    verify_assets = None,
+    verify_assets = False,
     asset_dir = None,
     ):
   v.validate_string(article_path)
@@ -77,7 +77,6 @@ def verify(
   v.validate_boolean(verify_signature)
   v.validate_boolean(verify_content)
   v.validate_boolean(verify_assets)
-  v.validate_string(asset_dir, 'asset_dir', 'verify.py')
   if article_type != 'unspecified':
     v.validate_article_type(article_type)
   try:
@@ -192,6 +191,9 @@ def verify(
     msg = "Content element: All descendant elements have been checked against the list of permitted tree structures."
     log(msg)
   if verify_assets:
+    if not asset_dir:
+      # Use the article_path, with the extension removed.
+      asset_dir = os.path.splitext(article_path)[0]
     # Get list of asset links in article.
     asset_links = a.content_element.get("//link[@type='asset']")
     # Load types of asset link:

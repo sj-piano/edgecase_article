@@ -216,9 +216,6 @@ def main():
       msg = "Directory not found at privateKeyDir {}".format(repr(a.privateKeyDir))
       raise FileNotFoundError(msg)
   if a.verifyAssets:
-    if not a.assetDir:
-      # Use the articlePath, with the extension removed.
-      a.assetDir = os.path.splitext(a.articlePath)[0]
     if not util.misc.shell_tool_exists('shasum'):
       msg = "Could not find shell tool 'shasum' on system."
       raise ValueError(msg)
