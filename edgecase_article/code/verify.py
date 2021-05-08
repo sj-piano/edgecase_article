@@ -24,6 +24,9 @@ from . import keys
 # Shortcuts
 v = util.validate
 datajack = submodules.datajack
+isdir = os.path.isdir
+basename = os.path.basename
+join = os.path.join
 
 
 
@@ -65,12 +68,16 @@ def verify(
     verify_signature = None,
     verify_content = None,
     public_key_dir = None,
+    verify_assets = None,
+    asset_dir = None,
     ):
   v.validate_string(article_path)
   v.validate_string(article_type, 'article_type', 'verify.py')
   v.validate_boolean(verify_file_name)
   v.validate_boolean(verify_signature)
   v.validate_boolean(verify_content)
+  v.validate_boolean(verify_assets)
+  v.validate_string(asset_dir, 'asset_dir', 'verify.py')
   if article_type != 'unspecified':
     v.validate_article_type(article_type)
   try:
@@ -184,6 +191,159 @@ def verify(
           raise ValueError(msg)
     msg = "Content element: All descendant elements have been checked against the list of permitted tree structures."
     log(msg)
+  if verify_assets:
+    # Get list of asset links in article.
+    asset_links = a.content_element.get("//link[@type='asset']")
+    # Load types of asset link:
+    text_asset_link_tree = """
+<link>
+<type>asset</type>
+<filename></filename>
+<text></text>
+<sha256></sha256>
+</link>
+""".strip()
+    text_asset_link_element = datajack.Element.from_string(text_asset_link_tree)
+    embedded_asset_link_tree = """
+<link>
+<type>asset</type>
+<filename></filename>
+<embed_asset>
+  <type>image</type>
+  <caption></caption>
+</embed_asset>
+<sha256></sha256>
+</link>
+""".strip()
+    embedded_asset_link_element = datajack.Element.from_string(embedded_asset_link_tree)
+    # Check formatting of all asset links.
+    # Also build lists of each type of asset link.
+    text_asset_links = []
+    embedded_asset_links = []
+    for asset_link in asset_links:
+      result2, msg2 = asset_link.matches_tree_of(text_asset_link_element)
+      # Use contains_tree_of, because embed_asset_link may also have a 'text' element.
+      result3, msg3 = asset_link.contains_tree_of(embedded_asset_link_element)
+      if not result2 and not result3:
+        msg = msg2 if result2 else msg3
+        raise ValueError(msg)
+      if result2:
+        text_asset_links.append(asset_link)
+      if result3:
+        embedded_asset_links.append(asset_link)
+    unique_asset_names = list(set([x.get_value('filename') for x in asset_links]))
+    msg = "Assets: {} asset links found in article, containing {} unique filenames.".format(len(asset_links), len(unique_asset_names))
+    if len(embedded_asset_links) > 0:
+      msg += " {} are embedded asset links.".format(len(embedded_asset_links))
+    log(msg)
+    # Check if asset directory exists.
+    article_dir = os.path.dirname(article_path)
+    default = 'assets'
+    default_asset_dir = join(article_dir, default)
+    asset_dir_exists = False
+    if isdir(asset_dir) or isdir(default_asset_dir):
+      asset_dir_exists = True
+    if isdir(asset_dir) and isdir(default_asset_dir):
+      msg = 'In article_dir ({}), found both the article asset directory ({}) and the default asset directory ({}). Exactly one is permitted.'.format(repr(article_dir), repr(basename(asset_dir)), repr(basename(default_asset_dir)))
+      raise ValueError(msg)
+    if not isdir(asset_dir) and not isdir(default_asset_dir):
+      # Only raise an error if we actually have asset links in the article.
+      if len(asset_links) > 0:
+        msg = 'In article_dir ({}), did not find either the article asset directory ({}) or the default asset directory ({}). Exactly one is required.'.format(repr(article_dir), repr(basename(asset_dir)), repr(basename(default_asset_dir)))
+        raise ValueError(msg)
+    if isdir(default_asset_dir):
+      asset_dir = default_asset_dir
+    # Analyse assets and compare them to asset links.
+    if not asset_dir_exists:
+      msg = "Assets: No asset directory found."
+      log(msg)
+    else:
+      # Load deleted_assets information.
+      deleted_asset_names = []  # Default.
+      deleted_assets_file = '../../settings/deleted_assets.txt'
+      das = pkgutil.get_data(__name__, deleted_assets_file).decode('ascii')
+      das_e = datajack.Element.from_string(das.strip())
+      a2 = das_e.get('article[@id={}]'.format(a.daid))
+      if len(a2) > 0:
+        # This article has at least one asset that has been deleted.
+        deleted_asset_names = a2[0].get_one('asset_names').text
+        deleted_asset_names = deleted_asset_names.strip().split('\n')
+      # Look at assets in asset_dir.
+      asset_names = os.listdir(asset_dir)
+      asset_files = [join(asset_dir, x) for x in asset_names]
+      msg = "Assets: {} asset files found in asset directory ({}).".format(len(asset_files), repr(asset_dir))
+      log(msg)
+      # Raise an error if we find assets but have no asset links in the article.
+      if len(asset_links) == 0:
+        msg = "Found {} assets in asset directory ({})".format(len(asset_names), repr(asset_dir))
+        msg += ", but found 0 asset links in article."
+        raise ValueError(msg)
+      # Check that asset filenames match asset link filenames.
+      # Note: There may be multiple asset links for a single actual asset.
+      asset_names2 = [x.get_value('filename') for x in asset_links]
+      info_msg = "\n- Asset directory: {}".format(asset_dir)
+      info_msg += "\n- Number of assets: {}".format(len(asset_names))
+      info_msg += "\n- Number of asset links within article: {}".format(len(asset_names2))
+      info_msg += "\n- Assets in asset directory:"
+      info_msg += '\n-- ' + '\n-- '.join(asset_names)
+      info_msg += "\n- Unique filenames in asset links:"
+      info_msg += '\n-- ' + '\n-- '.join(list(set(asset_names2)))
+      for asset_name in asset_names:
+        if asset_name not in asset_names2:
+          msg = "Asset not found in list of asset links within article."
+          msg += "\n- Asset filename: {}".format(repr(asset_name))
+          msg += info_msg
+          raise ValueError(msg)
+      msg = "Assets: All assets are linked at least once from the article."
+      log(msg)
+      for asset_name2 in asset_names2:
+        if asset_name2 not in asset_names:
+          if asset_name2 in deleted_asset_names:
+            msg = "Assets: Asset file {} not found in asset dir, but (according to information in settings) this asset has been deleted.".format(repr(asset_name2))
+            log(msg)
+          else:
+            msg = "Asset filename in asset link not found in list of assets in asset directory."
+            msg += "\n- Filename in asset link: {}".format(repr(asset_name2))
+            msg += info_msg
+            raise ValueError(msg)
+      msg = "Assets: All asset links map to an asset in the asset directory."
+      log(msg)
+      # Calculate asset hash values and confirm that they match the hash values in the asset links.
+      for asset_file in asset_files:
+        asset_name = basename(asset_file)
+        asset_bytes = open(asset_file, "rb").read()
+        # We'll always use the shell SHA256.
+        cmd = 'shasum -a 256 {}'.format(asset_file)
+        output, exit_code = util.misc.run_local_cmd(cmd)
+        sha256_calc = output.split(' ')[0]
+        # We'll use the Python SHA256 only if the asset is (approx) less than 1 MB.
+        if len(asset_bytes) < 10**6:
+          sha256_calc_2 = util.sha256.SHA256(asset_bytes).hexdigest()
+          if sha256_calc != sha256_calc_2:
+            msg = "Calculated SHA256 hash of asset ({}) in 2 different ways, which disagree.".format(asset_name)
+            msg += "\nFrom shell: shasum -a 256 <filepath>:"
+            msg += "\n" + sha256_calc
+            msg += "\nFrom Python3 SHA256 (in util directory):"
+            msg += "\n" + sha256_calc_2
+            print(msg + "\n")
+            #raise ValueError(msg)
+        # Get list of links to this specific asset.
+        asset_links3 = [x for x in asset_links if x.get_value('filename') == asset_name]
+        for asset_link in asset_links3:
+          sha256_link = asset_link.get_value('sha256')
+          if sha256_link != sha256_calc:
+            msg = "Asset link sha256 value does not match calculated sha256 value."
+            msg += "\n- Asset filename: {}".format(asset_name)
+            msg += "\n- Asset link:"
+            msg += "\n" + asset_link.data
+            msg += "\n- Asset link sha256 value:"
+            msg += "\n" + sha256_link
+            msg += "\n- Calculated sha256 value of asset file:"
+            msg += "\n" + sha256_calc
+            #print(msg + "\n")
+            raise ValueError(msg)
+      msg = "Assets: For each asset, the sha256 value has been re-calculated. All links to this asset contain the expected sha256 value."
+      log(msg)
   return a
 
 
