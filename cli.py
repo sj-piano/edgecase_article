@@ -25,6 +25,7 @@ isdir = os.path.isdir
 datajack = edgecase_article.submodules.datajack
 stateless_gpg = edgecase_article.submodules.stateless_gpg
 gpg = stateless_gpg.gpg
+util = edgecase_article.util
 
 
 
@@ -36,6 +37,7 @@ gpg = stateless_gpg.gpg
 # - I use "validate" to mean "check that this data is in the expected format".
 # - I use "verify" to mean that "check that a mathematical operation produces the expected result". Example: Check a digital signature.
 # - An article and the corresponding signed article have the same filenames. To distinguish between them, a newly created signed article has the additional extension '.signed'. It will fail filename verification but will pass all other checks. This extra extension means that an article and its signed equivalent can exist in the same directory.
+# - If the --verifyAssets option is used, this tool will look for a directory named "assets" in the article directory (in addition to looking for a directory with the same name as the article (minus the extension)).
 
 
 
@@ -126,13 +128,25 @@ def main():
   )
 
   parser.add_argument(
-    '-k', '--publicKeyDir',
+    '-e', '--verifyAssets',
+    action='store_true',
+    help="Validates the content element within an article.",
+  )
+
+  parser.add_argument(
+    '--assetDir',
+    help="Path to directory containing assets of this article (default: '%(default)s'). If not supplied, the article path (minus the .txt extension) is used.",
+    default=None,
+  )
+
+  parser.add_argument(
+    '--publicKeyDir',
     help="Path to directory containing public keys (default: '%(default)s').",
     default=None,
   )
 
   parser.add_argument(
-    '-q', '--privateKeyDir',
+    '--privateKeyDir',
     help="Path to directory containing private keys (default: '%(default)s').",
     default=None,
   )
@@ -201,6 +215,13 @@ def main():
     if not isdir(a.privateKeyDir):
       msg = "Directory not found at privateKeyDir {}".format(repr(a.privateKeyDir))
       raise FileNotFoundError(msg)
+  if a.verifyAssets:
+    if not a.assetDir:
+      # Use the articlePath, with the extension removed.
+      a.assetDir = os.path.splitext(a.articlePath)[0]
+    if not util.misc.shell_tool_exists('shasum'):
+      msg = "Could not find shell tool 'shasum' on system."
+      raise ValueError(msg)
 
   # Setup
   setup(
@@ -289,6 +310,8 @@ def verify(a):
     verify_signature = a.verifySignature,
     verify_content = a.verifyContent,
     public_key_dir = a.publicKeyDir,
+    verify_assets = a.verifyAssets,
+    asset_dir = a.assetDir,
   )
 
 
