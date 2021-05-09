@@ -73,6 +73,7 @@ def sign(
     verify_file_name = True,
     verify_signature = False,
     verify_content = True,
+    verify_assets = True,
     public_key_dir = None,
   )
   # Create signature.
