@@ -12,10 +12,10 @@ Analagous to a crypto wallet. Articles are transactions on the Edgecase Datafeed
 
 - Pytest 6.x (developed with 6.1.2).
 
-- GPG 1.x, preferably 1.4.x (developed with 1.4.20).
+- GPG 1.x, preferably 1.4.x (developed with 1.4.20).  
 -- Required for creating or verifying signatures.
 
-- Pip packages:
+- Pip packages:  
 -- colorlog (developed with 4.6.2). Required for colorised log output.
 
 
@@ -41,23 +41,23 @@ python3 cli.py --help
 Note: ```cd``` into the main directory ```edgecase_article```, before running these commands.
 
 
-Run all tests, including all tests within submodules: 
+Run all tests, including all tests within submodules:  
 ```pytest3 -q```
 
 
-Run all tests for edgecase_article only:
+Run all tests for edgecase_article only:  
 ```pytest3 edgecase_article/test```
 
 
-Run tests in a particular module:
+Run tests in a particular module:  
 ```pytest3 edgecase_article/test/test_verify.py```
 
 
-Run specific test:
+Run specific test:  
 ```pytest3 edgecase_article/test/test_verify.py::test_verify_signed_datafeed_article_containing_checkpoint_article```
 
 
-Run specific test with log output:
+Run specific test with log output:  
 ```pytest3 -s --log-cli-level=INFO edgecase_article/test/test_verify.py::test_verify_signed_datafeed_article_containing_checkpoint_article```
 
 
@@ -79,7 +79,7 @@ python3 cli.py --task verify --articlePath ../new_article/the_design_tree_of_a_b
 
 Note: All option argument values can be indicated using an equals sign instead of a space.
 
-Example:
+Example:  
 ```
 python3 cli.py --task=verify --articlePath=../new_article/the_design_tree_of_a_blockchain.txt
 ```
@@ -99,7 +99,7 @@ INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_article/the_des
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: article
 ```
 
-Notes:
+Notes:  
 - In the terminal, log output is colorised, if ```colorlog``` is installed.
 
 
@@ -130,13 +130,13 @@ python3 cli.py --task verify --logLevel info --verifyFileName --articlePath ../n
 
 Expected formats:
 
-- Checkpoint article:
+- Checkpoint article:  
 ```checkpoint_0.txt```
 
-- Article (whether or not signed by the author):
+- Article (whether or not signed by the author):  
 ```2017-08-19_stjohn_piano_lombard_street_by_walter_bagehot_chapter_1.txt```
 
-- Datafeed article:
+- Datafeed article:  
 ```
 2017-06-28_edgecase_datafeed_article_0_checkpoint_0.txt
 
@@ -149,7 +149,7 @@ python3 cli.py --task verify --logLevel info --verifyFileName --articlePath ../n
 
 ^ This works.
 
-Notes:
+Notes:  
 - Each article has within itself a date, an author name, and a title. Datafeed articles have a second date, a datafeed name, and an article ID. When the filename is verified, the tool will check that all these items match the values in the filename. 
 
 
@@ -232,10 +232,10 @@ INFO     [cli: 339 (sign)] Signed article written to ../new_article/2021-05-08_s
 
 Note: If no asset directory exists, and the article contains no asset links, the ```--verifyAssets``` option will have no effect.
 
-Verifying assets means:
-- Checking that all assets in the asset directory appear in at least one asset link within the article.
-- Checking that all asset links in the article lead to an actual asset in the asset directory.
-- Checking that the hash value in each asset link is identical to the re-calculated hash of the relevant asset file.
+Verifying assets means:  
+- Checking that all assets in the asset directory appear in at least one asset link within the article.  
+- Checking that all asset links in the article lead to an actual asset in the asset directory.  
+- Checking that the hash value in each asset link is identical to the re-calculated hash of the relevant asset file.  
 
 The assets directory can be either ```assets``` or (the article name minus the .txt extension). Only one of these can exist. The asset directory is assumed to be in the same directory as the article. You can set the asset directory path manually using the ```--assetDir``` option.
 
