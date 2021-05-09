@@ -1,14 +1,12 @@
 # Imports
 import os
 import pytest
-import pkgutil
 
 
 
 
 # Relative imports
 from .. import code
-from .. import util
 from .. import submodules
 
 
