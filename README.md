@@ -18,6 +18,8 @@ Analagous to a crypto wallet. Articles are transactions on the Edgecase Datafeed
 - Pip packages:  
 -- colorlog (developed with 4.6.2). Required for colorised log output.
 
+- The ```shasum``` tool. To produce SHA256 hashes, this tool uses the shell command ```shasum -a 256 <filepath>```.
+
 
 
 ### Installation
