@@ -1,6 +1,10 @@
 # Directories:
 new_articles/
 
+# Files:
+signed_datafeed_articles
+tmp.txt
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
