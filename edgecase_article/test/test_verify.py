@@ -52,7 +52,7 @@ def test_verify_article(conf):
   article_name = 'article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = False,
     verify_signature = False,
@@ -67,7 +67,7 @@ def test_verify_article_file_name(conf):
   article_name = '2021-05-05_test_key_1_test_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = True,
     verify_signature = False,
@@ -80,7 +80,7 @@ def test_verify_signed_article(conf):
   article_name = '2021-05-05_test_key_1_test_article.txt.signed'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'signed_article',
     verify_file_name = False,
     verify_signature = True,
@@ -95,7 +95,7 @@ def test_verify_signed_article_2(conf):
   article_name = 'signed_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'signed_article',
     verify_file_name = False,
     verify_signature = True,
@@ -110,7 +110,7 @@ def test_verify_signed_article_file_name(conf):
   article_name = '2017-06-28_stjohn_piano_viewpoint.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'signed_article',
     verify_file_name = False,
     verify_signature = True,
@@ -125,7 +125,7 @@ def test_verify_checkpoint_article(conf):
   article_name = 'checkpoint_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'checkpoint_article',
     verify_file_name = False,
     verify_signature = False,
@@ -139,7 +139,7 @@ def test_verify_checkpoint_article_file_name(conf):
   article_name = 'checkpoint_0.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = True,
     verify_signature = False,
@@ -153,7 +153,7 @@ def test_verify_datafeed_article_containing_article(conf):
   article_name = 'datafeed_article_containing_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = False,
     verify_signature = False,
@@ -167,7 +167,7 @@ def test_verify_datafeed_article_containing_article_file_name(conf):
   article_name = '2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = True,
     verify_signature = False,
@@ -181,7 +181,7 @@ def test_verify_datafeed_article_containing_signed_article(conf):
   article_name = 'datafeed_article_containing_signed_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = False,
     verify_signature = False,
@@ -195,7 +195,7 @@ def test_verify_datafeed_article_containing_signed_article_file_name(conf):
   article_name = '2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'datafeed_article',
     verify_file_name = True,
     verify_signature = False,
@@ -209,7 +209,7 @@ def test_verify_datafeed_article_containing_checkpoint_article(conf):
   article_name = 'datafeed_article_containing_checkpoint_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = False,
     verify_signature = False,
@@ -223,7 +223,7 @@ def test_verify_datafeed_article_containing_checkpoint_article_file_name(conf):
   article_name = '2017-06-28_edgecase_datafeed_article_2_checkpoint_1.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = True,
     verify_signature = False,
@@ -238,7 +238,7 @@ def test_verify_signed_datafeed_article_containing_article(conf):
   article_name = 'signed_datafeed_article_containing_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = False,
     verify_signature = True,
@@ -253,7 +253,7 @@ def test_verify_signed_datafeed_article_containing_article_file_name(conf):
   article_name = '2019-04-21_edgecase_datafeed_article_104_2019-04-21_stjohn_piano_blockchain_fundamentals.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = True,
     verify_signature = True,
@@ -267,7 +267,7 @@ def test_verify_signed_datafeed_article_containing_signed_article(conf):
   article_name = 'signed_datafeed_article_containing_signed_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = False,
     verify_signature = True,
@@ -281,7 +281,7 @@ def test_verify_signed_datafeed_article_containing_signed_article_file_name(conf
   article_name = '2019-04-21_edgecase_datafeed_article_104_2019-04-21_stjohn_piano_blockchain_fundamentals.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = True,
     verify_signature = True,
@@ -295,7 +295,7 @@ def test_verify_signed_datafeed_article_containing_checkpoint_article(conf):
   article_name = 'signed_datafeed_article_containing_checkpoint_article.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = False,
     verify_signature = True,
@@ -309,7 +309,7 @@ def test_verify_signed_datafeed_article_containing_checkpoint_article_file_name(
   article_name = '2017-07-13_edgecase_datafeed_article_4_checkpoint_2.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = True,
     verify_signature = True,
@@ -323,7 +323,7 @@ def test_verify_signed_datafeed_article_with_asset(conf):
   article_name = '2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt'
   article_file = join(conf['data_dir'], article_name)
   article = verify(
-    article_path = article_file,
+    article_file = article_file,
     article_type = 'unspecified',
     verify_file_name = True,
     verify_signature = True,
@@ -345,7 +345,7 @@ def test_verify_signed_datafeed_article_bad_signature(conf):
   article_file = join(conf['data_dir'], article_name)
   with pytest.raises(ValueError):
     article = verify(
-      article_path = article_file,
+      article_file = article_file,
       article_type = 'unspecified',
       verify_file_name = False,
       verify_signature = True,
