@@ -76,14 +76,14 @@ A datafeed article can contain an article, a signed article, or a checkpoint art
 ### Example: Validate the format of an article that you are writing.
 
 ```
-python3 cli.py --task verify --articlePath ../new_article/the_design_tree_of_a_blockchain.txt
+python3 cli.py --task verify --articleFile ../new_article/the_design_tree_of_a_blockchain.txt
 ```
 
 Note: All option argument values can be indicated using an equals sign instead of a space.
 
 Example:  
 ```
-python3 cli.py --task=verify --articlePath=../new_article/the_design_tree_of_a_blockchain.txt
+python3 cli.py --task=verify --articleFile=../new_article/the_design_tree_of_a_blockchain.txt
 ```
 
 
@@ -92,11 +92,11 @@ python3 cli.py --task=verify --articlePath=../new_article/the_design_tree_of_a_b
 
 
 ```
-python3 cli.py --task verify --articlePath ../new_article/the_design_tree_of_a_blockchain.txt --logLevel info
+python3 cli.py --task verify --articleFile ../new_article/the_design_tree_of_a_blockchain.txt --logLevel info
 ```
 
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task verify --articlePath ../new_article/the_design_tree_of_a_blockchain.txt --logLevel info
+stjohn@judgement:edgecase_article$ python3 cli.py --task verify --articleFile ../new_article/the_design_tree_of_a_blockchain.txt --logLevel info
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_article/the_design_tree_of_a_blockchain.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: article
 ```
@@ -109,11 +109,11 @@ Notes:
 ### Example: Verify the content of the article (e.g. check that there are no unrecognised element names).
 
 ```
-python3 cli.py --task verify --logLevel info --verifyContent --articlePath ../new_article/the_design_tree_of_a_blockchain.txt
+python3 cli.py --task verify --logLevel info --verifyContent --articleFile ../new_article/the_design_tree_of_a_blockchain.txt
 ```
 
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --verifyContent --articlePath ../new_article/the_design_tree_of_a_blockchain.txt
+stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --verifyContent --articleFile ../new_article/the_design_tree_of_a_blockchain.txt
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_article/the_design_tree_of_a_blockchain.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: article
 INFO     [edgecase_article.code.verify: 170 (verify)] Content element: All descendant elements have permitted names.
@@ -127,7 +127,7 @@ INFO     [edgecase_article.code.verify: 192 (verify)] Content element: All desce
 Note: Article filenames have a particular format on the Edgecase Datafeed blockchain.
 
 ```
-python3 cli.py --task verify --logLevel info --verifyFileName --articlePath ../new_article/the_design_tree_of_a_blockchain.txt
+python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../new_article/the_design_tree_of_a_blockchain.txt
 ```
 
 ^ This produces an exception.
@@ -148,7 +148,7 @@ Expected formats:
 ```
 
 ```
-python3 cli.py --task verify --logLevel info --verifyFileName --articlePath ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt
+python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt
 ```
 
 ^ This works.
@@ -173,14 +173,14 @@ Example layout:
 ```
 
 ```
-python3 cli.py --task verify --logLevel info --verifyFileName --articlePath ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt --publicKeyDir ../public_keys --verifySignature
+python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt --publicKeyDir ../public_keys --verifySignature
 ```
 
 Note:
 - Any or all of the --verifyX options can be used in a single command.
 
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --verifyFileName --articlePath ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt --publicKeyDir ../public_keys --verifySignature
+stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt --publicKeyDir ../public_keys --verifySignature
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: signed_datafeed_article
 INFO     [edgecase_article.code.verify: 120 (verify)] File name verified for SignedDatafeedArticle
@@ -212,14 +212,14 @@ Example layout:
 Note: Internally, the ```sign``` function will call the ```verify``` function prior to signing.
 
 ```
-python3 cli.py --task sign --articlePath ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys
+python3 cli.py --task sign --articleFile ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys
 ```
 
 Note: By default, the signed article will be written to the same directory as the unsigned article file. It will have an extra extension ```.signed```. You can used the ```--outputDir``` option to change the output directory if you wish.
 
 Example log output:
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task sign --articlePath ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --logLevel info
+stjohn@judgement:edgecase_article$ python3 cli.py --task sign --articleFile ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --logLevel info
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: article
 INFO     [edgecase_article.code.verify: 120 (verify)] File name verified for Article
@@ -244,11 +244,11 @@ Verifying assets means:
 The assets directory can be either ```assets``` or (the article name minus the .txt extension). Only one of these can exist. The asset directory is assumed to be in the same directory as the article. You can set the asset directory path manually using the ```--assetDir``` option.
 
 ```
-python3 cli.py --task verify --logLevel info --articlePath ../datafeed_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --verifyFileName --verifyAssets
+python3 cli.py --task verify --logLevel info --articleFile ../datafeed_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --verifyFileName --verifyAssets
 ```
 
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --articlePath ../datafeed_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --verifyFileName --verifyAssets
+stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --articleFile ../datafeed_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --verifyFileName --verifyAssets
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../datafeed_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: signed_datafeed_article
 INFO     [edgecase_article.code.verify: 120 (verify)] File name verified for SignedDatafeedArticle
