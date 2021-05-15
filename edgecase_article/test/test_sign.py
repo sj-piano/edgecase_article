@@ -52,7 +52,7 @@ def test_sign_article(conf):
   article_name = '2021-05-09_test_key_1_test_article_2.txt'
   article_file = join(conf['data_dir'], article_name)
   signed_article = sign(
-    article_path = article_file,
+    article_file = article_file,
     public_key_dir = conf['public_key_dir'],
     private_key_dir = conf['private_key_dir'],
   )
@@ -60,7 +60,7 @@ def test_sign_article(conf):
   with open(output_file, 'w') as f:
     f.write(signed_article.data + '\n')
   signed_article2 = verify(
-    article_path = output_file,
+    article_file = output_file,
     article_type = 'signed_article',
     verify_file_name = False,  # It has the extra '.signed' extension.
     verify_signature = True,
