@@ -227,7 +227,7 @@ def main():
       raise ValueError(msg)
     if a.deletedAssetsFile:
       if not isfile(a.deletedAssetsFile):
-        msg = "File not found at deletedAssetsFile {}".format(repr(a.articlePath))
+        msg = "File not found at deletedAssetsFile {}".format(repr(a.deletedAssetsFile))
         raise FileNotFoundError(msg)
 
   # Setup
