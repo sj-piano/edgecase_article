@@ -152,6 +152,12 @@ def main():
   )
 
   parser.add_argument(
+    '--deletedAssetsFile',
+    help="Path to file containing information about deleted assets (default: '%(default)s').",
+    default=None,
+  )
+
+  parser.add_argument(
     '-o', '--outputDir',
     help="Specify an output directory. (default: '%(default)s').",
     default=None,
@@ -219,6 +225,10 @@ def main():
     if not util.misc.shell_tool_exists('shasum'):
       msg = "Could not find shell tool 'shasum' on system."
       raise ValueError(msg)
+    if a.deletedAssetsFile:
+      if not isfile(a.deletedAssetsFile):
+        msg = "File not found at deletedAssetsFile {}".format(repr(a.articlePath))
+        raise FileNotFoundError(msg)
 
   # Setup
   setup(
@@ -300,6 +310,11 @@ def hello5(a):
 
 
 def verify(a):
+  # Load data from deletedAssetsFile if it has been supplied.
+  deleted_assets_element = None
+  if a.deletedAssetsFile:
+    deleted_assets_data = open(a.deletedAssetsFile).read().strip()
+    deleted_assets_element = datajack.Element.from_string(deleted_assets_data)
   edgecase_article.code.verify.verify(
     article_path = a.articlePath,
     article_type = a.articleType,
@@ -309,6 +324,7 @@ def verify(a):
     public_key_dir = a.publicKeyDir,
     verify_assets = a.verifyAssets,
     asset_dir = a.assetDir,
+    deleted_assets_element = deleted_assets_element,
   )
 
 
