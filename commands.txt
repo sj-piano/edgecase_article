@@ -34,6 +34,14 @@
 ./cli.py --task=verify --logLevel=info --articlePath=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --verifyAssets
 
 
+./cli.py --task=verify --logLevel=info --articlePath=new_articles/2021-05-13_stjohn_piano_using_a_few_random_words_to_store_bitcoin_2.txt --verifyAssets
+
+
+
+[verify a datafeed article that contains deleted assets]
+
+./cli.py --task verify --logLevel info --verifyAssets --deletedAssetsFile=settings/deleted_assets.txt --publicKeyDir=../public_keys --articlePath signed_datafeed_articles/2018-01-09_edgecase_datafeed_article_28_2018-01-09_stjohn_piano_installing_centos_6_9_minimal_on_kalkin.txt
+
 
 
 
