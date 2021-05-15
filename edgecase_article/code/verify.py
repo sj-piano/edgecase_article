@@ -62,7 +62,7 @@ def setup(
 
 
 def verify(
-    article_path = None,
+    article_file = None,
     article_type = None,
     verify_file_name = None,
     verify_signature = None,
@@ -72,7 +72,7 @@ def verify(
     asset_dir = None,
     deleted_assets_element = None,
     ):
-  v.validate_string(article_path)
+  v.validate_string(article_file)
   v.validate_string(article_type, 'article_type', 'verify.py')
   v.validate_boolean(verify_file_name)
   v.validate_boolean(verify_signature)
@@ -81,13 +81,13 @@ def verify(
   if article_type != 'unspecified':
     v.validate_article_type(article_type)
   try:
-    e = datajack.Element.from_file(article_path)
+    e = datajack.Element.from_file(article_file)
   except Exception as ex:
     traceback.print_exception(type(ex), ex, ex.__traceback__)
     msg = "\nError summary: Unable to parse file into an EML Element."
-    msg += "\n- File path: {}".format(article_path)
+    msg += "\n- File path: {}".format(article_file)
     stop(msg)
-  msg = "File {} contains a valid Element.".format(article_path)
+  msg = "File {} contains a valid Element.".format(article_file)
   log(msg)
   v.validate_article_type(e.name, 'e.name (element name)', 'verify.py')
   if article_type == 'unspecified':
@@ -114,7 +114,7 @@ def verify(
   else:
     msg = "No class available for article_type {}".format(repr(article_type))
     raise ValueError(msg)
-  a.set_file_path(article_path)
+  a.set_file_path(article_file)
   if verify_file_name:
     a.validate_file_name()
     msg = "File name verified for {}".format(a.__class__.__name__)
@@ -193,8 +193,8 @@ def verify(
     log(msg)
   if verify_assets:
     if not asset_dir:
-      # Use the article_path, with the extension removed.
-      asset_dir = os.path.splitext(article_path)[0]
+      # Use the article_file, with the extension removed.
+      asset_dir = os.path.splitext(article_file)[0]
     # Get list of asset links in article.
     asset_links = a.content_element.get("//link[@type='asset']")
     # Load types of asset link:
@@ -240,7 +240,7 @@ def verify(
       msg += " {} are embedded asset links.".format(len(embedded_asset_links))
     log(msg)
     # Check if asset directory exists.
-    article_dir = os.path.dirname(article_path)
+    article_dir = os.path.dirname(article_file)
     default = 'assets'
     default_asset_dir = join(article_dir, default)
     asset_dir_exists = False
