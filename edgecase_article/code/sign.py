@@ -57,16 +57,16 @@ def setup(
 
 
 def sign(
-    article_path = None,
+    article_file = None,
     public_key_dir = None,
     private_key_dir = None,
     ):
-  v.validate_string(article_path)
+  v.validate_string(article_file)
   v.validate_string(public_key_dir)
   v.validate_string(private_key_dir)
   # Verify the article.
   article = verify.verify(
-    article_path = article_path,
+    article_file = article_file,
     article_type = 'article',
     verify_file_name = True,
     verify_signature = False,
@@ -91,7 +91,7 @@ def sign(
   signed_article.insert_child('\n')
   # Create a SignedArticle from the signed article element.
   signed_article = SignedArticle.SignedArticle.from_element(signed_article)
-  signed_article.set_file_path(article_path)
+  signed_article.set_file_path(article_file)
   # Verify signature.
   public_key = keys.load_public_key(public_key_dir, author_name)
   signed_article.verify_signature(public_key)
