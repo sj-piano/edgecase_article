@@ -103,7 +103,7 @@ def main():
   )
 
   parser.add_argument(
-    '-p', '--articlePath',
+    '-f', '--articleFile',
     help="Path to article file (default: '%(default)s').",
     default='new_articles/new_article.txt',
   )
@@ -199,8 +199,8 @@ def main():
   log_filepath = a.logFilepath if a.logToFile else None
 
   # Check and analyse arguments
-  if not isfile(a.articlePath):
-    msg = "File not found at articlePath {}".format(repr(a.articlePath))
+  if not isfile(a.articleFile):
+    msg = "File not found at articleFile {}".format(repr(a.articleFile))
     raise FileNotFoundError(msg)
   if a.verifySignature:
     if not a.publicKeyDir:
@@ -316,7 +316,7 @@ def verify(a):
     deleted_assets_data = open(a.deletedAssetsFile).read().strip()
     deleted_assets_element = datajack.Element.from_string(deleted_assets_data)
   edgecase_article.code.verify.verify(
-    article_path = a.articlePath,
+    article_file = a.articleFile,
     article_type = a.articleType,
     verify_file_name = a.verifyFileName,
     verify_signature = a.verifySignature,
@@ -332,7 +332,7 @@ def verify(a):
 
 def sign(a):
   signed_article = edgecase_article.code.sign.sign(
-    article_path = a.articlePath,
+    article_file = a.articleFile,
     public_key_dir = a.publicKeyDir,
     private_key_dir = a.privateKeyDir,
   )
