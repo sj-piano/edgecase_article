@@ -70,6 +70,7 @@ def verify(
     public_key_dir = None,
     verify_assets = False,
     asset_dir = None,
+    deleted_assets_element = None,
     ):
   v.validate_string(article_path)
   v.validate_string(article_type, 'article_type', 'verify.py')
@@ -260,16 +261,14 @@ def verify(
       msg = "Assets: No asset directory found."
       log(msg)
     else:
-      # Load deleted_assets information.
+      # Check if this article has any deleted_assets.
       deleted_asset_names = []  # Default.
-      deleted_assets_file = '../../settings/deleted_assets.txt'
-      das = pkgutil.get_data(__name__, deleted_assets_file).decode('ascii')
-      das_e = datajack.Element.from_string(das.strip())
-      a2 = das_e.get('article[@id={}]'.format(a.daid))
-      if len(a2) > 0:
-        # This article has at least one asset that has been deleted.
-        deleted_asset_names = a2[0].get_one('asset_names').text
-        deleted_asset_names = deleted_asset_names.strip().split('\n')
+      if deleted_assets_element:
+        entries = deleted_assets_element.get('article[@id={}]'.format(a.daid))
+        if len(entries) > 0:
+          # This article has at least one asset that has been deleted.
+          deleted_asset_names = entries[0].get_one('asset_names').text
+          deleted_asset_names = deleted_asset_names.strip().split('\n')
       # Look at assets in asset_dir.
       asset_names = os.listdir(asset_dir)
       asset_files = [join(asset_dir, x) for x in asset_names]
@@ -301,7 +300,7 @@ def verify(
       for asset_name2 in asset_names2:
         if asset_name2 not in asset_names:
           if asset_name2 in deleted_asset_names:
-            msg = "Assets: Asset file {} not found in asset dir, but (according to information in settings) this asset has been deleted.".format(repr(asset_name2))
+            msg = "Assets: Asset file {} not found in asset dir, but (according to the information in the deleted assets file) this asset has been deleted.".format(repr(asset_name2))
             log(msg)
           else:
             msg = "Asset filename in asset link not found in list of assets in asset directory."
