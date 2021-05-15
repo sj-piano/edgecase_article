@@ -18,29 +18,29 @@
 
 
 [specify the article]
-./cli.py --task verify --logLevel info --articlePath new_articles/2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
+./cli.py --task verify --logLevel info --articleFile new_articles/2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
 
 
 [sign the article]
-./cli.py --task sign --logLevel info --articlePath new_articles/2021-01-05_stjohn_piano_blockchain_companies.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --outputDir=.
+./cli.py --task sign --logLevel info --articleFile new_articles/2021-01-05_stjohn_piano_blockchain_companies.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --outputDir=.
 
 
 [verify signature]
-./cli.py --task=verify --logLevel=info --articlePath=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --publicKeyDir=../public_keys --verifySignature
+./cli.py --task=verify --logLevel=info --articleFile=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --publicKeyDir=../public_keys --verifySignature
 
 
 [verify assets]
 
-./cli.py --task=verify --logLevel=info --articlePath=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --verifyAssets
+./cli.py --task=verify --logLevel=info --articleFile=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --verifyAssets
 
 
-./cli.py --task=verify --logLevel=info --articlePath=new_articles/2021-05-13_stjohn_piano_using_a_few_random_words_to_store_bitcoin_2.txt --verifyAssets
+./cli.py --task=verify --logLevel=info --articleFile=new_articles/2021-05-13_stjohn_piano_using_a_few_random_words_to_store_bitcoin_2.txt --verifyAssets
 
 
 
 [verify a datafeed article that contains deleted assets]
 
-./cli.py --task verify --logLevel info --verifyAssets --deletedAssetsFile=settings/deleted_assets.txt --publicKeyDir=../public_keys --articlePath signed_datafeed_articles/2018-01-09_edgecase_datafeed_article_28_2018-01-09_stjohn_piano_installing_centos_6_9_minimal_on_kalkin.txt
+./cli.py --task verify --logLevel info --verifyAssets --deletedAssetsFile=settings/deleted_assets.txt --publicKeyDir=../public_keys --articleFile signed_datafeed_articles/2018-01-09_edgecase_datafeed_article_28_2018-01-09_stjohn_piano_installing_centos_6_9_minimal_on_kalkin.txt
 
 
 
@@ -48,26 +48,26 @@
 
 Types of article:
 
-./cli.py --task verify --logLevel info --articlePath new_articles/article.txt
+./cli.py --task verify --logLevel info --articleFile new_articles/article.txt
 
-./cli.py --task verify --logLevel info --articlePath new_articles/signed_article.txt
+./cli.py --task verify --logLevel info --articleFile new_articles/signed_article.txt
 
-./cli.py --task verify --logLevel info --articlePath new_articles/checkpoint_article.txt
+./cli.py --task verify --logLevel info --articleFile new_articles/checkpoint_article.txt
 
-./cli.py --task verify --logLevel info --articlePath new_articles/datafeed_article.txt
+./cli.py --task verify --logLevel info --articleFile new_articles/datafeed_article.txt
 
-./cli.py --task verify --logLevel info --articlePath new_articles/signed_datafeed_article.txt
+./cli.py --task verify --logLevel info --articleFile new_articles/signed_datafeed_article.txt
 
 
 
 SignedDatafeedArticle:
 
 [verify filename]
-./cli.py --task verify --logLevel info --articlePath new_articles/2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt --verifyFileName
+./cli.py --task verify --logLevel info --articleFile new_articles/2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt --verifyFileName
 
 
 [verify signature]
-./cli.py --task verify --logLevel info --articlePath new_articles/2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt --verifyFileName --verifySignature --publicKeyDir ../public_keys
+./cli.py --task verify --logLevel info --articleFile new_articles/2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt --verifyFileName --verifySignature --publicKeyDir ../public_keys
 
 
 
@@ -124,11 +124,11 @@ pytest3 -s --log-cli-level=INFO edgecase_article/test/test_verify.py::test_verif
 
 
 
-./cli.py --task verify --logLevel info --verifySignature --verifyFileName --publicKeyDir=../public_keys --articlePath signed_datafeed_articles/2017-07-24_edgecase_datafeed_article_5_2017-07-21_stjohn_piano_james_sullivan_on_the_nature_of_banks.txt
+./cli.py --task verify --logLevel info --verifySignature --verifyFileName --publicKeyDir=../public_keys --articleFile signed_datafeed_articles/2017-07-24_edgecase_datafeed_article_5_2017-07-21_stjohn_piano_james_sullivan_on_the_nature_of_banks.txt
 
 
 
-./cli.py --task verify --logLevel info --verifySignature --verifyFileName --publicKeyDir=../public_keys --articlePath signed_datafeed_articles/2017-06-28_edgecase_datafeed_article_0_checkpoint_0.txt
+./cli.py --task verify --logLevel info --verifySignature --verifyFileName --publicKeyDir=../public_keys --articleFile signed_datafeed_articles/2017-06-28_edgecase_datafeed_article_0_checkpoint_0.txt
 
 
 
