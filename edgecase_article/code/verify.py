@@ -263,6 +263,19 @@ def verify(
     else:
       # Check if this article has any deleted_assets.
       deleted_asset_names = []  # Default.
+      if not deleted_assets_element:
+        log("No deleted_assets_element supplied.")
+        # If a default deleted_assets file is present in settings, load it.
+        deleted_assets_settings_file = '../../settings/deleted_assets.txt'
+        try:
+          das = pkgutil.get_data(__name__, deleted_assets_settings_file)
+          das = das.decode('ascii').strip()
+          deleted_assets_element = datajack.Element.from_string(das)
+          msg = "Default deleted_assets file loaded from: {}".format(deleted_assets_settings_file)
+          log(msg)
+        except FileNotFoundError:
+          msg = "No default deleted_assets file found at: {}".format(deleted_assets_settings_file)
+          log(msg)
       if deleted_assets_element:
         entries = deleted_assets_element.get('article[@id={}]'.format(a.daid))
         if len(entries) > 0:
