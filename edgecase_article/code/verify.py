@@ -276,7 +276,7 @@ def verify(
         except FileNotFoundError:
           msg = "No default deleted_assets file found at: {}".format(deleted_assets_settings_file)
           log(msg)
-      if deleted_assets_element:
+      if deleted_assets_element and hasattr(a, 'daid'):
         entries = deleted_assets_element.get('article[@id={}]'.format(a.daid))
         if len(entries) > 0:
           # This article has at least one asset that has been deleted.
