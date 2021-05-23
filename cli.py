@@ -199,9 +199,10 @@ def main():
   # Check and analyse arguments
   if not a.log_to_file:
     a.log_file = None
-  if not isdir(a.output_dir):
-      msg = "Output dir ({}) not found.".format(a.output_dir)
-      raise FileNotFoundError(msg)
+  if a.output_dir:
+    if not isdir(a.output_dir):
+        msg = "Output dir ({}) not found.".format(a.output_dir)
+        raise FileNotFoundError(msg)
   if not isfile(a.article_file):
     msg = "File not found at article_file {}".format(repr(a.article_file))
     raise FileNotFoundError(msg)
