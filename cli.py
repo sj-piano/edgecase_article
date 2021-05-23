@@ -199,6 +199,9 @@ def main():
   # Check and analyse arguments
   if not a.log_to_file:
     a.log_file = None
+  if not isdir(a.output_dir):
+      msg = "Output dir ({}) not found.".format(a.output_dir)
+      raise FileNotFoundError(msg)
   if not isfile(a.article_file):
     msg = "File not found at article_file {}".format(repr(a.article_file))
     raise FileNotFoundError(msg)
@@ -343,9 +346,6 @@ def sign(a):
   output_file = signed_article.file_path + '.signed'
   if a.output_dir:
     # If an output directory was specified, write the file there instead.
-    if not isdir(a.output_dir):
-      msg = "Output dir ({}) not found.".format(a.output_dir)
-      raise FileNotFoundError(msg)
     output_file_name = signed_article.file_name + '.signed'
     output_file = os.path.join(a.output_dir, output_file_name)
   if isfile(output_file):
