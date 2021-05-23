@@ -97,74 +97,74 @@ def main():
   )
 
   parser.add_argument(
-    '-a', '--articleType',
+    '-a', '--articleType', dest='article_type',
     help="Type of article (default: '%(default)s').",
     default='unspecified',
   )
 
   parser.add_argument(
-    '-f', '--articleFile',
+    '-f', '--articleFile', dest='article_file',
     help="Path to article file (default: '%(default)s').",
     default='new_articles/new_article.txt',
   )
 
   # Technically, this should be "validateFileName", but it seems more user-friendly to always use "verify" in the options.
   parser.add_argument(
-    '-n', '--verifyFileName',
+    '-n', '--verifyFileName', dest='verify_file_name',
     action='store_true',
     help="Checks that the article's filename is in the proper format.",
   )
 
   parser.add_argument(
-    '-v', '--verifySignature',
+    '-v', '--verifySignature', dest='verify_signature',
     action='store_true',
     help="Checks that the article's signature(s) are valid.",
   )
 
   parser.add_argument(
-    '-c', '--verifyContent',
+    '-c', '--verifyContent', dest='verify_content',
     action='store_true',
     help="Validates the content element within an article.",
   )
 
   parser.add_argument(
-    '-e', '--verifyAssets',
+    '-e', '--verifyAssets', dest='verify_assets',
     action='store_true',
     help="Validates the content element within an article.",
   )
 
   parser.add_argument(
-    '--assetDir',
+    '--assetDir', dest='asset_dir',
     help="Path to directory containing assets of this article (default: '%(default)s'). If not supplied, the article path (minus the .txt extension) is used.",
     default=None,
   )
 
   parser.add_argument(
-    '--publicKeyDir',
+    '--publicKeyDir', dest='public_key_dir',
     help="Path to directory containing public keys (default: '%(default)s').",
     default=None,
   )
 
   parser.add_argument(
-    '--privateKeyDir',
+    '--privateKeyDir', dest='private_key_dir',
     help="Path to directory containing private keys (default: '%(default)s').",
     default=None,
   )
 
   parser.add_argument(
-    '--deletedAssetsFile',
+    '--deletedAssetsFile', dest='deleted_assets_file',
     help="Path to file containing information about deleted assets (default: '%(default)s').",
     default=None,
   )
 
   parser.add_argument(
-    '-o', '--outputDir',
+    '-o', '--outputDir', dest='output_dir',
     help="Specify an output directory. (default: '%(default)s').",
     default=None,
   )
 
   parser.add_argument(
-    '-l', '--logLevel', type=str,
+    '-l', '--logLevel', type=str, dest='log_level',
     choices=['debug', 'info', 'warning', 'error'],
     help="Choose logging level (default: '%(default)s').",
     default='error',
@@ -177,65 +177,65 @@ def main():
   )
 
   parser.add_argument(
-    '-s', '--logTimestamp',
+    '-s', '--logTimestamp', dest='log_timestamp',
     action='store_true',
     help="Choose whether to prepend a timestamp to each log line.",
   )
 
   parser.add_argument(
-    '-x', '--logToFile',
+    '-x', '--logToFile', dest='log_to_file',
     action='store_true',
     help="Choose whether to save log output to a file.",
   )
 
   parser.add_argument(
-    '-z', '--logFile',
+    '-z', '--logFile', dest='log_file',
     help="The path to the file that log output will be written to.",
     default='log_edgecase_article.txt',
   )
 
   a = parser.parse_args()
 
-  log_file = a.logFile if a.logToFile else None
-
   # Check and analyse arguments
-  if not isfile(a.articleFile):
-    msg = "File not found at articleFile {}".format(repr(a.articleFile))
+  if not a.log_to_file:
+    a.log_file = None
+  if not isfile(a.article_file):
+    msg = "File not found at article_file {}".format(repr(a.article_file))
     raise FileNotFoundError(msg)
-  if a.verifySignature:
-    if not a.publicKeyDir:
+  if a.verify_signature:
+    if not a.public_key_dir:
       msg = "To use verifySignature, need to specify a publicKeyDir."
       raise ValueError(msg)
-    if not isdir(a.publicKeyDir):
-      msg = "Directory not found at publicKeyDir {}".format(repr(a.publicKeyDir))
+    if not isdir(a.public_key_dir):
+      msg = "Directory not found at publicKeyDir {}".format(repr(a.public_key_dir))
       raise FileNotFoundError(msg)
   if a.task == 'sign':
-    if not a.publicKeyDir:
+    if not a.public_key_dir:
       msg = "To use the 'sign' task, need to specify a publicKeyDir."
       raise ValueError(msg)
-    if not isdir(a.publicKeyDir):
-      msg = "Directory not found at publicKeyDir {}".format(repr(a.publicKeyDir))
-    if not a.privateKeyDir:
+    if not isdir(a.public_key_dir):
+      msg = "Directory not found at publicKeyDir {}".format(repr(a.public_key_dir))
+    if not a.private_key_dir:
       msg = "To use the 'sign' task, need to specify a privateKeyDir."
       raise ValueError(msg)
-    if not isdir(a.privateKeyDir):
-      msg = "Directory not found at privateKeyDir {}".format(repr(a.privateKeyDir))
+    if not isdir(a.private_key_dir):
+      msg = "Directory not found at privateKeyDir {}".format(repr(a.private_key_dir))
       raise FileNotFoundError(msg)
-  if a.verifyAssets:
+  if a.verify_assets:
     if not util.misc.shell_tool_exists('shasum'):
       msg = "Could not find shell tool 'shasum' on system."
       raise ValueError(msg)
-    if a.deletedAssetsFile:
-      if not isfile(a.deletedAssetsFile):
-        msg = "File not found at deletedAssetsFile {}".format(repr(a.deletedAssetsFile))
+    if a.deleted_assets_file:
+      if not isfile(a.deleted_assets_file):
+        msg = "File not found at deletedAssetsFile {}".format(repr(a.deleted_assets_file))
         raise FileNotFoundError(msg)
 
   # Setup
   setup(
-    log_level = a.logLevel,
+    log_level = a.log_level,
     debug = a.debug,
-    log_timestamp = a.logTimestamp,
-    log_file = log_file,
+    log_timestamp = a.log_timestamp,
+    log_file = a.log_file,
   )
 
   # Run top-level function (i.e. the appropriate task).
@@ -311,42 +311,43 @@ def hello5(a):
 
 
 def verify(a):
-  # Load data from deletedAssetsFile if it has been supplied.
+  # Load data from a.deleted_assets_file if it has been supplied.
   deleted_assets_element = None
-  if a.deletedAssetsFile:
-    deleted_assets_data = open(a.deletedAssetsFile).read().strip()
+  if a.deleted_assets_file:
+    deleted_assets_data = open(a.deleted_assets_file).read().strip()
     deleted_assets_element = datajack.Element.from_string(deleted_assets_data)
   article = edgecase_article.code.verify.verify(
-    article_file = a.articleFile,
-    article_type = a.articleType,
-    verify_file_name = a.verifyFileName,
-    verify_signature = a.verifySignature,
-    verify_content = a.verifyContent,
-    public_key_dir = a.publicKeyDir,
-    verify_assets = a.verifyAssets,
-    asset_dir = a.assetDir,
+    article_file = a.article_file,
+    article_type = a.article_type,
+    verify_file_name = a.verify_file_name,
+    verify_signature = a.verify_signature,
+    verify_content = a.verify_content,
+    public_key_dir = a.public_key_dir,
+    verify_assets = a.verify_assets,
+    asset_dir = a.asset_dir,
     deleted_assets_element = deleted_assets_element,
   )
+  msg = 'Article file {} loaded and verified.'.format(a.article_file)
+  log(msg)
 
 
 
 
 def sign(a):
   signed_article = edgecase_article.code.sign.sign(
-    article_file = a.articleFile,
-    public_key_dir = a.publicKeyDir,
-    private_key_dir = a.privateKeyDir,
+    article_file = a.article_file,
+    public_key_dir = a.public_key_dir,
+    private_key_dir = a.private_key_dir,
   )
   # By default, write the output file to the same directory as the original article.
   output_file = signed_article.file_path + '.signed'
-  output_dir = a.outputDir
-  if output_dir:
+  if a.output_dir:
     # If an output directory was specified, write the file there instead.
-    if not isdir(output_dir):
-      msg = "Output dir ({}) not found.".format(output_dir)
+    if not isdir(a.output_dir):
+      msg = "Output dir ({}) not found.".format(a.output_dir)
       raise FileNotFoundError(msg)
     output_file_name = signed_article.file_name + '.signed'
-    output_file = os.path.join(output_dir, output_file_name)
+    output_file = os.path.join(a.output_dir, output_file_name)
   if isfile(output_file):
     msg = "Error: Output file ({}) already exists.".format(output_file)
     stop(msg)
