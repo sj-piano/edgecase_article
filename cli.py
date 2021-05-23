@@ -316,7 +316,7 @@ def verify(a):
   if a.deletedAssetsFile:
     deleted_assets_data = open(a.deletedAssetsFile).read().strip()
     deleted_assets_element = datajack.Element.from_string(deleted_assets_data)
-  edgecase_article.code.verify.verify(
+  article = edgecase_article.code.verify.verify(
     article_file = a.articleFile,
     article_type = a.articleType,
     verify_file_name = a.verifyFileName,
