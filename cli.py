@@ -56,7 +56,7 @@ def setup(
     log_level = 'error',
     debug = False,
     log_timestamp = False,
-    log_filepath = None,
+    log_file = None,
     ):
   logger_name = 'cli'
   # Configure logger for this module.
@@ -66,7 +66,7 @@ def setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
-    log_filepath = log_filepath,
+    log_file = log_file,
   )
   deb('Setup complete.')
   # Configure logging levels for edgecase_article package.
@@ -76,7 +76,7 @@ def setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
-    log_filepath = log_filepath,
+    log_file = log_file,
   )
 
 
@@ -189,14 +189,14 @@ def main():
   )
 
   parser.add_argument(
-    '-z', '--logFilepath',
+    '-z', '--logFile',
     help="The path to the file that log output will be written to.",
     default='log_edgecase_article.txt',
   )
 
   a = parser.parse_args()
 
-  log_filepath = a.logFilepath if a.logToFile else None
+  log_file = a.logFile if a.logToFile else None
 
   # Check and analyse arguments
   if not isfile(a.articleFile):
@@ -235,7 +235,7 @@ def main():
     log_level = a.logLevel,
     debug = a.debug,
     log_timestamp = a.logTimestamp,
-    log_filepath = log_filepath,
+    log_file = log_file,
   )
 
   # Run top-level function (i.e. the appropriate task).
