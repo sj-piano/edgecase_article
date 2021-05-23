@@ -24,6 +24,9 @@
 [sign the article]
 ./cli.py --task sign --logLevel info --articleFile new_articles/2021-01-05_stjohn_piano_blockchain_companies.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --outputDir=.
 
+Cleanup:
+rm 2021-01-05_stjohn_piano_blockchain_companies.txt.signed
+
 
 [verify signature]
 ./cli.py --task=verify --logLevel=info --articleFile=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --publicKeyDir=../public_keys --verifySignature
