@@ -244,8 +244,9 @@ hello hello2 hello3 hello4 hello5
 verify sign
 """.split()
   if a.task not in tasks:
-    print("Unrecognised task: {}".format(a.task))
-    stop()
+    msg = "Unrecognised task: {}".format(a.task)
+    msg += "\nTask list: {}".format(tasks)
+    stop(msg)
   globals()[a.task](a)  # run task.
 
 
