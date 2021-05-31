@@ -334,13 +334,21 @@ def verify(
         if len(asset_bytes) < 10**6:
           sha256_calc_2 = util.sha256.SHA256(asset_bytes).hexdigest()
           if sha256_calc != sha256_calc_2:
-            msg = "Calculated SHA256 hash of asset ({}) in 2 different ways, which disagree.".format(asset_name)
+            msg = "ERROR: Calculated SHA256 hash of asset ({}) in 2 different ways, which disagree.".format(asset_name)
             msg += "\nFrom shell: shasum -a 256 <filepath>:"
             msg += "\n" + sha256_calc
             msg += "\nFrom Python3 SHA256 (in util directory):"
             msg += "\n" + sha256_calc_2
             print(msg + "\n")
             #raise ValueError(msg)
+          # Tmp report:
+          else:
+            msg = "Calculated SHA256 hash of asset ({}) in 2 different ways, which agree.".format(asset_name)
+            msg += "\nFrom shell: shasum -a 256 <filepath>:"
+            msg += "\n" + sha256_calc
+            msg += "\nFrom Python3 SHA256 (in util directory):"
+            msg += "\n" + sha256_calc_2
+            log(msg + "\n")
         # Get list of links to this specific asset.
         asset_links3 = [x for x in asset_links if x.get_value('filename') == asset_name]
         for asset_link in asset_links3:
