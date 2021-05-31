@@ -134,7 +134,6 @@ pytest3 -s --log-cli-level=INFO edgecase_article/test/test_verify.py::test_verif
 ./cli.py --task verify --logLevel info --verifySignature --verifyFileName --publicKeyDir=../public_keys --articleFile signed_datafeed_articles/2017-06-28_edgecase_datafeed_article_0_checkpoint_0.txt
 
 
-
-
+python3 cli.py --task verify --logLevel info --verifySignature --verifyFileName --verifyAssets --publicKeyDir=../public_keys --articleFile signed_datafeed_articles/2019-02-26_edgecase_datafeed_article_85_2019-02-26_stjohn_piano_creating_a_bitcoin_transaction_with_two_outputs.txt
 
 
