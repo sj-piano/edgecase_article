@@ -10,6 +10,8 @@ Analagous to a crypto wallet. Articles are transactions on the Edgecase Datafeed
 
 - Python 3.x (developed with 3.5.2).
 
+- Python 2.x (developed with 2.7.12).
+
 - Pytest 6.x (developed with 6.1.2).
 
 - GPG 1.x, preferably 1.4.x (developed with 1.4.20).  
@@ -70,6 +72,9 @@ Run specific test with log output:
 An article may be signed by its author.
 
 A datafeed article can contain an article, a signed article, or a checkpoint article. A datafeed article is always signed by the Edgecase Datafeed key.
+
+Python 2 is only used to run an additional SHA256 implementation, as a double-check for asset SHA256 hashes.
+
 
 
 
