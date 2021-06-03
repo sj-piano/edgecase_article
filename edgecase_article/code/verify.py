@@ -349,9 +349,11 @@ def verify(
             msg = "Calculated SHA256 hash of asset ({}) in 3 different ways, which agree.".format(asset_name)
             msg += "\nFrom shell: shasum -a 256 <filepath>:"
             msg += "\n" + sha256_calc
-            msg += "\nFrom Python3 SHA256 (in util directory):"
+            msg += "\nFrom Python2 SHA256 (in util directory):"
             msg += "\n" + sha256_calc_2
-            deb(msg + "\n")
+            msg += "\nFrom Python3 SHA256 (in util directory):"
+            msg += "\n" + sha256_calc_3
+            deb(msg)
         # Get list of links to this specific asset.
         asset_links3 = [x for x in asset_links if x.get_value('filename') == asset_name]
         for asset_link in asset_links3:
