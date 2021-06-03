@@ -305,6 +305,15 @@ datafeed_article signed_datafeed_article
 
 
 
+def validate_bytes(b, name=None, location=None, kind='bytes'):
+  if not isinstance(b, bytes):
+    msg = "which has type '{}', not 'int'.".format(type(b).__name__)
+    msg = build_error_msg(msg, b, name, location, kind)
+    raise TypeError(msg)
+
+
+
+
 def validate_whole_number(n, name=None, location=None, kind='whole_number'):
   # 0 is a whole number.
   if n == 0:
