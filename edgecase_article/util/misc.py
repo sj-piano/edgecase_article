@@ -3,12 +3,19 @@ import os
 import string
 import subprocess
 import tempfile
+import pathlib
 
 
 
 
 # Relative imports
 from . import validate as v
+
+
+
+
+# Shortcuts
+join = os.path.join
 
 
 
@@ -21,7 +28,8 @@ def pypy_sha256(input_data):
   tf = tempfile.NamedTemporaryFile(delete=False)
   tf.write(input_data)
   tf.close()
-  tool_path = 'edgecase_article/util/cli_sha256.py'
+  current_dir = str(pathlib.Path(__file__).parent.absolute())
+  tool_path = join(current_dir, 'cli_sha256.py')
   cmd = "python2 {} --targetFile {}".format(tool_path, tf.name)
   output, exit_code = run_local_cmd(cmd)
   os.remove(tf.name)
