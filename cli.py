@@ -246,6 +246,7 @@ def main():
   tasks = """
 hello hello2 hello3 hello4 hello5
 verify sign
+test
 """.split()
   if a.task not in tasks:
     msg = "Unrecognised task: {}".format(a.task)
@@ -356,6 +357,16 @@ def sign(a):
     f.write(signed_article.data + '\n')
   msg = "Signed article written to {}".format(output_file)
   log(msg)
+
+
+
+
+def test(a):
+  x = b'abc'
+  result='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'
+  print(result)
+  hash = util.misc.pypy_sha256(x)
+  print(hash)
 
 
 
