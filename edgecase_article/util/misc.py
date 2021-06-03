@@ -1,12 +1,33 @@
 # Imports
+import os
 import string
 import subprocess
+import tempfile
 
 
 
 
 # Relative imports
 from . import validate as v
+
+
+
+
+def pypy_sha256(input_data):
+  # input_data should be raw binary data.
+  # output is a hex string.
+  v.validate_bytes(input_data)
+  # Write input_data to a temporary file.
+  tf = tempfile.NamedTemporaryFile(delete=False)
+  tf.write(input_data)
+  tf.close()
+  tool_path = 'edgecase_article/util/cli_sha256.py'
+  cmd = "python2 {} --targetFile {}".format(tool_path, tf.name)
+  output, exit_code = run_local_cmd(cmd)
+  os.remove(tf.name)
+  if exit_code != 0:
+    raise ValueError
+  return output.strip()
 
 
 
