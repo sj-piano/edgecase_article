@@ -73,6 +73,11 @@ class SignedArticle(datajack.Element):
 
 
   @property
+  def checkpoint_id(self):
+    return None
+
+
+  @property
   def title(self):
     return self.article.title
 
