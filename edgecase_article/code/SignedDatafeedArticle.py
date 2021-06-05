@@ -99,6 +99,11 @@ class SignedDatafeedArticle(datajack.Element):
 
 
   @property
+  def author_name(self):
+    return self.article.author_name
+
+
+  @property
   def date(self):
     return self.datafeed_article.date
 

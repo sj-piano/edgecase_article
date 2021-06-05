@@ -112,6 +112,11 @@ class DatafeedArticle(datajack.Element):
 
 
   @property
+  def author_name(self):
+    return self.article.author_name
+
+
+  @property
   def date(self):
     return self.get_branch_value('date').strip()
 
