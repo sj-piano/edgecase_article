@@ -119,8 +119,8 @@ class SignedDatafeedArticle(datajack.Element):
 
 
   @property
-  def previous_checkpoint_block_height(self):
-    return self.datafeed_article.previous_checkpoint_block_height
+  def previous_checkpoint(self):
+    return self.datafeed_article.previous_checkpoint
 
 
   @property

@@ -122,10 +122,15 @@ class DatafeedArticle(datajack.Element):
 
 
   @property
-  def previous_checkpoint_block_height(self):
+  def previous_checkpoint(self):
     if self.datafeed_article_id == '0':
       return None
-    return self.get_value('previous_checkpoint/transaction/block_height')
+    # Children of previous_checkpoint:
+    # datafeed_article_id, checkpoint_id, date, transaction.
+    # Children of previous_checkpoint/transaction:
+    # blockchain_name, transaction_id, block_height,
+    # source_address, destination_address
+    return self.get_one('previous_checkpoint')
 
 
   @property
