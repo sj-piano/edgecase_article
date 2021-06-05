@@ -93,6 +93,11 @@ class CheckpointArticle(datajack.Element):
 
 
   @property
+  def signed_by_author(self):
+    return None
+
+
+  @property
   def blockchain_name(self):
     return self.get_value('block/blockchain_name')
 
