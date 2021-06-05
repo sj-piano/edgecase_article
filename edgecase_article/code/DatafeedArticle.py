@@ -122,6 +122,13 @@ class DatafeedArticle(datajack.Element):
 
 
   @property
+  def previous_checkpoint_block_height(self):
+    if self.datafeed_article_id == '0':
+      return None
+    return self.get_value('previous_checkpoint/transaction/block_height')
+
+
+  @property
   def content_element(self):
     return self.article.content_element
 
