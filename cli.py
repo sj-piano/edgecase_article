@@ -362,11 +362,18 @@ def sign(a):
 
 
 def test(a):
-  x = b'abc'
-  result='ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad'
-  print(result)
-  hash = util.misc.pypy_sha256(x)
-  print(hash)
+  article = edgecase_article.code.verify.verify(
+    article_file = a.article_file,
+    article_type = a.article_type,
+    verify_file_name = a.verify_file_name,
+    verify_signature = False,
+    verify_content = False,
+    public_key_dir = a.public_key_dir,
+    asset_dir = a.asset_dir,
+  )
+  msg = 'Article file {} loaded and verified.'.format(a.article_file)
+  log(msg)
+  print(article.previous_checkpoint_block_height)
 
 
 
