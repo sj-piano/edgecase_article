@@ -49,7 +49,6 @@ def _maj(x, y, z):
 def _ch(x, y, z):
   return (x & y) ^ ((~x) & z)
 
-
 class SHA256:
   _output_size = 8
   blocksize = 1
@@ -94,6 +93,9 @@ class SHA256:
       self._h[i] = (x + y) & F32
 
   def update(self, m):
+    if isinstance(m, str):
+      m = m.encode()
+
     if not m:
       return
 
@@ -102,7 +104,9 @@ class SHA256:
 
     for i in range(0, len(m) // 64):
       self._compress(m[64 * i:64 * (i + 1)])
-    self._cache = m[-(len(m) % 64):]
+
+    remainder = len(m) % 64
+    self._cache = m[-remainder:] if remainder != 0 else b''
 
   def digest(self):
     r = copy.deepcopy(self)
@@ -130,6 +134,7 @@ if __name__ == '__main__':
     ('12345678901234567890123456789012345678901234567890123456789'
      '012345678901234567890'): 'f371bc4a311f2b009eef952dd83ca80e2b60026c8e935592d0f9c308453c813e',
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit.': 'a58dd8680234c1f8cc2ef2b325a43733605a7f16f288e072de8eae81fd8d6433',
+    'Don\'t mind me, just getting to a multiple of 64 bytes la la la l': '4e42d2fabbc5d07b06ea9cc240efc85a010092e7fd3137784aa3ac854e679e47',
   }
 
   for inp, out in tests.items():
