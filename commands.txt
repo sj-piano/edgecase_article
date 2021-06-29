@@ -77,6 +77,22 @@ SignedDatafeedArticle:
 
 
 
+[generate links]
+
+python3 cli.py --logLevel=info --task links --articleFile new_articles/article.txt --linkType=hyperlink
+
+python3 cli.py --logLevel=info --task links --articleFile new_articles/article.txt --linkType asset --assetDir=new_articles/assets
+
+python3 cli.py --logLevel=info --task links --articleFile new_articles/article.txt --linkType article
+
+python3 cli.py --logLevel=info --task links --articleFile new_articles/article.txt --linkType article --articleLinksFile=settings/datafeed_article_links.json
+
+python3 cli.py --logLevel=info --task links --articleFile new_articles/article.txt --linkType external_asset --assetLinksFile=settings/datafeed_asset_links.json
+
+
+
+
+
 
 
 ### CODE QUALITY
