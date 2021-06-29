@@ -3,6 +3,7 @@ from . import module_logger
 from . import validate
 from . import misc
 from . import sha256
+from . import get_sha256
 
 
 
