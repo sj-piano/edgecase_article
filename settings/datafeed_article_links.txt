@@ -1,0 +1,2044 @@
+checkpoint_0:
+<link>
+<type>article</type>
+<article_title>checkpoint_0</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>0</datafeed_article_id>
+<text>checkpoint 0</text>
+</link>
+
+viewpoint:
+<link>
+<type>article</type>
+<article_title>Viewpoint</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>1</datafeed_article_id>
+<text>Viewpoint</text>
+</link>
+
+checkpoint_1:
+<link>
+<type>article</type>
+<article_title>checkpoint_1</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>2</datafeed_article_id>
+<text>checkpoint 1</text>
+</link>
+
+how_i_bought_and_stored_some_bitcoin:
+<link>
+<type>article</type>
+<article_title>How_I_bought_and_stored_some_bitcoin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>3</datafeed_article_id>
+<text>How I bought and stored some bitcoin</text>
+</link>
+
+checkpoint_2:
+<link>
+<type>article</type>
+<article_title>checkpoint_2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>4</datafeed_article_id>
+<text>checkpoint 2</text>
+</link>
+
+james_sullivan_on_the_nature_of_banks:
+<link>
+<type>article</type>
+<article_title>James_Sullivan_on_the_nature_of_banks</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>5</datafeed_article_id>
+<text>James Sullivan on the nature of banks</text>
+</link>
+
+dictation_system_demo:
+<link>
+<type>article</type>
+<article_title>Dictation_system_demo</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>6</datafeed_article_id>
+<text>Dictation system demo</text>
+</link>
+
+jordan_peterson_on_speech_truth_thinking_and_attention:
+<link>
+<type>article</type>
+<article_title>Jordan_Peterson_on_speech,_truth,_thinking,_and_attention</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>7</datafeed_article_id>
+<text>Jordan Peterson on speech, truth, thinking, and attention</text>
+</link>
+
+lombard_street_by_walter_bagehot_chapter_1:
+<link>
+<type>article</type>
+<article_title>Lombard_Street_by_Walter_Bagehot:_Chapter_1</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>8</datafeed_article_id>
+<text>Lombard Street by Walter Bagehot: Chapter 1</text>
+</link>
+
+george_orwells_review_of_mein_kampf_by_adolf_hitler:
+<link>
+<type>article</type>
+<article_title>George_Orwell's_review_of_Mein_Kampf_by_Adolf_Hitler</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>9</datafeed_article_id>
+<text>George Orwell's review of Mein Kampf by Adolf Hitler</text>
+</link>
+
+checkpoint_3:
+<link>
+<type>article</type>
+<article_title>checkpoint_3</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>10</datafeed_article_id>
+<text>checkpoint 3</text>
+</link>
+
+stalky__co__by_rudyard_kipling_prefatory_poem:
+<link>
+<type>article</type>
+<article_title>Stalky_&_Co._by_Rudyard_Kipling:_Prefatory_poem</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>11</datafeed_article_id>
+<text>Stalky & Co. by Rudyard Kipling: Prefatory poem</text>
+</link>
+
+warren_buffett_on_pensions:
+<link>
+<type>article</type>
+<article_title>Warren_Buffett_on_pensions</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>12</datafeed_article_id>
+<text>Warren Buffett on pensions</text>
+</link>
+
+ed_seykota_the_jademaster:
+<link>
+<type>article</type>
+<article_title>Ed_Seykota:_The_Jademaster</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>13</datafeed_article_id>
+<text>Ed Seykota: The Jademaster</text>
+</link>
+
+email_to_a_concerned_relative_concerning_rsi:
+<link>
+<type>article</type>
+<article_title>Email_to_a_concerned_relative_concerning_RSI</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>14</datafeed_article_id>
+<text>Email to a concerned relative concerning RSI</text>
+</link>
+
+james_goldman_a_word_about_castles:
+<link>
+<type>article</type>
+<article_title>James_Goldman:_A_Word_About_Castles</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>15</datafeed_article_id>
+<text>James Goldman: A Word About Castles</text>
+</link>
+
+lucius_annaeus_seneca_on_the_shortness_of_life:
+<link>
+<type>article</type>
+<article_title>Lucius_Annaeus_Seneca:_On_the_Shortness_of_Life</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>16</datafeed_article_id>
+<text>Lucius Annaeus Seneca: On the Shortness of Life</text>
+</link>
+
+new_computer_kalkin:
+<link>
+<type>article</type>
+<article_title>New_computer:_Kalkin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>17</datafeed_article_id>
+<text>New computer: Kalkin</text>
+</link>
+
+lawrence_durrell_on_history_and_the_greeks:
+<link>
+<type>article</type>
+<article_title>Lawrence_Durrell_on_history_and_the_Greeks</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>18</datafeed_article_id>
+<text>Lawrence Durrell on history and the Greeks</text>
+</link>
+
+making_a_centos_6_9_bootable_usb_memory_stick_on_mac_os_x_10_6_8_snow_leopard:
+<link>
+<type>article</type>
+<article_title>Making_a_Centos_6.9_bootable_USB_memory_stick_on_Mac_OS_X_10.6.8_Snow_Leopard</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>19</datafeed_article_id>
+<text>Making a Centos 6.9 bootable USB memory stick on Mac OS X 10.6.8 Snow Leopard</text>
+</link>
+
+checkpoint_4:
+<link>
+<type>article</type>
+<article_title>checkpoint_4</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>20</datafeed_article_id>
+<text>checkpoint 4</text>
+</link>
+
+compiling_bitcoind_trb_0_5_4_on_debian_7_11:
+<link>
+<type>article</type>
+<article_title>Compiling_bitcoind_(trb_0.5.4)_on_Debian_7.11</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>21</datafeed_article_id>
+<text>Compiling bitcoind (trb 0.5.4) on Debian 7.11</text>
+</link>
+
+checkpoint_5:
+<link>
+<type>article</type>
+<article_title>checkpoint_5</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>22</datafeed_article_id>
+<text>checkpoint 5</text>
+</link>
+
+exploring_the_bios_boot_options_on_kalkin:
+<link>
+<type>article</type>
+<article_title>Exploring_the_BIOS_boot_options_on_Kalkin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>23</datafeed_article_id>
+<text>Exploring the BIOS boot options on Kalkin</text>
+</link>
+
+checking_kalkins_hardware_details_using_centos_6_9:
+<link>
+<type>article</type>
+<article_title>Checking_Kalkin's_hardware_details_using_Centos_6.9</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>24</datafeed_article_id>
+<text>Checking Kalkin's hardware details using Centos 6.9</text>
+</link>
+
+excerpts_from_j_a_froudes_the_dissolution_of_the_monasteries:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_J_A_Froude's_The_Dissolution_of_the_Monasteries</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>25</datafeed_article_id>
+<text>Excerpts from J A Froude's The Dissolution of the Monasteries</text>
+</link>
+
+excerpts_from_j_a_froudes_the_science_of_history:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_J_A_Froude's_The_Science_of_History</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>26</datafeed_article_id>
+<text>Excerpts from J A Froude's The Science of History</text>
+</link>
+
+excerpt_from_j_a_froudes_the_book_of_job:
+<link>
+<type>article</type>
+<article_title>Excerpt_from_J_A_Froude's_The_Book_of_Job</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>27</datafeed_article_id>
+<text>Excerpt from J A Froude's The Book of Job</text>
+</link>
+
+installing_centos_6_9_minimal_on_kalkin:
+<link>
+<type>article</type>
+<article_title>Installing_Centos_6.9_Minimal_on_Kalkin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>28</datafeed_article_id>
+<text>Installing Centos 6.9 Minimal on Kalkin</text>
+</link>
+
+stalky__co__by_rudyard_kipling_in_ambush:
+<link>
+<type>article</type>
+<article_title>Stalky_&_Co._by_Rudyard_Kipling:_"In_Ambush"</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>29</datafeed_article_id>
+<text>Stalky & Co. by Rudyard Kipling: "In Ambush"</text>
+</link>
+
+listing_available_tools_on_centos_6_9_minimal:
+<link>
+<type>article</type>
+<article_title>Listing_available_tools_on_Centos_6.9_Minimal</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>30</datafeed_article_id>
+<text>Listing available tools on Centos 6.9 Minimal</text>
+</link>
+
+a_possible_inspiration_for_yes_minister:
+<link>
+<type>article</type>
+<article_title>A_possible_inspiration_for_Yes_Minister</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>31</datafeed_article_id>
+<text>A possible inspiration for Yes Minister</text>
+</link>
+
+goliath_by_neil_gaiman:
+<link>
+<type>article</type>
+<article_title>Goliath_by_Neil_Gaiman</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>32</datafeed_article_id>
+<text>Goliath by Neil Gaiman</text>
+</link>
+
+examining_a_boot_problem_on_kalkin:
+<link>
+<type>article</type>
+<article_title>Examining_a_boot_problem_on_Kalkin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>33</datafeed_article_id>
+<text>Examining a boot problem on Kalkin</text>
+</link>
+
+stalky__co__by_rudyard_kipling_slaves_of_the_lamp_part_i:
+<link>
+<type>article</type>
+<article_title>Stalky_&_Co._by_Rudyard_Kipling:_Slaves_of_the_Lamp_Part_I</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>34</datafeed_article_id>
+<text>Stalky & Co. by Rudyard Kipling: Slaves of the Lamp Part I</text>
+</link>
+
+john_t__flynn_how_the_great_rothschild_family_of_bankers_got_started:
+<link>
+<type>article</type>
+<article_title>John_T._Flynn:_How_the_great_Rothschild_family_of_bankers_got_started</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>35</datafeed_article_id>
+<text>John T. Flynn: How the great Rothschild family of bankers got started</text>
+</link>
+
+examining_a_problem_with_saving_data_to_a_usb_memory_stick_on_kalkin:
+<link>
+<type>article</type>
+<article_title>Examining_a_problem_with_saving_data_to_a_USB_memory_stick_on_Kalkin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>36</datafeed_article_id>
+<text>Examining a problem with saving data to a USB memory stick on Kalkin</text>
+</link>
+
+mapping_the_bios_on_kalkin:
+<link>
+<type>article</type>
+<article_title>Mapping_the_BIOS_on_Kalkin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>37</datafeed_article_id>
+<text>Mapping the BIOS on Kalkin</text>
+</link>
+
+hardening_the_bios_on_kalkin_against_remote_access:
+<link>
+<type>article</type>
+<article_title>Hardening_the_BIOS_on_Kalkin_against_remote_access</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>38</datafeed_article_id>
+<text>Hardening the BIOS on Kalkin against remote access</text>
+</link>
+
+how_i_developed_rsi_and_returned_to_a_low_but_useful_level_of_productivity:
+<link>
+<type>article</type>
+<article_title>How_I_developed_RSI_and_returned_to_a_low_but_useful_level_of_productivity</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>39</datafeed_article_id>
+<text>How I developed RSI and returned to a low but useful level of productivity</text>
+</link>
+
+excerpts_from_the_once_and_future_king_by_t_h_white:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_The_Once_and_Future_King_by_T_H_White</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>40</datafeed_article_id>
+<text>Excerpts from The Once and Future King by T H White</text>
+</link>
+
+orwell_on_kipling:
+<link>
+<type>article</type>
+<article_title>Orwell_on_Kipling</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>41</datafeed_article_id>
+<text>Orwell on Kipling</text>
+</link>
+
+philip_henshers_review_of_the_book_of_kings_by_james_thackara:
+<link>
+<type>article</type>
+<article_title>Philip_Hensher's_review_of_The_Book_of_Kings_by_James_Thackara</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>42</datafeed_article_id>
+<text>Philip Hensher's review of The Book of Kings by James Thackara</text>
+</link>
+
+case_history_of_my_rsi_condition:
+<link>
+<type>article</type>
+<article_title>Case_history_of_my_RSI_condition</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>43</datafeed_article_id>
+<text>Case history of my RSI condition</text>
+</link>
+
+the_library_of_babel_by_jorge_luis_borges_translated_by_norman_thomas_di_giovanni:
+<link>
+<type>article</type>
+<article_title>The_Library_of_Babel_by_Jorge_Luis_Borges,_translated_by_Norman_Thomas_Di_Giovanni</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>44</datafeed_article_id>
+<text>The Library of Babel by Jorge Luis Borges, translated by Norman Thomas Di Giovanni</text>
+</link>
+
+dorothy_l_sayers_on_the_motivation_of_bell_ringers:
+<link>
+<type>article</type>
+<article_title>Dorothy_L_Sayers_on_the_motivation_of_bell-ringers</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>45</datafeed_article_id>
+<text>Dorothy L Sayers on the motivation of bell-ringers</text>
+</link>
+
+the_eye_of_argon_by_jim_theis:
+<link>
+<type>article</type>
+<article_title>The_Eye_of_Argon_by_Jim_Theis</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>46</datafeed_article_id>
+<text>The Eye of Argon by Jim Theis</text>
+</link>
+
+selected_quotations_from_the_eye_of_argon_by_jim_theis:
+<link>
+<type>article</type>
+<article_title>Selected_quotations_from_The_Eye_of_Argon_by_Jim_Theis</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>47</datafeed_article_id>
+<text>Selected quotations from The Eye of Argon by Jim Theis</text>
+</link>
+
+offline_installation_of_a_c_compiler_on_centos_6_9_minimal_on_kalkin:
+<link>
+<type>article</type>
+<article_title>Offline_installation_of_a_C_compiler_on_Centos_6.9_Minimal_on_Kalkin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>48</datafeed_article_id>
+<text>Offline installation of a C compiler on Centos 6.9 Minimal on Kalkin</text>
+</link>
+
+stalky__co__by_rudyard_kipling_an_unsavoury_interlude:
+<link>
+<type>article</type>
+<article_title>Stalky_&_Co._by_Rudyard_Kipling:_An_Unsavoury_Interlude</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>49</datafeed_article_id>
+<text>Stalky & Co. by Rudyard Kipling: An Unsavoury Interlude</text>
+</link>
+
+excerpts_from_the_mote_in_gods_eye_by_larry_niven_and_jerry_pournelle:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_The_Mote_in_God's_Eye_by_Larry_Niven_and_Jerry_Pournelle</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>50</datafeed_article_id>
+<text>Excerpts from The Mote in God's Eye by Larry Niven and Jerry Pournelle</text>
+</link>
+
+reading_and_verifying_a_standard_raw_bitcoin_transaction:
+<link>
+<type>article</type>
+<article_title>Reading_and_verifying_a_standard_raw_bitcoin_transaction</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>51</datafeed_article_id>
+<text>Reading and verifying a standard raw bitcoin transaction</text>
+</link>
+
+checkpoint_6:
+<link>
+<type>article</type>
+<article_title>checkpoint_6</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>52</datafeed_article_id>
+<text>checkpoint 6</text>
+</link>
+
+excerpts_from_roadside_picnic_by_arkady_and_boris_strugatsky_translated_by_olena_bormashenko:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_Roadside_Picnic_by_Arkady_and_Boris_Strugatsky,_translated_by_Olena_Bormashenko</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>53</datafeed_article_id>
+<text>Excerpts from Roadside Picnic by Arkady and Boris Strugatsky, translated by Olena Bormashenko</text>
+</link>
+
+generating_a_standard_bitcoin_address:
+<link>
+<type>article</type>
+<article_title>Generating_a_standard_Bitcoin_address</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>54</datafeed_article_id>
+<text>Generating a standard Bitcoin address</text>
+</link>
+
+an_overview_of_repetitive_strain_injury_rsi:
+<link>
+<type>article</type>
+<article_title>An_Overview_of_Repetitive_Strain_Injury_(RSI)</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>55</datafeed_article_id>
+<text>An Overview of Repetitive Strain Injury (RSI)</text>
+</link>
+
+creating_and_signing_a_standard_raw_bitcoin_transaction:
+<link>
+<type>article</type>
+<article_title>Creating_and_signing_a_standard_raw_Bitcoin_transaction</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>56</datafeed_article_id>
+<text>Creating and signing a standard raw Bitcoin transaction</text>
+</link>
+
+some_notes_on_paper_promises_by_philip_coggan:
+<link>
+<type>article</type>
+<article_title>Some_notes_on_Paper_Promises_by_Philip_Coggan</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>57</datafeed_article_id>
+<text>Some notes on Paper Promises by Philip Coggan</text>
+</link>
+
+installing_cygwin_on_windows_7:
+<link>
+<type>article</type>
+<article_title>Installing_Cygwin_on_Windows_7</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>58</datafeed_article_id>
+<text>Installing Cygwin on Windows 7</text>
+</link>
+
+installing_openssh_on_cygwin_and_using_it_to_access_a_vps:
+<link>
+<type>article</type>
+<article_title>Installing_OpenSSH_on_Cygwin_and_using_it_to_access_a_VPS</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>59</datafeed_article_id>
+<text>Installing OpenSSH on Cygwin and using it to access a VPS</text>
+</link>
+
+verifying_a_signed_deed_of_the_gpg_1_4_10_source_code:
+<link>
+<type>article</type>
+<article_title>Verifying_a_signed_deed_of_the_GPG_1.4.10_source_code</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>60</datafeed_article_id>
+<text>Verifying a signed deed of the GPG 1.4.10 source code</text>
+</link>
+
+compiling_gpg_1_4_10_from_source:
+<link>
+<type>article</type>
+<article_title>Compiling_GPG_1.4.10_from_source</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>61</datafeed_article_id>
+<text>Compiling GPG 1.4.10 from source</text>
+</link>
+
+checkpoint_7:
+<link>
+<type>article</type>
+<article_title>checkpoint_7</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>62</datafeed_article_id>
+<text>checkpoint 7</text>
+</link>
+
+creating_and_signing_a_standard_raw_bitcoin_transaction_iteration_2:
+<link>
+<type>article</type>
+<article_title>Creating_and_signing_a_standard_raw_Bitcoin_transaction:_Iteration_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>63</datafeed_article_id>
+<text>Creating and signing a standard raw Bitcoin transaction: Iteration #2</text>
+</link>
+
+generating_entropy_with_dice:
+<link>
+<type>article</type>
+<article_title>Generating_entropy_with_dice</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>64</datafeed_article_id>
+<text>Generating entropy with dice</text>
+</link>
+
+some_poems_by_felix_dennis:
+<link>
+<type>article</type>
+<article_title>Some_poems_by_Felix_Dennis</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>65</datafeed_article_id>
+<text>Some poems by Felix Dennis</text>
+</link>
+
+using_a_transaction_to_validate_a_bitcoin_address:
+<link>
+<type>article</type>
+<article_title>Using_a_transaction_to_validate_a_Bitcoin_address</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>66</datafeed_article_id>
+<text>Using a transaction to validate a Bitcoin address</text>
+</link>
+
+recipe_for_generating_entropy_bytes_using_dice:
+<link>
+<type>article</type>
+<article_title>Recipe_for_generating_entropy_bytes_using_dice</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>67</datafeed_article_id>
+<text>Recipe for generating entropy bytes using dice</text>
+</link>
+
+the_factory_director_in_the_u_s_s_r__by_raymond_a_bauer:
+<link>
+<type>article</type>
+<article_title>The_Factory_Director_in_the_U.S.S.R._by_Raymond_A_Bauer</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>68</datafeed_article_id>
+<text>The Factory Director in the U.S.S.R. by Raymond A Bauer</text>
+</link>
+
+recipe_for_generating_a_bitcoin_address:
+<link>
+<type>article</type>
+<article_title>Recipe_for_generating_a_Bitcoin_address</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>69</datafeed_article_id>
+<text>Recipe for generating a Bitcoin address</text>
+</link>
+
+recipe_for_creating_and_signing_a_standard_bitcoin_transaction:
+<link>
+<type>article</type>
+<article_title>Recipe_for_creating_and_signing_a_standard_Bitcoin_transaction</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>70</datafeed_article_id>
+<text>Recipe for creating and signing a standard Bitcoin transaction</text>
+</link>
+
+excerpts_from_a_qa_with_jordan_peterson:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_a_Q&A_with_Jordan_Peterson</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>71</datafeed_article_id>
+<text>Excerpts from a Q&A with Jordan Peterson</text>
+</link>
+
+recipe_for_creating_and_signing_a_nonstandard_bitcoin_transaction:
+<link>
+<type>article</type>
+<article_title>Recipe_for_creating_and_signing_a_nonstandard_Bitcoin_transaction</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>72</datafeed_article_id>
+<text>Recipe for creating and signing a nonstandard Bitcoin transaction</text>
+</link>
+
+displaying_hex_bytes_for_manual_copying:
+<link>
+<type>article</type>
+<article_title>Displaying_hex_bytes_for_manual_copying</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>73</datafeed_article_id>
+<text>Displaying hex bytes for manual copying</text>
+</link>
+
+uncleftish_beholding_by_poul_anderson:
+<link>
+<type>article</type>
+<article_title>Uncleftish_Beholding_by_Poul_Anderson</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>74</datafeed_article_id>
+<text>Uncleftish Beholding by Poul Anderson</text>
+</link>
+
+storing_bitcoin_on_an_offline_raspberry_pi:
+<link>
+<type>article</type>
+<article_title>Storing_bitcoin_on_an_offline_Raspberry_Pi</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>75</datafeed_article_id>
+<text>Storing bitcoin on an offline Raspberry Pi</text>
+</link>
+
+recipe_for_managing_the_fee_and_broadcast_of_a_bitcoin_transaction:
+<link>
+<type>article</type>
+<article_title>Recipe_for_managing_the_fee_and_broadcast_of_a_Bitcoin_transaction</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>76</datafeed_article_id>
+<text>Recipe for managing the fee and broadcast of a Bitcoin transaction</text>
+</link>
+
+excerpts_from_i_claudius_by_robert_graves:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_I,_Claudius_by_Robert_Graves</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>77</datafeed_article_id>
+<text>Excerpts from I, Claudius by Robert Graves</text>
+</link>
+
+recipe_for_manually_mounting_a_usb_flash_drive:
+<link>
+<type>article</type>
+<article_title>Recipe_for_manually_mounting_a_USB_flash_drive</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>78</datafeed_article_id>
+<text>Recipe for manually mounting a USB flash drive</text>
+</link>
+
+recipe_for_storing_bitcoin_on_paper_using_a_raspberry_pi:
+<link>
+<type>article</type>
+<article_title>Recipe_for_storing_bitcoin_on_paper_using_a_Raspberry_Pi</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>79</datafeed_article_id>
+<text>Recipe for storing bitcoin on paper using a Raspberry Pi</text>
+</link>
+
+the_palace_by_rudyard_kipling:
+<link>
+<type>article</type>
+<article_title>The_Palace_by_Rudyard_Kipling</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>80</datafeed_article_id>
+<text>The Palace by Rudyard Kipling</text>
+</link>
+
+new_computer_shovel:
+<link>
+<type>article</type>
+<article_title>New_computer:_Shovel</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>81</datafeed_article_id>
+<text>New computer: Shovel</text>
+</link>
+
+testing_a_list_of_vim_commands:
+<link>
+<type>article</type>
+<article_title>Testing_a_list_of_Vim_commands</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>82</datafeed_article_id>
+<text>Testing a list of Vim commands</text>
+</link>
+
+verifying_the_first_checkpoint_article_in_edgecase_datafeed:
+<link>
+<type>article</type>
+<article_title>Verifying_the_first_checkpoint_article_in_Edgecase_Datafeed</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>83</datafeed_article_id>
+<text>Verifying the first checkpoint article in Edgecase Datafeed</text>
+</link>
+
+some_thoughts_on_brexit_and_the_european_union:
+<link>
+<type>article</type>
+<article_title>Some_thoughts_on_Brexit_and_the_European_Union</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>84</datafeed_article_id>
+<text>Some thoughts on Brexit and the European Union</text>
+</link>
+
+creating_a_bitcoin_transaction_with_two_outputs:
+<link>
+<type>article</type>
+<article_title>Creating_a_Bitcoin_transaction_with_two_outputs</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>85</datafeed_article_id>
+<text>Creating a Bitcoin transaction with two outputs</text>
+</link>
+
+installing_gpg_1_4_10_on_centos_7_6:
+<link>
+<type>article</type>
+<article_title>Installing_GPG_1.4.10_on_CentOS_7.6</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>86</datafeed_article_id>
+<text>Installing GPG 1.4.10 on CentOS 7.6</text>
+</link>
+
+the_last_thoughts_of_bindon:
+<link>
+<type>article</type>
+<article_title>The_last_thoughts_of_Bindon</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>87</datafeed_article_id>
+<text>The last thoughts of Bindon</text>
+</link>
+
+testing_gpg_1_4_10:
+<link>
+<type>article</type>
+<article_title>Testing_GPG_1.4.10</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>88</datafeed_article_id>
+<text>Testing GPG 1.4.10</text>
+</link>
+
+creating_a_bitcoin_transaction_with_two_inputs:
+<link>
+<type>article</type>
+<article_title>Creating_a_Bitcoin_transaction_with_two_inputs</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>89</datafeed_article_id>
+<text>Creating a Bitcoin transaction with two inputs</text>
+</link>
+
+the_ascii_text_encoding:
+<link>
+<type>article</type>
+<article_title>The_ASCII_text_encoding</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>90</datafeed_article_id>
+<text>The ASCII text encoding</text>
+</link>
+
+printable_ascii:
+<link>
+<type>article</type>
+<article_title>Printable_ASCII</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>91</datafeed_article_id>
+<text>Printable ASCII</text>
+</link>
+
+edgecase_markup_language_eml_latin_1:
+<link>
+<type>article</type>
+<article_title>Edgecase_Markup_Language_(EML):_Latin-1</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>92</datafeed_article_id>
+<text>Edgecase Markup Language (EML): Latin-1</text>
+</link>
+
+basic_vim_commands:
+<link>
+<type>article</type>
+<article_title>Basic_Vim_commands</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>93</datafeed_article_id>
+<text>Basic Vim commands</text>
+</link>
+
+basic_gpg_commands:
+<link>
+<type>article</type>
+<article_title>Basic_GPG_Commands</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>94</datafeed_article_id>
+<text>Basic GPG Commands</text>
+</link>
+
+a_simple_api:
+<link>
+<type>article</type>
+<article_title>A_simple_API</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>95</datafeed_article_id>
+<text>A simple API</text>
+</link>
+
+a_simple_api_implementation:
+<link>
+<type>article</type>
+<article_title>A_simple_API:_Implementation</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>96</datafeed_article_id>
+<text>A simple API: Implementation</text>
+</link>
+
+using_gpg_1_4_10_statelessly:
+<link>
+<type>article</type>
+<article_title>Using_GPG_1.4.10_statelessly</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>97</datafeed_article_id>
+<text>Using GPG 1.4.10 statelessly</text>
+</link>
+
+gpg_1_4_10_stateless_operations:
+<link>
+<type>article</type>
+<article_title>GPG_1.4.10_Stateless_Operations</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>98</datafeed_article_id>
+<text>GPG 1.4.10 Stateless Operations</text>
+</link>
+
+remapping_keys_in_centos_7_6:
+<link>
+<type>article</type>
+<article_title>Remapping_keys_in_CentOS_7.6</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>99</datafeed_article_id>
+<text>Remapping keys in CentOS 7.6</text>
+</link>
+
+a_simple_api_json_inputoutput:
+<link>
+<type>article</type>
+<article_title>A_simple_API:_JSON_Input/Output</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>100</datafeed_article_id>
+<text>A simple API: JSON Input/Output</text>
+</link>
+
+public_key_identity_document_stjohn_piano:
+<link>
+<type>article</type>
+<article_title>Public_Key_Identity_Document:_StJohn_Piano</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>101</datafeed_article_id>
+<text>Public Key Identity Document: StJohn Piano</text>
+</link>
+
+public_key_identity_document_stjohn_piano_2:
+<link>
+<type>article</type>
+<article_title>Public_Key_Identity_Document:_StJohn_Piano_2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>102</datafeed_article_id>
+<text>Public Key Identity Document: StJohn Piano 2</text>
+</link>
+
+contract_0:
+<link>
+<type>article</type>
+<article_title>Contract_0</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>103</datafeed_article_id>
+<text>Contract 0</text>
+</link>
+
+blockchain_fundamentals:
+<link>
+<type>article</type>
+<article_title>Blockchain_Fundamentals</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>104</datafeed_article_id>
+<text>Blockchain Fundamentals</text>
+</link>
+
+verifying_the_first_signed_article_in_edgecase_datafeed:
+<link>
+<type>article</type>
+<article_title>Verifying_the_first_signed_article_in_Edgecase_Datafeed</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>105</datafeed_article_id>
+<text>Verifying the first signed article in Edgecase Datafeed</text>
+</link>
+
+checkpoint_8:
+<link>
+<type>article</type>
+<article_title>checkpoint_8</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>106</datafeed_article_id>
+<text>checkpoint 8</text>
+</link>
+
+setting_up_irc_irssi_znc_digital_ocean_freenode:
+<link>
+<type>article</type>
+<article_title>Setting_up_IRC_(Irssi,_ZNC,_Digital_Ocean,_Freenode)</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>107</datafeed_article_id>
+<text>Setting up IRC (Irssi, ZNC, Digital Ocean, Freenode)</text>
+</link>
+
+conversation_programmer_licences:
+<link>
+<type>article</type>
+<article_title>Conversation:_Programmer_Licences</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>108</datafeed_article_id>
+<text>Conversation: Programmer Licences</text>
+</link>
+
+building_a_parser_for_eml:
+<link>
+<type>article</type>
+<article_title>Building_a_parser_for_EML</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>109</datafeed_article_id>
+<text>Building a parser for EML</text>
+</link>
+
+excerpts_from_the_chrysalids_by_john_wyndham:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_The_Chrysalids_by_John_Wyndham</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>110</datafeed_article_id>
+<text>Excerpts from The Chrysalids by John Wyndham</text>
+</link>
+
+joining_the_web_of_trust:
+<link>
+<type>article</type>
+<article_title>Joining_the_web_of_trust</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>111</datafeed_article_id>
+<text>Joining the web of trust</text>
+</link>
+
+excerpts_from_heretics_of_dune_by_frank_herbert:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_Heretics_of_Dune_by_Frank_Herbert</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>112</datafeed_article_id>
+<text>Excerpts from Heretics of Dune by Frank Herbert</text>
+</link>
+
+the_value_of_software:
+<link>
+<type>article</type>
+<article_title>The_Value_of_Software</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>113</datafeed_article_id>
+<text>The Value of Software</text>
+</link>
+
+excerpts_from_human_behavioral_biology_by_robert_sapolsky:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_Human_Behavioral_Biology_by_Robert_Sapolsky</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>114</datafeed_article_id>
+<text>Excerpts from Human Behavioral Biology by Robert Sapolsky</text>
+</link>
+
+bitcoin_transaction_test_set:
+<link>
+<type>article</type>
+<article_title>Bitcoin_transaction_test_set</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>115</datafeed_article_id>
+<text>Bitcoin transaction test set</text>
+</link>
+
+excerpts_from_god_emperor_of_dune_by_frank_herbert:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_God_Emperor_of_Dune_by_Frank_Herbert</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>116</datafeed_article_id>
+<text>Excerpts from God Emperor of Dune by Frank Herbert</text>
+</link>
+
+line_to_take_ltt:
+<link>
+<type>article</type>
+<article_title>Line_To_Take_(LTT)</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>117</datafeed_article_id>
+<text>Line To Take (LTT)</text>
+</link>
+
+hello_world_on_a_server_digitalocean_nginx_gunicorn_python:
+<link>
+<type>article</type>
+<article_title>Hello_World_on_a_server_(DigitalOcean,_Nginx,_Gunicorn,_Python)</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>118</datafeed_article_id>
+<text>Hello World on a server (DigitalOcean, Nginx, Gunicorn, Python)</text>
+</link>
+
+report_on_an_unidentified_space_station_by_j_g_ballard:
+<link>
+<type>article</type>
+<article_title>Report_on_an_Unidentified_Space_Station_by_J_G_Ballard</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>119</datafeed_article_id>
+<text>Report on an Unidentified Space Station by J G Ballard</text>
+</link>
+
+buying_and_setting_up_a_raspberry_pi_for_storing_bitcoin:
+<link>
+<type>article</type>
+<article_title>Buying_and_setting_up_a_Raspberry_Pi_for_storing_Bitcoin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>120</datafeed_article_id>
+<text>Buying and setting up a Raspberry Pi for storing Bitcoin</text>
+</link>
+
+letter_of_application_for_a_moustache:
+<link>
+<type>article</type>
+<article_title>Letter_of_Application_for_a_Moustache</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>121</datafeed_article_id>
+<text>Letter of Application for a Moustache</text>
+</link>
+
+the_establishment_of_a_cryptocurrency_guild:
+<link>
+<type>article</type>
+<article_title>The_Establishment_of_a_Cryptocurrency_Guild</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>122</datafeed_article_id>
+<text>The Establishment of a Cryptocurrency Guild</text>
+</link>
+
+the_flight_of_the_horse_by_larry_niven:
+<link>
+<type>article</type>
+<article_title>The_Flight_of_the_Horse_by_Larry_Niven</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>123</datafeed_article_id>
+<text>The Flight of the Horse by Larry Niven</text>
+</link>
+
+excerpts_from_bring_up_the_bodies_by_hilary_mantel:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_Bring_Up_The_Bodies_by_Hilary_Mantel</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>124</datafeed_article_id>
+<text>Excerpts from Bring Up The Bodies by Hilary Mantel</text>
+</link>
+
+notes_on_the_security_of_p2sh_multisignature_addresses:
+<link>
+<type>article</type>
+<article_title>Notes_on_the_security_of_P2SH_multisignature_addresses</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>125</datafeed_article_id>
+<text>Notes on the security of P2SH multisignature addresses</text>
+</link>
+
+why_gold_doesnt_work_anymore:
+<link>
+<type>article</type>
+<article_title>Why_Gold_Doesn't_Work_Anymore</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>126</datafeed_article_id>
+<text>Why Gold Doesn't Work Anymore</text>
+</link>
+
+entrepreneurs_are_the_new_labour_by_venkatesh_rao:
+<link>
+<type>article</type>
+<article_title>Entrepreneurs_Are_The_New_Labour_by_Venkatesh_Rao</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>127</datafeed_article_id>
+<text>Entrepreneurs Are The New Labour by Venkatesh Rao</text>
+</link>
+
+the_second_coming_by_william_butler_yeats:
+<link>
+<type>article</type>
+<article_title>The_Second_Coming_by_William_Butler_Yeats</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>128</datafeed_article_id>
+<text>The Second Coming by William Butler Yeats</text>
+</link>
+
+leviathan_by_larry_niven:
+<link>
+<type>article</type>
+<article_title>Leviathan_by_Larry_Niven</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>129</datafeed_article_id>
+<text>Leviathan by Larry Niven</text>
+</link>
+
+the_structure_of_a_bitcoin_bank:
+<link>
+<type>article</type>
+<article_title>The_structure_of_a_Bitcoin_bank</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>130</datafeed_article_id>
+<text>The structure of a Bitcoin bank</text>
+</link>
+
+summary_of_ethereum_for_dummies_by_dr_gavin_wood:
+<link>
+<type>article</type>
+<article_title>Summary_of_Ethereum_for_Dummies_by_Dr_Gavin_Wood</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>131</datafeed_article_id>
+<text>Summary of Ethereum for Dummies by Dr Gavin Wood</text>
+</link>
+
+excerpts_from_the_conan_chronicles_by_robert_e_howard:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_The_Conan_Chronicles_by_Robert_E_Howard</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>132</datafeed_article_id>
+<text>Excerpts from The Conan Chronicles by Robert E Howard</text>
+</link>
+
+edgecase_guild_strategic_policy_document:
+<link>
+<type>article</type>
+<article_title>Edgecase_Guild:_Strategic_Policy_Document</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>133</datafeed_article_id>
+<text>Edgecase Guild: Strategic Policy Document</text>
+</link>
+
+excerpt_from_dont_follow_your_passion_by_ben_horowitz:
+<link>
+<type>article</type>
+<article_title>Excerpt_from_Don't_Follow_Your_Passion_by_Ben_Horowitz</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>134</datafeed_article_id>
+<text>Excerpt from Don't Follow Your Passion by Ben Horowitz</text>
+</link>
+
+codebase_trb_0_5_4:
+<link>
+<type>article</type>
+<article_title>Codebase:_TRB_0.5.4</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>135</datafeed_article_id>
+<text>Codebase: TRB 0.5.4</text>
+</link>
+
+a_brief_history_of_the_real_bitcoin_trb:
+<link>
+<type>article</type>
+<article_title>A_brief_history_of_The_Real_Bitcoin_(TRB)</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>136</datafeed_article_id>
+<text>A brief history of The Real Bitcoin (TRB)</text>
+</link>
+
+compiling_bitcoind_trb_0_5_4_on_ubuntu_16_04:
+<link>
+<type>article</type>
+<article_title>Compiling_bitcoind_(trb_0.5.4)_on_Ubuntu_16.04</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>137</datafeed_article_id>
+<text>Compiling bitcoind (trb 0.5.4) on Ubuntu 16.04</text>
+</link>
+
+preparations_for_coronavirus_induced_short_term_disruption_of_supermarkets_and_healthcare:
+<link>
+<type>article</type>
+<article_title>Preparations_for_Coronavirus-induced_short-term_disruption_of_supermarkets_and_healthcare</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>138</datafeed_article_id>
+<text>Preparations for Coronavirus-induced short-term disruption of supermarkets and healthcare</text>
+</link>
+
+a_state_machine_approach_to_parsing:
+<link>
+<type>article</type>
+<article_title>A_State_Machine_Approach_To_Parsing</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>139</datafeed_article_id>
+<text>A State Machine Approach To Parsing</text>
+</link>
+
+source_material_for_home_treatments_for_coronavirus:
+<link>
+<type>article</type>
+<article_title>Source_material_for_Home_treatments_for_coronavirus</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>140</datafeed_article_id>
+<text>Source material for Home treatments for coronavirus</text>
+</link>
+
+home_treatments_for_coronavirus:
+<link>
+<type>article</type>
+<article_title>Home_treatments_for_coronavirus</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>141</datafeed_article_id>
+<text>Home treatments for coronavirus</text>
+</link>
+
+the_path_of_blue_and_orange:
+<link>
+<type>article</type>
+<article_title>The_Path_of_Blue_and_Orange</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>142</datafeed_article_id>
+<text>The Path of Blue and Orange</text>
+</link>
+
+an_investigation_into_recovering_from_transcription_errors_in_bitcoin_private_keys:
+<link>
+<type>article</type>
+<article_title>An_investigation_into_recovering_from_transcription_errors_in_Bitcoin_private_keys</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>143</datafeed_article_id>
+<text>An investigation into recovering from transcription errors in Bitcoin private keys</text>
+</link>
+
+checkpoint_9:
+<link>
+<type>article</type>
+<article_title>checkpoint_9</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>144</datafeed_article_id>
+<text>checkpoint 9</text>
+</link>
+
+further_recovery_from_rsi:
+<link>
+<type>article</type>
+<article_title>Further_recovery_from_RSI</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>145</datafeed_article_id>
+<text>Further recovery from RSI</text>
+</link>
+
+bitcoin_address_test_set:
+<link>
+<type>article</type>
+<article_title>Bitcoin_address_test_set</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>146</datafeed_article_id>
+<text>Bitcoin address test set</text>
+</link>
+
+bitcoin_nonstandard_transaction_test_set:
+<link>
+<type>article</type>
+<article_title>Bitcoin_nonstandard_transaction_test_set</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>147</datafeed_article_id>
+<text>Bitcoin nonstandard transaction test set</text>
+</link>
+
+edgecase_bitcoin_storage_toolset_version_2:
+<link>
+<type>article</type>
+<article_title>Edgecase_Bitcoin_Storage_Toolset_version_2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>148</datafeed_article_id>
+<text>Edgecase Bitcoin Storage Toolset version 2</text>
+</link>
+
+programming_as_theory_building_by_peter_naur:
+<link>
+<type>article</type>
+<article_title>Programming_as_Theory_Building_by_Peter_Naur</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>149</datafeed_article_id>
+<text>Programming as Theory Building by Peter Naur</text>
+</link>
+
+stove_on_jaynes:
+<link>
+<type>article</type>
+<article_title>Stove_on_Jaynes</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>150</datafeed_article_id>
+<text>Stove on Jaynes</text>
+</link>
+
+recipe_for_generating_entropy_bytes_using_dice_2:
+<link>
+<type>article</type>
+<article_title>Recipe_for_generating_entropy_bytes_using_dice_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>151</datafeed_article_id>
+<text>Recipe for generating entropy bytes using dice #2</text>
+</link>
+
+tools_for_storing_a_bitcoin_private_key_with_a_checksum_tree:
+<link>
+<type>article</type>
+<article_title>Tools_for_storing_a_Bitcoin_private_key_with_a_checksum_tree</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>152</datafeed_article_id>
+<text>Tools for storing a Bitcoin private key with a checksum tree</text>
+</link>
+
+bioleninism_summary:
+<link>
+<type>article</type>
+<article_title>Bioleninism_summary</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>153</datafeed_article_id>
+<text>Bioleninism summary</text>
+</link>
+
+the_war_continues:
+<link>
+<type>article</type>
+<article_title>The_War_Continues</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>154</datafeed_article_id>
+<text>The War Continues</text>
+</link>
+
+recipe_for_generating_a_bitcoin_address_2:
+<link>
+<type>article</type>
+<article_title>Recipe_for_generating_a_Bitcoin_address_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>155</datafeed_article_id>
+<text>Recipe for generating a Bitcoin address #2</text>
+</link>
+
+how_to_write_a_bitcoin_private_key_on_paper:
+<link>
+<type>article</type>
+<article_title>How_to_write_a_Bitcoin_private_key_on_paper</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>156</datafeed_article_id>
+<text>How to write a Bitcoin private key on paper</text>
+</link>
+
+excerpts_from_sapiens_by_yuval_noah_harari:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_Sapiens_by_Yuval_Noah_Harari</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>157</datafeed_article_id>
+<text>Excerpts from Sapiens by Yuval Noah Harari</text>
+</link>
+
+how_to_write_a_bitcoin_address_on_paper:
+<link>
+<type>article</type>
+<article_title>How_to_write_a_Bitcoin_address_on_paper</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>158</datafeed_article_id>
+<text>How to write a Bitcoin address on paper</text>
+</link>
+
+the_collapse_of_the_family_and_the_community_by_yuval_noah_harari:
+<link>
+<type>article</type>
+<article_title>The_Collapse_of_the_Family_and_the_Community_by_Yuval_Noah_Harari</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>159</datafeed_article_id>
+<text>The Collapse of the Family and the Community by Yuval Noah Harari</text>
+</link>
+
+effective_offline_storage_of_bitcoin:
+<link>
+<type>article</type>
+<article_title>Effective_offline_storage_of_Bitcoin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>160</datafeed_article_id>
+<text>Effective offline storage of Bitcoin</text>
+</link>
+
+excerpts_from_ideas_never_rule_by_aidan_maclear:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_Ideas_Never_Rule_by_Aidan_Maclear</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>161</datafeed_article_id>
+<text>Excerpts from Ideas Never Rule by Aidan Maclear</text>
+</link>
+
+a_brief_overview_of_psychoanalytic_theory_by_jordan_peterson:
+<link>
+<type>article</type>
+<article_title>A_brief_overview_of_psychoanalytic_theory_by_Jordan_Peterson</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>162</datafeed_article_id>
+<text>A brief overview of psychoanalytic theory by Jordan Peterson</text>
+</link>
+
+downloading_some_ambience:
+<link>
+<type>article</type>
+<article_title>Downloading_some_ambience</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>163</datafeed_article_id>
+<text>Downloading some ambience</text>
+</link>
+
+recipe_for_installing_kafka_2_5_0_as_a_systemd_service_on_ubuntu_16_04:
+<link>
+<type>article</type>
+<article_title>Recipe_for_installing_Kafka_2.5.0_as_a_systemd_service_on_Ubuntu_16.04</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>164</datafeed_article_id>
+<text>Recipe for installing Kafka 2.5.0 as a systemd service on Ubuntu 16.04</text>
+</link>
+
+source_material_a_simple_water_purification_system:
+<link>
+<type>article</type>
+<article_title>Source_material:_A_simple_water_purification_system</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>165</datafeed_article_id>
+<text>Source material: A simple water purification system</text>
+</link>
+
+a_simple_water_purification_system:
+<link>
+<type>article</type>
+<article_title>A_simple_water_purification_system</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>166</datafeed_article_id>
+<text>A simple water purification system</text>
+</link>
+
+an_approach_to_caching:
+<link>
+<type>article</type>
+<article_title>An_approach_to_caching</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>167</datafeed_article_id>
+<text>An approach to caching</text>
+</link>
+
+recipe_for_creating_and_signing_a_standard_bitcoin_transaction_2:
+<link>
+<type>article</type>
+<article_title>Recipe_for_creating_and_signing_a_standard_Bitcoin_transaction_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>168</datafeed_article_id>
+<text>Recipe for creating and signing a standard Bitcoin transaction #2</text>
+</link>
+
+notes_on_air_travel_during_the_coronavirus_pandemic:
+<link>
+<type>article</type>
+<article_title>Notes_on_air_travel_during_the_Coronavirus_pandemic</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>169</datafeed_article_id>
+<text>Notes on air travel during the Coronavirus pandemic</text>
+</link>
+
+the_two_currencies_of_florence_by_raymond_de_roover:
+<link>
+<type>article</type>
+<article_title>The_two_currencies_of_Florence_by_Raymond_de_Roover</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>170</datafeed_article_id>
+<text>The two currencies of Florence by Raymond de Roover</text>
+</link>
+
+discussion_of_a_potential_us_civil_war:
+<link>
+<type>article</type>
+<article_title>Discussion_of_a_potential_US_civil_war</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>171</datafeed_article_id>
+<text>Discussion of a potential US civil war</text>
+</link>
+
+recipe_for_creating_and_signing_a_nonstandard_bitcoin_transaction_2:
+<link>
+<type>article</type>
+<article_title>Recipe_for_creating_and_signing_a_nonstandard_Bitcoin_transaction_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>172</datafeed_article_id>
+<text>Recipe for creating and signing a nonstandard Bitcoin transaction #2</text>
+</link>
+
+creating_and_signing_a_standard_bitcoin_transaction_with_two_inputs_and_two_outputs:
+<link>
+<type>article</type>
+<article_title>Creating_and_signing_a_standard_Bitcoin_transaction_with_two_inputs_and_two_outputs</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>173</datafeed_article_id>
+<text>Creating and signing a standard Bitcoin transaction with two inputs and two outputs</text>
+</link>
+
+divine_voices_dreams_and_culture:
+<link>
+<type>article</type>
+<article_title>Divine_voices,_dreams,_and_culture</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>174</datafeed_article_id>
+<text>Divine voices, dreams, and culture</text>
+</link>
+
+recipe_for_looking_up_the_unspent_outputs_in_a_bitcoin_address:
+<link>
+<type>article</type>
+<article_title>Recipe_for_looking_up_the_unspent_outputs_in_a_Bitcoin_address</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>175</datafeed_article_id>
+<text>Recipe for looking up the unspent outputs in a Bitcoin address</text>
+</link>
+
+recipe_for_looking_up_the_unspent_outputs_in_a_bitcoin_address_2:
+<link>
+<type>article</type>
+<article_title>Recipe_for_looking_up_the_unspent_outputs_in_a_Bitcoin_address_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>176</datafeed_article_id>
+<text>Recipe for looking up the unspent outputs in a Bitcoin address #2</text>
+</link>
+
+recipe_for_managing_the_fee_and_broadcast_of_a_bitcoin_transaction_2:
+<link>
+<type>article</type>
+<article_title>Recipe_for_managing_the_fee_and_broadcast_of_a_Bitcoin_transaction_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>177</datafeed_article_id>
+<text>Recipe for managing the fee and broadcast of a Bitcoin transaction #2</text>
+</link>
+
+recipe_for_storing_bitcoin_on_paper_using_an_offline_raspberry_pi_2:
+<link>
+<type>article</type>
+<article_title>Recipe_for_storing_bitcoin_on_paper_using_an_offline_Raspberry_Pi_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>178</datafeed_article_id>
+<text>Recipe for storing bitcoin on paper using an offline Raspberry Pi #2</text>
+</link>
+
+recipe_for_storing_bitcoin_on_an_online_windows_10_laptop:
+<link>
+<type>article</type>
+<article_title>Recipe_for_storing_bitcoin_on_an_online_Windows_10_laptop</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>179</datafeed_article_id>
+<text>Recipe for storing bitcoin on an online Windows 10 laptop</text>
+</link>
+
+the_current_apocalypse:
+<link>
+<type>article</type>
+<article_title>The_Current_Apocalypse</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>180</datafeed_article_id>
+<text>The Current Apocalypse</text>
+</link>
+
+the_worship_of_man_by_yuval_noah_harari:
+<link>
+<type>article</type>
+<article_title>The_Worship_of_Man_by_Yuval_Noah_Harari</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>181</datafeed_article_id>
+<text>The Worship of Man by Yuval Noah Harari</text>
+</link>
+
+creating_and_signing_a_standard_bitcoin_transaction_with_three_inputs_and_three_outputs:
+<link>
+<type>article</type>
+<article_title>Creating_and_signing_a_standard_Bitcoin_transaction_with_three_inputs_and_three_outputs</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>182</datafeed_article_id>
+<text>Creating and signing a standard Bitcoin transaction with three inputs and three outputs</text>
+</link>
+
+edgecase_passport_stjohn_piano:
+<link>
+<type>article</type>
+<article_title>Edgecase_Passport:_StJohn_Piano</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>183</datafeed_article_id>
+<text>Edgecase Passport: StJohn Piano</text>
+</link>
+
+a_brief_history_of_buddhism_by_yuval_noah_harari:
+<link>
+<type>article</type>
+<article_title>A_Brief_History_of_Buddhism_by_Yuval_Noah_Harari</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>184</datafeed_article_id>
+<text>A Brief History of Buddhism by Yuval Noah Harari</text>
+</link>
+
+why_cults_exist:
+<link>
+<type>article</type>
+<article_title>Why_Cults_Exist</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>185</datafeed_article_id>
+<text>Why Cults Exist</text>
+</link>
+
+bitcoin_paper_wallet_guidance:
+<link>
+<type>article</type>
+<article_title>Bitcoin_paper_wallet_guidance</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>186</datafeed_article_id>
+<text>Bitcoin paper wallet guidance</text>
+</link>
+
+excerpts_from_the_mirror_and_the_light_by_hilary_mantel:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_The_Mirror_and_the_Light_by_Hilary_Mantel</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>187</datafeed_article_id>
+<text>Excerpts from The Mirror and the Light by Hilary Mantel</text>
+</link>
+
+generating_entropy_from_dice_2:
+<link>
+<type>article</type>
+<article_title>Generating_entropy_from_dice_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>188</datafeed_article_id>
+<text>Generating entropy from dice #2</text>
+</link>
+
+generating_a_standard_bitcoin_address_2:
+<link>
+<type>article</type>
+<article_title>Generating_a_standard_Bitcoin_address_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>189</datafeed_article_id>
+<text>Generating a standard Bitcoin address #2</text>
+</link>
+
+looking_death_in_the_face_now_and_again:
+<link>
+<type>article</type>
+<article_title>Looking_Death_in_the_face,_now_and_again</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>190</datafeed_article_id>
+<text>Looking Death in the face, now and again</text>
+</link>
+
+the_battle_for_the_white_house:
+<link>
+<type>article</type>
+<article_title>The_Battle_for_the_White_House</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>191</datafeed_article_id>
+<text>The Battle for the White House</text>
+</link>
+
+validating_a_standard_bitcoin_address:
+<link>
+<type>article</type>
+<article_title>Validating_a_standard_Bitcoin_address</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>192</datafeed_article_id>
+<text>Validating a standard Bitcoin address</text>
+</link>
+
+book_review_the_history_of_the_peloponnesian_war_by_thucydides:
+<link>
+<type>article</type>
+<article_title>Book_Review:_The_History_of_the_Peloponnesian_War_by_Thucydides</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>193</datafeed_article_id>
+<text>Book Review: The History of the Peloponnesian War by Thucydides</text>
+</link>
+
+markets_and_states:
+<link>
+<type>article</type>
+<article_title>Markets_and_States</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>194</datafeed_article_id>
+<text>Markets and States</text>
+</link>
+
+the_meaning_of_the_term_market_maker:
+<link>
+<type>article</type>
+<article_title>The_meaning_of_the_term_"market_maker"</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>195</datafeed_article_id>
+<text>The meaning of the term "market maker"</text>
+</link>
+
+algorithm_generate_an_arithmetic_checksum_tree_for_a_bitcoin_private_key:
+<link>
+<type>article</type>
+<article_title>Algorithm:_Generate_an_arithmetic_checksum_tree_for_a_Bitcoin_private_key</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>196</datafeed_article_id>
+<text>Algorithm: Generate an arithmetic checksum tree for a Bitcoin private key</text>
+</link>
+
+converting_a_bitcoin_private_key_into_a_different_alphabet:
+<link>
+<type>article</type>
+<article_title>Converting_a_Bitcoin_private_key_into_a_different_alphabet</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>197</datafeed_article_id>
+<text>Converting a Bitcoin private key into a different alphabet</text>
+</link>
+
+police_and_cryptocurrency:
+<link>
+<type>article</type>
+<article_title>Police_and_cryptocurrency</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>198</datafeed_article_id>
+<text>Police and cryptocurrency</text>
+</link>
+
+bitcoin_transaction_test_set_2:
+<link>
+<type>article</type>
+<article_title>Bitcoin_transaction_test_set_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>199</datafeed_article_id>
+<text>Bitcoin transaction test set #2</text>
+</link>
+
+bitcoin_address_test_set_2:
+<link>
+<type>article</type>
+<article_title>Bitcoin_address_test_set_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>200</datafeed_article_id>
+<text>Bitcoin address test set #2</text>
+</link>
+
+creating_a_bitcoin_transaction:
+<link>
+<type>article</type>
+<article_title>Creating_a_Bitcoin_transaction</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>201</datafeed_article_id>
+<text>Creating a Bitcoin transaction</text>
+</link>
+
+book_review_the_gulag_archipelago_by_alexander_solzhenitsyn:
+<link>
+<type>article</type>
+<article_title>Book_review:_The_Gulag_Archipelago_by_Alexander_Solzhenitsyn</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>202</datafeed_article_id>
+<text>Book review: The Gulag Archipelago by Alexander Solzhenitsyn</text>
+</link>
+
+losing_some_bitcoin:
+<link>
+<type>article</type>
+<article_title>Losing_some_bitcoin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>203</datafeed_article_id>
+<text>Losing some bitcoin</text>
+</link>
+
+dont_use_hooks_to_load_data:
+<link>
+<type>article</type>
+<article_title>Don't_use_hooks_to_load_data</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>204</datafeed_article_id>
+<text>Don't use hooks to load data</text>
+</link>
+
+chat_excerpt_individualism:
+<link>
+<type>article</type>
+<article_title>Chat_Excerpt:_Individualism</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>205</datafeed_article_id>
+<text>Chat Excerpt: Individualism</text>
+</link>
+
+the_intrinsic_value_of_bitcoin:
+<link>
+<type>article</type>
+<article_title>The_intrinsic_value_of_Bitcoin</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>206</datafeed_article_id>
+<text>The intrinsic value of Bitcoin</text>
+</link>
+
+proposal_decentralised_domain_name_system_ddns:
+<link>
+<type>article</type>
+<article_title>Proposal:_Decentralised_Domain_Name_System_(DDNS)</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>207</datafeed_article_id>
+<text>Proposal: Decentralised Domain Name System (DDNS)</text>
+</link>
+
+why_cryptocurrency_markets_should_probably_be_regulated:
+<link>
+<type>article</type>
+<article_title>Why_Cryptocurrency_Markets_Should_Probably_Be_Regulated</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>208</datafeed_article_id>
+<text>Why Cryptocurrency Markets Should Probably Be Regulated</text>
+</link>
+
+project_log_setting_up_nginx_and_gunicorn_on_ubuntu_20:
+<link>
+<type>article</type>
+<article_title>Project_Log:_Setting_up_Nginx_and_Gunicorn_on_Ubuntu_20</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>209</datafeed_article_id>
+<text>Project Log: Setting up Nginx and Gunicorn on Ubuntu 20</text>
+</link>
+
+monads_in_python:
+<link>
+<type>article</type>
+<article_title>Monads_in_Python</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>210</datafeed_article_id>
+<text>Monads in Python</text>
+</link>
+
+public_key_nicholas_piano:
+<link>
+<type>article</type>
+<article_title>Public_Key:_Nicholas_Piano</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>211</datafeed_article_id>
+<text>Public Key: Nicholas Piano</text>
+</link>
+
+public_key_nicholas_piano_2:
+<link>
+<type>article</type>
+<article_title>Public_Key:_Nicholas_Piano_2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>212</datafeed_article_id>
+<text>Public Key: Nicholas Piano 2</text>
+</link>
+
+the_blockchain_based_internet:
+<link>
+<type>article</type>
+<article_title>The_Blockchain-based_Internet</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>213</datafeed_article_id>
+<text>The Blockchain-based Internet</text>
+</link>
+
+contract_1:
+<link>
+<type>article</type>
+<article_title>Contract_1</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>214</datafeed_article_id>
+<text>Contract 1</text>
+</link>
+
+checkpoint_10:
+<link>
+<type>article</type>
+<article_title>checkpoint_10</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>215</datafeed_article_id>
+<text>checkpoint 10</text>
+</link>
+
+discussion_crypto_messaging_apps:
+<link>
+<type>article</type>
+<article_title>Discussion:_Crypto_Messaging_Apps</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>216</datafeed_article_id>
+<text>Discussion: Crypto Messaging Apps</text>
+</link>
+
+a_brief_history_of_the_joint_stock_company_by_yuval_noah_harari:
+<link>
+<type>article</type>
+<article_title>A_Brief_History_of_the_Joint-Stock_Company_by_Yuval_Noah_Harari</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>217</datafeed_article_id>
+<text>A Brief History of the Joint-Stock Company by Yuval Noah Harari</text>
+</link>
+
+interstellar_travel:
+<link>
+<type>article</type>
+<article_title>Interstellar_Travel</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>218</datafeed_article_id>
+<text>Interstellar Travel</text>
+</link>
+
+using_some_random_words_to_store_a_bitcoin_private_key:
+<link>
+<type>article</type>
+<article_title>Using_some_random_words_to_store_a_Bitcoin_private_key</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>219</datafeed_article_id>
+<text>Using some random words to store a Bitcoin private key</text>
+</link>
+
+blockchain_application_development_strategy:
+<link>
+<type>article</type>
+<article_title>Blockchain_Application_Development_Strategy</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>220</datafeed_article_id>
+<text>Blockchain Application Development Strategy</text>
+</link>
+
+blockchain_companies:
+<link>
+<type>article</type>
+<article_title>Blockchain_Companies</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>221</datafeed_article_id>
+<text>Blockchain Companies</text>
+</link>
+
+the_design_tree_of_a_blockchain:
+<link>
+<type>article</type>
+<article_title>The_design_tree_of_a_blockchain</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>222</datafeed_article_id>
+<text>The design tree of a blockchain</text>
+</link>
+
+using_a_few_random_words_to_store_bitcoin_2:
+<link>
+<type>article</type>
+<article_title>Using_a_few_random_words_to_store_bitcoin_#2</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>223</datafeed_article_id>
+<text>Using a few random words to store bitcoin #2</text>
+</link>
+
+using_a_few_random_words_to_store_bitcoin_3:
+<link>
+<type>article</type>
+<article_title>Using_a_few_random_words_to_store_bitcoin_#3</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>224</datafeed_article_id>
+<text>Using a few random words to store bitcoin #3</text>
+</link>
+
+using_a_few_random_words_to_store_bitcoin_4:
+<link>
+<type>article</type>
+<article_title>Using_a_few_random_words_to_store_bitcoin_#4</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>225</datafeed_article_id>
+<text>Using a few random words to store bitcoin #4</text>
+</link>
+
+excerpts_from_leviathan_wakes_by_james_s_a_corey:
+<link>
+<type>article</type>
+<article_title>Excerpts_from_Leviathan_Wakes_by_James_S_A_Corey</article_title>
+<datafeed>edgecase</datafeed>
+<datafeed_article_id>226</datafeed_article_id>
+<text>Excerpts from Leviathan Wakes by James S A Corey</text>
+</link>
+
+
