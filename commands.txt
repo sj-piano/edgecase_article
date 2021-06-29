@@ -99,7 +99,7 @@ python3 cli.py --logLevel=info --task links --articleFile new_articles/article.t
 
 
 
-pycodestyle --filename=*.py --exclude edgecase_article/submodules
+pycodestyle --filename=*.py --exclude edgecase_article/submodules,edgecase_article/util/pypy_sha256.py
 
 
 
