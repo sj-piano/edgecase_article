@@ -330,29 +330,35 @@ def verify(
         cmd = 'shasum -a 256 {}'.format(asset_file)
         output, exit_code = util.misc.run_local_cmd(cmd)
         sha256_calc = output.split(' ')[0]
+        hashes = [sha256_calc]
         # We'll use Python SHA256 only if the asset is (approx) less than 1 MB. It's slow.
         if len(asset_bytes) < 10**6:
-          sha256_calc_2 = util.misc.pypy_sha256(asset_bytes)
           sha256_calc_3 = util.sha256.SHA256(asset_bytes).hexdigest()
-          hashes = [sha256_calc, sha256_calc_2, sha256_calc_3]
+          hashes.append(sha256_calc_3)
+          python2_exists = util.misc.shell_tool_exists('python2')
+          if python2_exists:
+            sha256_calc_2 = util.misc.pypy_sha256(asset_bytes)
+            hashes.append(sha256_calc_2)
           if len(set(hashes)) != 1:
-            msg = "Calculated SHA256 hash of asset ({}) in 3 different ways, which don't all agree.".format(asset_name)
+            msg = "Calculated SHA256 hash of asset ({}) using multiple implementations, which don't all agree.".format(asset_name)
             msg += "\nFrom shell: shasum -a 256 <filepath>:"
             msg += "\n" + sha256_calc
-            msg += "\nFrom Python2 SHA256 (in util directory):"
-            msg += "\n" + sha256_calc_2
             msg += "\nFrom Python3 SHA256 (in util directory):"
             msg += "\n" + sha256_calc_3
+            if python2_exists:
+              msg += "\nFrom Python2 SHA256 (in util directory):"
+              msg += "\n" + sha256_calc_2
             logger.error(msg)  # For now, just log this.
             #raise ValueError(msg)
           else:
-            msg = "Calculated SHA256 hash of asset ({}) in 3 different ways, which agree.".format(asset_name)
+            msg = "Calculated SHA256 hash of asset ({}) using multiple implementations, which agree.".format(asset_name)
             msg += "\nFrom shell: shasum -a 256 <filepath>:"
             msg += "\n" + sha256_calc
-            msg += "\nFrom Python2 SHA256 (in util directory):"
-            msg += "\n" + sha256_calc_2
             msg += "\nFrom Python3 SHA256 (in util directory):"
             msg += "\n" + sha256_calc_3
+            if python2_exists:
+              msg += "\nFrom Python2 SHA256 (in util directory):"
+              msg += "\n" + sha256_calc_2
             deb(msg)
         # Get list of links to this specific asset.
         asset_links3 = [x for x in asset_links if x.get_value('filename') == asset_name]
