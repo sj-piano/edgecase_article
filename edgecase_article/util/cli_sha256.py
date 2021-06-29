@@ -46,7 +46,7 @@ def main():
 
   a = parser.parse_args()
 
-  if a.target_file == None:
+  if a.target_file is None:
     msg = "targetFile argument not supplied."
     raise ValueError(msg)
 
