@@ -39,6 +39,7 @@ python3 cli.py --help
 ```
 
 
+
 ### Tests
 
 
@@ -66,7 +67,6 @@ Run specific test with log output:
 
 
 
-
 ### Notes
 
 An article may be signed by its author.
@@ -81,14 +81,14 @@ Python 2 is only used to run an additional SHA256 implementation, as a double-ch
 ### Example: Validate the format of an article that you are writing.
 
 ```
-python3 cli.py --task verify --articleFile ../new_article/the_design_tree_of_a_blockchain.txt
+python3 cli.py --task verify --articleFile ../new_articles/the_design_tree_of_a_blockchain.txt
 ```
 
 Note: All option argument values can be indicated using an equals sign instead of a space.
 
 Example:  
 ```
-python3 cli.py --task=verify --articleFile=../new_article/the_design_tree_of_a_blockchain.txt
+python3 cli.py --task=verify --articleFile=../new_articles/the_design_tree_of_a_blockchain.txt
 ```
 
 
@@ -97,12 +97,12 @@ python3 cli.py --task=verify --articleFile=../new_article/the_design_tree_of_a_b
 
 
 ```
-python3 cli.py --task verify --articleFile ../new_article/the_design_tree_of_a_blockchain.txt --logLevel info
+python3 cli.py --task verify --articleFile ../new_articles/the_design_tree_of_a_blockchain.txt --logLevel info
 ```
 
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task verify --articleFile ../new_article/the_design_tree_of_a_blockchain.txt --logLevel info
-INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_article/the_design_tree_of_a_blockchain.txt contains a valid Element.
+stjohn@judgement:edgecase_article$ python3 cli.py --task verify --articleFile ../new_articles/the_design_tree_of_a_blockchain.txt --logLevel info
+INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_articles/the_design_tree_of_a_blockchain.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: article
 ```
 
@@ -114,11 +114,11 @@ Notes:
 ### Example: Verify the content of the article (e.g. check that there are no unrecognised element names).
 
 ```
-python3 cli.py --task verify --logLevel info --verifyContent --articleFile ../new_article/the_design_tree_of_a_blockchain.txt
+python3 cli.py --task verify --logLevel info --verifyContent --articleFile ../new_articles/the_design_tree_of_a_blockchain.txt
 ```
 
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --verifyContent --articleFile ../new_article/the_design_tree_of_a_blockchain.txt
+stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --verifyContent --articleFile ../new_articles/the_design_tree_of_a_blockchain.txt
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_article/the_design_tree_of_a_blockchain.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: article
 INFO     [edgecase_article.code.verify: 170 (verify)] Content element: All descendant elements have permitted names.
@@ -132,7 +132,7 @@ INFO     [edgecase_article.code.verify: 192 (verify)] Content element: All desce
 Note: Article filenames have a particular format on the Edgecase Datafeed blockchain.
 
 ```
-python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../new_article/the_design_tree_of_a_blockchain.txt
+python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../new_articles/the_design_tree_of_a_blockchain.txt
 ```
 
 ^ This produces an exception.
@@ -153,7 +153,7 @@ Expected formats:
 ```
 
 ```
-python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt
+python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt
 ```
 
 ^ This works.
@@ -217,14 +217,14 @@ Example layout:
 Note: Internally, the ```sign``` function will call the ```verify``` function prior to signing.
 
 ```
-python3 cli.py --task sign --articleFile ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys
+python3 cli.py --task sign --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys
 ```
 
 Note: By default, the signed article will be written to the same directory as the unsigned article file. It will have an extra extension ```.signed```. You can used the ```--outputDir``` option to change the output directory if you wish.
 
 Example log output:
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task sign --articleFile ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --logLevel info
+stjohn@judgement:edgecase_article$ python3 cli.py --task sign --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --logLevel info
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: article
 INFO     [edgecase_article.code.verify: 120 (verify)] File name verified for Article
