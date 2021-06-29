@@ -220,7 +220,7 @@ Note: Internally, the ```sign``` function will call the ```verify``` function pr
 python3 cli.py --task sign --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys
 ```
 
-Note: By default, the signed article will be written to the same directory as the unsigned article file. It will have an extra extension ```.signed```. You can used the ```--outputDir``` option to change the output directory if you wish.
+Note: By default, the signed article will be written to the default output directory ```cli_output```. It will have an extra extension ```.signed```. You can use the ```--outputDir``` option to change the output directory if you wish.
 
 Example log output:
 ```
