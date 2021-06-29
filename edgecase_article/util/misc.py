@@ -24,6 +24,8 @@ def pypy_sha256(input_data):
   # input_data should be raw binary data.
   # output is a hex string.
   v.validate_bytes(input_data)
+  if not shell_tool_exists('python2'):
+    raise ValueError
   # Write input_data to a temporary file.
   tf = tempfile.NamedTemporaryFile(delete=False)
   tf.write(input_data)
