@@ -305,6 +305,24 @@ datafeed_article signed_datafeed_article
 
 
 
+def validate_dict(x, name=None, location=None, kind='dict'):
+  if not isinstance(x, dict):
+    msg = "which has type '{}', not 'dict'.".format(type(x).__name__)
+    msg = build_error_msg(msg, x, name, location, kind)
+    raise TypeError(msg)
+
+
+
+
+def validate_list(x, name=None, location=None, kind='list'):
+  if not isinstance(x, list):
+    msg = "which has type '{}', not 'list'.".format(type(x).__name__)
+    msg = build_error_msg(msg, x, name, location, kind)
+    raise TypeError(msg)
+
+
+
+
 def validate_bytes(b, name=None, location=None, kind='bytes'):
   if not isinstance(b, bytes):
     msg = "which has type '{}', not 'int'.".format(type(b).__name__)
