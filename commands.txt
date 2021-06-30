@@ -17,7 +17,7 @@
 
 
 [verify filename]
-./cli.py --task verify --logLevel info --verifyFileName
+./cli.py --task verify --logLevel info --articleFile signed_datafeed_articles/2021-05-02_edgecase_datafeed_article_221_2021-05-02_stjohn_piano_blockchain_companies.txt --verifyFileName
 
 
 [specify the article]
