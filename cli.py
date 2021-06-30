@@ -389,12 +389,8 @@ def sign(a):
     public_key_dir = a.public_key_dir,
     private_key_dir = a.private_key_dir,
   )
-  # By default, write the output file to the same directory as the original article.
-  output_file = signed_article.file_path + '.signed'
-  if a.output_dir:
-    # If an output directory was specified, write the file there instead.
-    output_file_name = signed_article.file_name + '.signed'
-    output_file = os.path.join(a.output_dir, output_file_name)
+  output_file_name = signed_article.file_name + '.signed'
+  output_file = os.path.join(a.output_dir, output_file_name)
   if isfile(output_file):
     msg = "Error: Output file ({}) already exists.".format(output_file)
     stop(msg)
