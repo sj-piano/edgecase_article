@@ -9,7 +9,6 @@ import sys
 import argparse
 import logging
 import json
-import re
 
 
 
@@ -402,156 +401,64 @@ def sign(a):
 
 
 
-
-
 def links(a):
 
-
+  # Load article.
   article_data = open(a.article_file).read()
 
-
-  if a.link_type == 'hyperlink':
-
-    # Look through the article data for any hypertext links.
-    pattern = r'http[s]?://[a-zA-Z0-9./_\-?=#~()+%:&]+'
-    urls = re.findall(pattern, article_data)
-    msg = "{} hyperlinks found.".format(len(urls))
-    log(msg)
-    # For each of these links, generate an equivalent EML hyperlink.
-    template = """
-<link>
-<type>hyperlink</type>
-<reference>{}</reference>
-<text>{}</text>
-</link>
-  """.strip()
-    hyperlinks = []
-    for url in urls:
-      reference = url
-      text = url
-      if text.startswith('https://'):
-        text = text[len('https://'):]
-      if text.startswith('http://'):
-        text = text[len('http://'):]
-      hyperlink = template.format(reference, text)
-      hyperlinks.append(hyperlink)
-
-    # Write the EML hyperlinks to an output file.
-    output_file = join(a.output_dir, 'generated_hyperlinks.txt')
-    with open(output_file, 'w') as f:
-      for hyperlink in hyperlinks:
-        f.write(hyperlink + '\n\n')
-    msg = "Generated EML hyperlinks written to {}".format(output_file)
-    log(msg)
-
-
-  elif a.link_type == 'asset':
-
-    # For each asset file, generate an EML asset link.
+  asset_files = []
+  if a.link_type == 'asset':
+    # Load asset file names.
     asset_file_names = sorted(os.listdir(a.asset_dir))
+    asset_files = [join(a.asset_dir, x) for x in asset_file_names]
     msg = "{} asset files found in asset directory {}"
-    msg = msg.format(len(asset_file_names), a.asset_dir)
-    log(msg)
-    asset_links = []
-    template = """
-<link>
-<type>asset</type>
-<filename>{a}</filename>
-<text>{a}</text>
-<sha256>{h}</sha256>
-</link>
-""".strip()
-    for asset_file_name in asset_file_names:
-      asset_file = join(a.asset_dir, asset_file_name)
-      hash = util.get_sha256.get_sha256_of_file(asset_file)
-      asset_link = template.format(a=asset_file_name, h=hash)
-      asset_links.append(asset_link)
-
-    # Write the EML asset links to an output file.
-    output_file = join(a.output_dir, 'generated_asset_links.txt')
-    with open(output_file, 'w') as f:
-      for asset_link in asset_links:
-        f.write(asset_link + '\n\n')
-    msg = "Generated EML asset links written to {}".format(output_file)
+    msg = msg.format(len(asset_files), a.asset_dir)
     log(msg)
 
-
-  elif a.link_type == 'article':
-
+  article_links = {}
+  if a.link_type == 'article':
     # Load article links data.
     article_links = json.load(open(a.article_links_file))
     article_links = article_links['data'][0]['datafeed_article_links']
-    uri_titles = {}
-    for daid, link in article_links.items():
-      link_element = datajack.Element.from_string(link)
-      article_title = link_element.get_value('article_title')
-      uri_title = util.misc.uri_title(article_title)
-      uri_titles[uri_title] = daid
-    # Look through the article data for any article link placeholders.
-    # These contain article uri_titles.
-    # [LINK: excerpts_from_leviathan_wakes_by_james_s_a_corey]
-    # [     LINK:blockchain_companies ]
-    # [ LINK:blockchain_companies ]
-    # [LINK: discussion_crypto_messaging_apps ]
-    # [LINK:contract_1]
-    # [LINK: monads_in_python]
-    pattern = r'\[\s*LINK\s*:\s*(?P<placeholder>[a-z0-9_]*)\s*\]'
-    placeholders = re.findall(pattern, article_data)
-    msg = "{} article link placeholders found.".format(len(placeholders))
-    log(msg)
-    results = []
-    for placeholder in placeholders:
-      if placeholder in uri_titles.keys():
-        daid = uri_titles[uri_title]
-        article_link = article_links[daid]
-      else:
-        article_link = "[no link found]"
-      result = placeholder + '\n' + article_link
-      results.append(result)
 
-    # Write the placeholders and article links to an output file.
-    output_file = join(a.output_dir, 'selected_datafeed_article_links.txt')
-    with open(output_file, 'w') as f:
-      for result in results:
-        f.write(result + '\n\n')
-    msg = "Selected EML article links written to {}".format(output_file)
-    log(msg)
-
-
-  elif a.link_type == 'external_asset':
+  asset_links = {}
+  if a.link_type == 'external_asset':
     # Load asset links data.
     asset_links = json.load(open(a.asset_links_file))
     asset_links = asset_links['data'][0]['datafeed_asset_links']
-    asset_filename_to_asset_link = {}
-    for daid, links in asset_links.items():
-      for link in links:
-        link_element = datajack.Element.from_string(link)
-        asset_filename = link_element.get_value('filename')
-        asset_filename_to_asset_link[asset_filename] = link
-    # Look through the article data for any asset link placeholders.
-    # These contain the asset filename.
-    # [ASSET LINK: contract_1.txt]
-    # [ ASSET LINK : the_eye_of_argon_by_jim_theis.pdf]
-    pattern = r'\[\s*ASSET\s*LINK\s*:\s*(?P<placeholder>[a-z0-9_\-.]*)\s*\]'
-    placeholders = re.findall(pattern, article_data)
-    msg = "{} asset link placeholders found.".format(len(placeholders))
-    log(msg)
-    results = []
-    for placeholder in placeholders:
-      if placeholder in asset_filename_to_asset_link.keys():
-        asset_link = asset_filename_to_asset_link[placeholder]
-      else:
-        asset_link = "[no link found]"
-      result = placeholder + '\n' + asset_link
-      results.append(result)
 
-    # Write the placeholders and asset links to an output file.
-    output_file = join(a.output_dir, 'selected_datafeed_asset_links.txt')
-    with open(output_file, 'w') as f:
-      for result in results:
-        f.write(result + '\n\n')
-    msg = "Selected EML asset links written to {}".format(output_file)
-    log(msg)
+  # Analyse article.
+  results = edgecase_article.code.links.generate_or_select_links(
+    article_data,
+    a.link_type,
+    asset_files,
+    article_links,
+    asset_links,
+  )
+
+  # Select output file.
+  if a.link_type == 'hyperlink':
+    output_file_name = 'generated_hyperlinks.txt'
+    msg = "Generated EML hyperlinks written to {}"
+  elif a.link_type == 'asset':
+    output_file_name = 'generated_asset_links.txt'
+    msg = "Generated EML asset links written to {}"
+  elif a.link_type == 'article':
+    output_file_name = 'selected_datafeed_article_links.txt'
+    msg = "Selected EML article links written to {}"
+  elif a.link_type == 'external_asset':
+    output_file_name = 'selected_datafeed_asset_links.txt'
+    msg = "Selected EML asset links written to {}"
+  else:
+    raise ValueError
+
+  # Write result to output file.
+  output_file = join(a.output_dir, output_file_name)
+  with open(output_file, 'w') as f:
+    for result in results:
+      f.write(result + '\n\n')
+  msg = msg.format(output_file)
+  log(msg)
 
 
 
