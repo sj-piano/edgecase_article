@@ -475,7 +475,8 @@ def test(a):
   )
   msg = 'Article file {} loaded and verified.'.format(a.article_file)
   log(msg)
-  print(article.previous_checkpoint_block_height)
+  block_height = article.previous_checkpoint.get_value('transaction/block_height')
+  print('block_height: ' + str(block_height))
 
 
 
