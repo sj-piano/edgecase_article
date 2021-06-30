@@ -7,8 +7,10 @@ import logging
 # Relative imports
 from .. import util
 from . import hello
-from . import verify
+from . import keys
+from . import links
 from . import sign
+from . import verify
 
 
 
@@ -47,6 +49,12 @@ def setup(
     log_file = log_file,
   )
   keys.setup(
+    log_level = log_level,
+    debug = debug,
+    log_timestamp = log_timestamp,
+    log_file = log_file,
+  )
+  links.setup(
     log_level = log_level,
     debug = debug,
     log_timestamp = log_timestamp,
