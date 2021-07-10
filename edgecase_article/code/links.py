@@ -143,7 +143,7 @@ def generate_or_select_links(
     selected_links = []
     for placeholder in placeholders:
       if placeholder in uri_title_to_article_link.keys():
-        article_link = uri_title_to_article_link[uri_title]
+        article_link = uri_title_to_article_link[placeholder]
       else:
         article_link = "[no link found]"
       selected_link = placeholder + '\n' + article_link
