@@ -460,6 +460,10 @@ def links(a):
   msg = msg.format(output_file)
   log(msg)
 
+  # Print results.
+  for result in results:
+    print(result + '\n\n')
+
 
 
 
