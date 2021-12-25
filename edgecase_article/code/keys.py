@@ -105,6 +105,8 @@ def load_public_key(public_key_dir, author_name):
   key_file_name = author_name + pk_ext
   key_file = os.path.join(public_key_dir, key_file_name)
   public_key = open(key_file).read().strip()
+  msg = "Author name = {}. Key file loaded = {}".format(author_name, key_file)
+  log(msg)
   return public_key
 
 
