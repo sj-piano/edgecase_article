@@ -38,6 +38,7 @@ bold
 bold_lines
 caption
 chat
+chapter
 code
 code_lines
 code_title
@@ -73,6 +74,7 @@ format
 gpg_public_key
 greek-1
 greek-1_lines
+h
 hash
 heading_lines
 hex_value
@@ -128,6 +130,7 @@ type
 warning_lines
 underline
 underline_lines
+v
 value
 </element_names>
 
