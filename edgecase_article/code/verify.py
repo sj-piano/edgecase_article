@@ -86,7 +86,7 @@ def verify(
     traceback.print_exception(type(ex), ex, ex.__traceback__)
     msg = "\nError summary: Unable to parse file into an EML Element."
     msg += "\n- File path: {}".format(article_file)
-    stop(msg)
+    raise Exception(msg)
   msg = "File {} contains a valid Element.".format(article_file)
   log(msg)
   v.validate_article_type(e.name, 'e.name (element name)', 'verify.py')
@@ -166,7 +166,7 @@ def verify(
         msg += "\n- Path from root element ({}):\n-- {}" \
           .format(a.name, repr(d_e.path_from_root))
         msg += "\n- Line {}, index {}".format(d_e.line_number, d_e.line_index)
-        stop(msg)
+        raise Exception(msg)
     msg = "Content element: All descendant elements have permitted names."
     log(msg)
     # Some elements are required to have particular descendants.
@@ -373,7 +373,6 @@ def verify(
             msg += "\n" + sha256_link
             msg += "\n- Calculated sha256 value of asset file:"
             msg += "\n" + sha256_calc
-            #print(msg + "\n")
             raise ValueError(msg)
       msg = "Assets: For each asset, the sha256 value has been re-calculated. All links to this asset contain the expected sha256 value."
       log(msg)
@@ -381,9 +380,3 @@ def verify(
 
 
 
-
-def stop(msg=None):
-  if msg is not None:
-    print(msg)
-  import sys
-  sys.exit()

@@ -23,7 +23,7 @@ from . import edgecase_article
 hello = edgecase_article.code.hello.hello
 validate = edgecase_article.util.validate
 configure_module_logger = edgecase_article.util.module_logger.configure_module_logger
-submodules = edgecase_article.submodules
+#submodules = edgecase_article.submodules
 verify = edgecase_article.code.verify.verify
 uri_title = edgecase_article.util.misc.uri_title
 
