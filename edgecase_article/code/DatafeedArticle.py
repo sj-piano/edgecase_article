@@ -157,7 +157,8 @@ class DatafeedArticle(datajack.Element):
     v.validate_string_is_whole_number(self.datafeed_article_id)
     v.validate_date(self.date)
     # Look at previous_checkpoint child.
-    if self.datafeed_article_id != '0':  # first checkpoint.
+    if self.datafeed_article_id != '0':
+      # Note: The first checkpoint's previous checkpoint contains only "None".
       pc_e = self.get_one('previous_checkpoint')
       pc_daid = pc_e.get_value('datafeed_article_id')
       v.validate_string_is_whole_number(pc_daid)
@@ -167,6 +168,8 @@ class DatafeedArticle(datajack.Element):
       v.validate_date(pc_date)
       # Look at previous_checkpoint/transaction descendant.
       t_e = self.get_one('previous_checkpoint/transaction')
+      blockchain_name = t_e.get_value('blockchain_name')
+      v.validate_blockchain_name(blockchain_name)
       t_txid = t_e.get_value('transaction_id')
       v.validate_hex_length(t_txid, 32)
       t_block_height = t_e.get_value('block_height')
