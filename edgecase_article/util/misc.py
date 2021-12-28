@@ -53,7 +53,7 @@ def uri_title(t):
   # recipe_for_installing_kafka_2_5_0_as_a_systemd_service_on_ubuntu_16_04
   v.validate_string(t)
   t = t.lower()
-  # Remove punctuation, except for periods and hyphens.
+  # Remove punctuation, except for underscores, periods, and hyphens.
   t2 = ''
   permitted = string.ascii_lowercase + string.digits + '_' + '.-'
   for c in t:
