@@ -140,5 +140,5 @@ class Article(datajack.Element):
   def construct_file_name(self):
     # We can have "draft articles" that don't have "officially correct" filenames.
     # So: This method allows them to be easily constructed when the draft is finished.
-    return self.date + '_' + self.author_name + self.uri_title + '.txt'
+    return self.date + '_' + self.author_name + '_' + self.uri_title + '.txt'
 
