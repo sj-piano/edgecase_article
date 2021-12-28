@@ -38,8 +38,10 @@ util = edgecase_article.util
 # rearranged much more easily.
 # - I use "validate" to mean "check that this data is in the expected format".
 # - I use "verify" to mean that "check that a mathematical operation produces the expected result". Example: Check a digital signature.
-# - An article and the corresponding signed article have the same filenames. To distinguish between them, a newly created signed article has the additional extension '.signed'. It will fail filename verification but will pass all other checks. This extra extension means that an article and its signed equivalent can exist in the same directory.
-# - If the --verifyAssets option is used, this tool will look for a directory named "assets" in the article directory (in addition to looking for a directory with the same name as the article (minus the extension)).
+# - An article and the corresponding signed article have the same filenames. To distinguish between them, a newly created signed article should be saved in a different directory.
+# - If the --verifyAssets option is used, this tool will look in the article directory for:
+# 1) A directory named "assets"
+# 2) A directory with the same name as the article, minus the .txt extension.
 
 
 
@@ -132,7 +134,7 @@ def main():
   parser.add_argument(
     '-e', '--verifyAssets', dest='verify_assets',
     action='store_true',
-    help="Validates the content element within an article.",
+    help="Validates that the assets in the assets directory match the asset links within the article.",
   )
 
   parser.add_argument(
@@ -280,7 +282,7 @@ def main():
   )
 
   # Create output directory.
-  if a.task in 'sign links'.split():
+  if a.task in 'links'.split():
     if not isdir(a.output_dir):
       os.makedirs(a.output_dir)
       msg = "Directory created: {}".format(a.output_dir)
@@ -389,15 +391,7 @@ def sign(a):
     public_key_dir = a.public_key_dir,
     private_key_dir = a.private_key_dir,
   )
-  output_file_name = signed_article.file_name + '.signed'
-  output_file = os.path.join(a.output_dir, output_file_name)
-  if isfile(output_file):
-    msg = "Error: Output file ({}) already exists.".format(output_file)
-    stop(msg)
-  with open(output_file, 'w') as f:
-    f.write(signed_article.data + '\n')
-  msg = "Signed article written to {}".format(output_file)
-  log(msg)
+  print(signed_article.data)
 
 
 
