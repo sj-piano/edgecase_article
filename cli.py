@@ -293,7 +293,7 @@ def main():
 hello hello2 hello3 hello4 hello5
 verify sign links
 test
-deriveURITitle
+deriveURITitle constructFilename
 """.split()
   if a.task not in tasks:
     msg = "Unrecognised task: {}".format(a.task)
@@ -491,6 +491,21 @@ def deriveURITitle(a):
     asset_dir = a.asset_dir,
   )
   print(article.uri_title)
+
+
+
+
+def constructFilename(a):
+  article = edgecase_article.code.verify.verify(
+    article_file = a.article_file,
+    article_type = a.article_type,
+    verify_file_name = a.verify_file_name,
+    verify_signature = False,
+    verify_content = False,
+    public_key_dir = a.public_key_dir,
+    asset_dir = a.asset_dir,
+  )
+  print(article.construct_file_name())
 
 
 
