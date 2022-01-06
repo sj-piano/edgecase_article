@@ -13,12 +13,25 @@ This file contains information about assets that have been deleted.
 
 <article>
 <id>28</id>
+<uri_title>
+installing_centos_6_9_minimal_on_kalkin
+</uri_title>
 <asset_names>
+0_readme.txt
 centos-6.9-x86_64-minimal.iso
 </asset_names>
 </article>
 
 
+<article>
+<id>48</id>
+<uri_title>
+offline_installation_of_a_c_compiler_on_centos_6_9_minimal_on_kalkin
+</uri_title>
+<asset_names>
+rpm-gpg-key-centos-6
+</asset_names>
+</article>
 
 
 
