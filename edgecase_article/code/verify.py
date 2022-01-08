@@ -125,6 +125,8 @@ def verify(
       author_name = a.author_name
       public_key = keys.load_public_key(public_key_dir, author_name)
       a.verify_signature(public_key)
+      msg = "Signature verified for {}".format(a.__class__.__name__)
+      log(msg)
     elif a.article_type == 'signed_datafeed_article':
       v.validate_string(public_key_dir)
       datafeed_name = 'edgecase_datafeed'  # hardcoded.
@@ -137,11 +139,12 @@ def verify(
         a.article.verify_signature(public_key2)
         msg = "Signature verified for internal {}".format(a.article.__class__.__name__)
         log(msg)
+      msg = "Signature verified for {}".format(a.__class__.__name__)
+      log(msg)
     else:
       msg = "verifySignature not possible for article_type {}".format(repr(a.article_type))
-      raise ValueError(msg)
-    msg = "Signature verified for {}".format(a.__class__.__name__)
-    log(msg)
+      log(msg)
+
   if verify_content:
     # Load content settings.
     content_settings_file = '../../settings/content.txt'
