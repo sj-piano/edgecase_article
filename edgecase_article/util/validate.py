@@ -274,7 +274,7 @@ def validate_title(t, article_type):
     # Example: Discussion:_Crypto_Messaging_Apps
     if t[0] not in string.ascii_uppercase:
       raise ValueError('First character must be uppercase')
-    permitted = string.ascii_letters + string.digits + "#&'(),-./:_" + '"'
+    permitted = string.ascii_letters + string.digits + "#&'(),-./:_?" + '"'
     for c in t:
       if c not in permitted:
         msg = 'Character [{}] not permitted in article title.'.format(repr(c))
