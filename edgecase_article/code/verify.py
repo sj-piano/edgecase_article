@@ -263,7 +263,7 @@ def verify(
     if not asset_dir_exists:
       msg = "Assets: No asset directory found."
       log(msg)
-    else:
+    elif len(os.listdir(asset_dir)) > 0:
       # Check if this article has any deleted_assets.
       deleted_asset_names = []  # Default.
       if not deleted_assets_element:
