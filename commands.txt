@@ -12,6 +12,7 @@
 ./cli.py --task test --logLevel info --articleFile signed_datafeed_articles/2021-05-02_edgecase_datafeed_article_221_2021-05-02_stjohn_piano_blockchain_companies.txt
 
 
+
 [derive URI title]
 ./cli.py --task deriveURITitle --articleFile signed_datafeed_articles/2021-05-02_edgecase_datafeed_article_221_2021-05-02_stjohn_piano_blockchain_companies.txt
 
