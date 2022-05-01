@@ -68,14 +68,18 @@ def sign(
   article = verify.verify(
     article_file = article_file,
     article_type = 'article',
-    verify_file_name = True,
+    verify_file_name = False,
     verify_signature = False,
     verify_content = True,
     verify_assets = True,
     public_key_dir = None,
   )
+  if article.signed_by_author != 'yes':
+    msg = "Before signing the article, the 'signed_by_author' value at the beginning must be changed from 'no' to 'yes'."
+    raise ValueError(msg)
   # Create signature.
   author_name = article.author_name
+  log("Signing article in the name of: {}".format(author_name))
   private_key = keys.load_private_key(private_key_dir, author_name)
   signature = gpg.make_signature(private_key, article.data)
   signature = keys.strip_gpg_signature(signature)
