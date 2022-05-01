@@ -93,6 +93,7 @@ line_numbers
 lined_code
 lined_code_lines
 link
+list_item_lines
 merge_columns
 merge_rows
 mild_warning_lines
@@ -105,6 +106,7 @@ notes
 number_of_characters
 number_of_columns
 number_of_rows
+ordered_list
 pages
 parties
 presentation
@@ -131,6 +133,7 @@ type
 warning_lines
 underline
 underline_lines
+unordered_list
 v
 value
 </element_names>
