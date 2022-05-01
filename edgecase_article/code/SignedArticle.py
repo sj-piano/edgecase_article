@@ -156,3 +156,8 @@ class SignedArticle(datajack.Element):
       msg = "Invalid signature"
       raise ValueError(msg)
     return result
+
+
+  def construct_file_name(self):
+    return self.article.construct_file_name()
+
