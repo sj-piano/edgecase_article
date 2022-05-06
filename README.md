@@ -10,7 +10,7 @@ Analogous to a crypto wallet transaction package. Articles are transactions on t
 
 - Python 3.x (developed with 3.5.2).
 
--- Note: Also runs under Python 2.x (developed with 2.7.12).
+- Python 2.x (developed with 2.7.12).
 
 - Pytest 6.x (developed with 6.1.2).
 
