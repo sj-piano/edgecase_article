@@ -329,53 +329,30 @@ def verify(
       for asset_file in asset_files:
         asset_name = basename(asset_file)
         asset_bytes = open(asset_file, "rb").read()
-        # We'll always use the shell SHA256.
-        cmd = 'shasum -a 256 {}'.format(asset_file)
-        output, exit_code = util.misc.run_local_cmd(cmd)
-        sha256_calc = output.split(' ')[0]
-        hashes = [sha256_calc]
-        # We'll use Python SHA256 only if the asset is (approx) less than 1 MB. It's slow.
-        if len(asset_bytes) < 10**6:
-          sha256_calc_3 = util.sha256.SHA256(asset_bytes).hexdigest()
-          hashes.append(sha256_calc_3)
-          python2_exists = util.misc.shell_tool_exists('python2')
-          if python2_exists:
-            sha256_calc_2 = util.misc.pypy_sha256(asset_bytes)
-            hashes.append(sha256_calc_2)
-          if len(set(hashes)) != 1:
-            msg = "Calculated SHA256 hash of asset ({}) using multiple implementations, which don't all agree.".format(asset_name)
-            msg += "\nFrom shell: shasum -a 256 <filepath>:"
-            msg += "\n" + sha256_calc
-            msg += "\nFrom Python3 SHA256 (in util directory):"
-            msg += "\n" + sha256_calc_3
-            if python2_exists:
-              msg += "\nFrom Python2 SHA256 (in util directory):"
-              msg += "\n" + sha256_calc_2
-            logger.error(msg)  # For now, just log this.
-            #raise ValueError(msg)
-          else:
-            msg = "Calculated SHA256 hash of asset ({}) using multiple implementations, which agree.".format(asset_name)
-            msg += "\nFrom shell: shasum -a 256 <filepath>:"
-            msg += "\n" + sha256_calc
-            msg += "\nFrom Python3 SHA256 (in util directory):"
-            msg += "\n" + sha256_calc_3
-            if python2_exists:
-              msg += "\nFrom Python2 SHA256 (in util directory):"
-              msg += "\n" + sha256_calc_2
-            deb(msg)
+        # By default, we'll use an included Python3 SHA256 implementation.
+        # If the asset is over 1 MB, we'll use the shell SHA256. The Python3 implementation is slow.
+        # When an article is added to the node, we use both implementations in order to double-check.
+        if len(asset_bytes) <= 10**6:
+          asset_hash = util.sha256.SHA256(asset_bytes).hexdigest()
+        else:
+          if not shell_tool_exists('shasum'):
+            raise ValueError
+          cmd = 'shasum -a 256 {}'.format(asset_file)
+          output, exit_code = util.misc.run_local_cmd(cmd)
+          asset_hash = output.split(' ')[0]
         # Get list of links to this specific asset.
         asset_links3 = [x for x in asset_links if x.get_value('filename') == asset_name]
         for asset_link in asset_links3:
-          sha256_link = asset_link.get_value('sha256')
-          if sha256_link != sha256_calc:
+          hash_in_link = asset_link.get_value('sha256')
+          if hash_in_link != asset_hash:
             msg = "Asset link sha256 value does not match calculated sha256 value."
             msg += "\n- Asset filename: {}".format(asset_name)
             msg += "\n- Asset link:"
             msg += "\n" + asset_link.data
             msg += "\n- Asset link sha256 value:"
-            msg += "\n" + sha256_link
+            msg += "\n" + hash_in_link
             msg += "\n- Calculated sha256 value of asset file:"
-            msg += "\n" + sha256_calc
+            msg += "\n" + asset_hash
             raise ValueError(msg)
       msg = "Assets: For each asset, the sha256 value has been re-calculated. All links to this asset contain the expected sha256 value."
       log(msg)
