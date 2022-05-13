@@ -27,6 +27,11 @@ configure_module_logger = edgecase_article.util.module_logger.configure_module_l
 keys = edgecase_article.code.keys
 verify = edgecase_article.code.verify.verify
 uri_title = edgecase_article.util.misc.uri_title
+Article = edgecase_article.code.Article.Article
+SignedArticle = edgecase_article.code.SignedArticle.SignedArticle
+CheckpointArticle = edgecase_article.code.CheckpointArticle.CheckpointArticle
+DatafeedArticle = edgecase_article.code.DatafeedArticle.DatafeedArticle
+SignedDatafeedArticle = edgecase_article.code.SignedDatafeedArticle.SignedDatafeedArticle
 
 
 
