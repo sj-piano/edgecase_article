@@ -70,7 +70,6 @@ def uri_title(t):
 
 
 
-
 def shell_tool_exists(tool):
   if ' ' in tool:
     raise ValueError
