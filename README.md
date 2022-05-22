@@ -174,14 +174,14 @@ Example layout:
 ```
 
 ```
-python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt --publicKeyDir ../public_keys --verifySignature
+python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt --publicKeyDir ../keys/public_keys --verifySignature
 ```
 
 Note:
 - Any or all of the --verifyX options can be used in a single command.
 
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt --publicKeyDir ../public_keys --verifySignature
+stjohn@judgement:edgecase_article$ python3 cli.py --task verify --logLevel info --verifyFileName --articleFile ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt --publicKeyDir ../keys/public_keys --verifySignature
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../datafeed_articles/2017-06-28_edgecase_datafeed_article_1_2017-06-28_stjohn_piano_viewpoint.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: signed_datafeed_article
 INFO     [edgecase_article.code.verify: 120 (verify)] File name verified for SignedDatafeedArticle
@@ -195,32 +195,32 @@ INFO     [edgecase_article.code.verify: 143 (verify)] Signature verified for Sig
 
 ### Sign an article.
 
-Note: For creating signatures, you'll need a ```private_keys``` directory, which contains the necessary private key files. It can be named something other than ```private_keys``` if you want. You will also need a ```public_keys``` directory, so that the signature can be verified immediately after its creation.
+To an article i.e. create a signature, you'll need a ```private_keys``` directory, which will contain the necessary private key file. It can be named something other than ```private_keys``` if you want. You will also need a ```public_keys``` directory, so that the signature can be verified immediately after its creation.
 
 Example layout:
 ```
 - work
 -- datafeed_articles
 -- edgecase_article
--- new_article
--- private_keys
---- stjohn_piano_private_key.txt
--- public_keys
---- edgecase_datafeed_public_key.txt
---- stjohn_piano_public_key.txt
+-- new_articles
+-- signed_articles
+-- keys
+--- private_keys
+---- stjohn_piano_private_key.txt
+--- public_keys
+---- edgecase_datafeed_public_key.txt
+---- stjohn_piano_public_key.txt
 ```
 
 Note: Internally, the ```sign``` function will call the ```verify``` function prior to signing.
 
 ```
-python3 cli.py --task sign --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys
+python3 cli.py --task sign --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../keys/public_keys --privateKeyDir=../keys/private_keys
 ```
-
-Note: By default, the signed article will be written to the default output directory ```cli_output```. It will have an extra extension ```.signed```. You can use the ```--outputDir``` option to change the output directory if you wish.
 
 Example log output:
 ```
-stjohn@judgement:edgecase_article$ python3 cli.py --task sign --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --logLevel info
+stjohn@judgement:edgecase_article$ python3 cli.py --task sign --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../keys/public_keys --privateKeyDir=../keys/private_keys --logLevel info
 INFO     [edgecase_article.code.verify: 90 (verify)] File ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt contains a valid Element.
 INFO     [edgecase_article.code.verify: 100 (verify)] Element name: article
 INFO     [edgecase_article.code.verify: 120 (verify)] File name verified for Article
@@ -228,7 +228,14 @@ INFO     [edgecase_article.code.verify: 170 (verify)] Content element: All desce
 INFO     [edgecase_article.code.verify: 192 (verify)] Content element: All descendant elements have been checked against the list of permitted tree structures.
 INFO     [edgecase_article.submodules.stateless_gpg.stateless_gpg.code.stateless_gpg: 92 (make_signature)] GPG signature created.
 INFO     [edgecase_article.submodules.stateless_gpg.stateless_gpg.code.stateless_gpg: 141 (verify_signature)] GPG signature verified.
-INFO     [cli: 339 (sign)] Signed article written to ../new_article/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt.signed
+[signed article data is printed here]
+```
+
+To get just the signed article data, remove the `--logLevel info` option. You can redirect the output to a file.
+
+Example:
+```
+python3 cli.py --task sign --articleFile ../new_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt --publicKeyDir=../keys/public_keys --privateKeyDir=../keys/private_keys > ../signed_articles/2021-05-08_stjohn_piano_the_design_tree_of_a_blockchain.txt
 ```
 
 
@@ -267,7 +274,7 @@ INFO     [edgecase_article.code.verify: 348 (verify)] Assets: For each asset, th
 
 Within an EML article, links are EML structures (rather than http strings).
 
-edgecase_article contains options for generating these links. The result files will be written to the default output directory ```cli_output```. You can use the ```--outputDir``` option to change the output directory if you wish.
+edgecase_article contains options for generating these links. The resulting files will be written to the default output directory ```cli_output``` (within the `edgecase_article` directory). You can use the ```--outputDir``` option to change the output directory if you wish.
 
 
 Example hypertext link (a link to a webpage):
@@ -325,7 +332,7 @@ Example external asset link (a link to an asset contained by another article):
 Example: Generate EML links for all hypertext strings found within the article.
 
 ```
-python3 cli.py --logLevel=info --task links --articleFile new_articles/article.txt --linkType=hyperlink
+python3 cli.py --logLevel=info --task links --articleFile ../new_articles/article.txt --linkType=hyperlink
 ```
 
 By default, the output will be written to the file ```cli_output/generated_hyperlinks.txt```.
@@ -335,7 +342,7 @@ By default, the output will be written to the file ```cli_output/generated_hyper
 Example: Generate EML links for all asset files found in the asset directory.
 
 ```
-python3 cli.py --logLevel=info --task links --articleFile new_articles/article.txt --linkType asset --assetDir=new_articles/assets
+python3 cli.py --logLevel=info --task links --articleFile ../new_articles/article.txt --linkType asset --assetDir=new_articles/assets
 ```
 
 By default, the output will be written to the file ```cli_output/generated_asset_links.txt```.
@@ -361,14 +368,14 @@ The ```datafeed_article_links.json``` file will not contain links for the most r
 
 Command:  
 ```
-curl --silent edgecase.pro/api/v1/datafeed_links/articles > datafeed_article_links.json
+curl --silent edgecase.pro/api/v1/datafeed_links/articles > settings/datafeed_article_links.json
 ```
 
 You can also download a human-readable version.
 
 Command:  
 ```
-curl --silent edgecase.pro/api/v1/datafeed_links/articles/data > datafeed_article_links.txt
+curl --silent edgecase.pro/api/v1/datafeed_links/articles/data > settings/datafeed_article_links.txt
 ```
 
 
@@ -392,14 +399,14 @@ The ```datafeed_asset_links.json``` file will not contain links for the most rec
 
 Command:  
 ```
-curl --silent edgecase.pro/api/v1/datafeed_links/assets > datafeed_asset_links.json
+curl --silent edgecase.pro/api/v1/datafeed_links/assets > settings/datafeed_asset_links.json
 ```
 
 You can also download a human-readable version.
 
 Command:  
 ```
-curl --silent edgecase.pro/api/v1/datafeed_links/assets/data > datafeed_asset_links.txt
+curl --silent edgecase.pro/api/v1/datafeed_links/assets/data > settings/datafeed_asset_links.txt
 ```
 
 
