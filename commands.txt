@@ -29,15 +29,12 @@
 ./cli.py --task verify --logLevel info --articleFile new_articles/2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt
 
 
-[sign the article]
-./cli.py --task sign --logLevel info --articleFile new_articles/2021-01-05_stjohn_piano_blockchain_companies.txt --publicKeyDir=../public_keys --privateKeyDir=../private_keys --outputDir=.
-
-Cleanup:
-rm 2021-01-05_stjohn_piano_blockchain_companies.txt.signed
+[sign the article - the article will be printed to the terminal]
+./cli.py --task sign --logLevel info --articleFile new_articles/2021-01-05_stjohn_piano_blockchain_companies.txt --publicKeyDir=../keys/public_keys --privateKeyDir=../keys/private_keys
 
 
 [verify signature]
-./cli.py --task=verify --logLevel=info --articleFile=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --publicKeyDir=../public_keys --verifySignature
+./cli.py --task=verify --logLevel=info --articleFile=new_articles/2021-03-11_edgecase_datafeed_article_211_2021-03-09_nicholas_piano_public_key_nicholas_piano.txt --publicKeyDir=../keys/public_keys --verifySignature
 
 
 [verify assets]
@@ -51,7 +48,7 @@ rm 2021-01-05_stjohn_piano_blockchain_companies.txt.signed
 
 [verify a datafeed article that contains deleted assets]
 
-./cli.py --task verify --logLevel info --verifyAssets --deletedAssetsFile=settings/deleted_assets.txt --publicKeyDir=../public_keys --articleFile signed_datafeed_articles/2018-01-09_edgecase_datafeed_article_28_2018-01-09_stjohn_piano_installing_centos_6_9_minimal_on_kalkin.txt
+./cli.py --task verify --logLevel info --verifyAssets --deletedAssetsFile=settings/deleted_assets.txt --publicKeyDir=../keys/public_keys --articleFile signed_datafeed_articles/2018-01-09_edgecase_datafeed_article_28_2018-01-09_stjohn_piano_installing_centos_6_9_minimal_on_kalkin.txt
 
 
 
@@ -78,11 +75,12 @@ SignedDatafeedArticle:
 
 
 [verify signature]
-./cli.py --task verify --logLevel info --articleFile new_articles/2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt --verifyFileName --verifySignature --publicKeyDir ../public_keys
+./cli.py --task verify --logLevel info --articleFile new_articles/2021-04-12_edgecase_datafeed_article_216_2021-04-12_stjohn_piano_discussion_crypto_messaging_apps.txt --verifyFileName --verifySignature --publicKeyDir ../keys/public_keys
 
 
 
 [generate links]
+These files are currently written to "cli_output" directory.
 
 python3 cli.py --logLevel=info --task links --articleFile new_articles/article.txt --linkType=hyperlink
 
