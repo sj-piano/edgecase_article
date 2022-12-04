@@ -57,7 +57,7 @@ class SignedArticle(datajack.Element):
 
   @classmethod
   def from_element(cls, element):
-    e = element
+    e = element.create_copy()
     e.__class__ = SignedArticle
     e.article = Article.Article.from_element(e.get_one('article'))
     e.author_signature = e.get_one('author_signature')

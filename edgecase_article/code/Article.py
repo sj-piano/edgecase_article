@@ -58,7 +58,7 @@ class Article(datajack.Element):
 
   @classmethod
   def from_element(cls, element):
-    e = element
+    e = element.create_copy()
     e.__class__ = Article
     e.validate_format()
     e.article_type = 'article'

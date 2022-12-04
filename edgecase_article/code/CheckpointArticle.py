@@ -54,7 +54,7 @@ class CheckpointArticle(datajack.Element):
 
   @classmethod
   def from_element(cls, element):
-    e = element
+    e = element.create_copy()
     e.__class__ = CheckpointArticle
     e.article_type = 'checkpoint_article'
     e.file_path = None

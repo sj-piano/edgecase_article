@@ -57,7 +57,7 @@ class SignedDatafeedArticle(datajack.Element):
 
   @classmethod
   def from_element(cls, element):
-    e = element
+    e = element.create_copy()
     e.__class__ = SignedDatafeedArticle
     e.datafeed_article = DatafeedArticle.DatafeedArticle.from_element(e.get_one('datafeed_article'))
     e.datafeed_signature = e.get_one('datafeed_signature')

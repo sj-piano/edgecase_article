@@ -57,7 +57,7 @@ class DatafeedArticle(datajack.Element):
 
   @classmethod
   def from_element(cls, element):
-    e = element
+    e = element.create_copy()
     e.__class__ = DatafeedArticle
     # Confirm that this DatafeedArticle contains exactly one of the following:
     # [checkpoint_article, signed_article, article]
